@@ -29,52 +29,7 @@ const ModalForm = (props: ModalFormProps) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log(formData);
-    try {
 
-      const formData = {
-        name: 'John Doe',
-        email: 'john.doe@example.com',
-        message: 'Hello, this is a test message.'
-      };
-      
-      const url = 'http://localhost:3001/send-email';
-      
-      fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData),
-        mode: 'no-cors' // Set mode to 'cors' to allow access to the response
-      })
-        .then(response => response.json())
-        .then(data => {
-          // Handle the response data here
-          console.log(data);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-      // const response = await fetch('https://localhost:3001/send-email', {
-      //   method: 'POST',
-      //   mode:"cors",
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   },
-      //   body: JSON.stringify(formData)
-      // });
-
-      // if (response.ok) {
-      //   console.log('Email sent successfully');
-      //   // Add any success message or further actions here
-      // } else {
-      //   console.log('Failed to send the email');
-      //   // Handle the error or display an error message to the user
-      // }
-    } catch (error) {
-      console.log('Error occurred:', error);
-      // Handle the error or display an error message to the user
-    }
     // Reset the form
     setFormData({ name: "", email: "", message: "" });
   };
@@ -128,7 +83,7 @@ const ModalForm = (props: ModalFormProps) => {
               touch.
             </p>
 
-            <form className="max-w-md text-sm" onSubmit={handleSubmit}>
+            <form name="contact" className="max-w-md text-sm" onSubmit={handleSubmit} data-netlify="true">
               <Input
                 value={formData.name}
                 handleInputChange={handleChange}
