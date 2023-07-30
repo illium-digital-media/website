@@ -59,7 +59,6 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-      <GetQuoteSection />
     </>
   );
 };

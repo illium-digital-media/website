@@ -1,11 +1,7 @@
 import { useState, useRef, ChangeEvent, FormEvent } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import Input from "./Input";
-import getConfig from 'next/config'
 
 const ContactForm = () => {
-  const captchaRef = useRef<any>(null);
-  const captchaKey = getConfig().publicRuntimeConfig.REACT_APP_SITE_KEY;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -61,7 +57,6 @@ const ContactForm = () => {
           required
         ></textarea>
       </div>
-      <ReCAPTCHA sitekey={captchaKey} ref={captchaRef} />
       <button
         className="bg-blue-900 text-white font-bold py-2 px-4 rounded mt-4"
         type="submit"

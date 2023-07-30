@@ -45,7 +45,6 @@ const MainNavigation: React.FC = () => {
         navbarVisible ? "fixed shadow-lg bg-white" : "absolute bg-transparent "
       }`}
     >
-      <Header />
       <nav className="flex justify-between m-auto max-w-screen-lg max-lg:px-4 max-lg:bg-white">
         <BurgerMenu />
         <div className="py-2">
