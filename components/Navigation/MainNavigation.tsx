@@ -1,14 +1,27 @@
 import Link from "next/link";
 import BurgerMenu from "../BurgerMenu";
 import NavItem from "./NavItem";
-import Header from "./Header";
 import ModalForm from "../ModalForm";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import Logo from "../../assets/logo.svg";
-import Light from "../../assets/light.svg";
+import DarkModeToggle from "./DarkModeToggle";
+import { DarkModeContext } from '../DarkModeContext';
+
+const navItems = [
+  { pageLink: "/", title: "Home" },
+  { pageLink: "/about", title: "About" },
+  { pageLink: "/residential", title: "Residential" },
+  { pageLink: "/commercial", title: "Commercial" },
+  { pageLink: "/exterior", title: "Exterior" },
+  { pageLink: "/testimonials", title: "Testimonials" },
+  { pageLink: "/contact", title: "Contact" },
+];
 
 const MainNavigation: React.FC = () => {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
+  
   const [isModalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
@@ -42,8 +55,10 @@ const MainNavigation: React.FC = () => {
   return (
     <header
       className={`w-full max-lg:shadow-lg max-lg:fixed ${
-        navbarVisible ? "fixed shadow-lg bg-white" : "absolute bg-transparent "
-      }`}
+        navbarVisible ? "fixed shadow-lg " : "absolute "
+      }  ${darkMode ? 'bg-zinc-800' : 'bg-white'}`}
+
+      style={{ transition: "background-color 0.3s ease" }}
     >
       <nav className="flex justify-between m-auto max-w-screen-lg max-lg:px-4 max-lg:bg-white">
         <BurgerMenu />
@@ -58,38 +73,16 @@ const MainNavigation: React.FC = () => {
         </div>
 
         <ul className="menu-list max-lg:hidden menu flex">
-          <NavItem pageLink="/" copy="Home" handleClick={function () {}} />
-          <NavItem
-            pageLink="/about"
-            copy="About"
-            handleClick={function () {}}
-          />
-          <NavItem
-            pageLink="/residential"
-            copy="Residential"
-            handleClick={function () {}}
-          />
-          <NavItem
-            pageLink="/commercial"
-            copy="Commercial"
-            handleClick={function () {}}
-          />
-          <NavItem
-            pageLink="/exterior"
-            copy="Exterior"
-            handleClick={function () {}}
-          />
-          <NavItem
-            pageLink="/testimonials"
-            copy="Testimonials"
-            handleClick={function () {}}
-          />
-          <NavItem
-            pageLink="/contact"
-            copy="Contact"
-            handleClick={function () {}}
-          />
+          {navItems.map((item, index) => (
+            <NavItem
+              key={index}
+              pageLink={item.pageLink}
+              copy={item.title}
+              handleClick={() => {}}
+            />
+          ))}
         </ul>
+        <DarkModeToggle />
 
         <button onClick={openModal} className="">
           <span className="border-2 border-blue-800 rounded uppercase text-xs font-bold text-blue-900 p-2 hover:bg-blue-900 hover:text-white duration-200">

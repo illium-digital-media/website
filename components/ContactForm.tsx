@@ -19,9 +19,6 @@ const ContactForm = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission logic here
-    const token = captchaRef.current.getValue();
-    console.log(token);
-    captchaRef.current.reset();
     console.log(formData);
     // Reset the form
     setFormData({ name: "", email: "", message: "" });

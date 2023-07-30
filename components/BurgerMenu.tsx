@@ -3,6 +3,16 @@ import CloseButton from "./CloseButton";
 import NavItem from "./Navigation/NavItem";
 import BurgerMenuIcon from "./Icons/BurgerMenuIcon";
 
+const navItems = [
+  { pageLink: "/", title: "Home" },
+  { pageLink: "/about", title: "About" },
+  { pageLink: "/residential", title: "Residential" },
+  { pageLink: "/commercial", title: "Commercial" },
+  { pageLink: "/exterior", title: "Exterior" },
+  { pageLink: "/testimonials", title: "Testimonials" },
+  { pageLink: "/contact", title: "Contact" },
+];
+
 const BurgerMenu: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -28,14 +38,9 @@ const BurgerMenu: React.FC = () => {
 
   return (
     <div className="flex items-center lg:justify-between p-3 lg:hidden">
-      
       <nav>
-
         <section className="flex lg:hidden">
-          <div
-            className="space-y-2 cursor-pointer"
-            onClick={toggleNav}
-          >
+          <div className="space-y-2 cursor-pointer" onClick={toggleNav}>
             <BurgerMenuIcon />
           </div>
 
@@ -49,19 +54,20 @@ const BurgerMenu: React.FC = () => {
               <CloseButton handleClose={toggleNav} />
             </div>
             <ul className="flex flex-col min-h-[250px]">
-              <NavItem pageLink="/" copy="Home" handleClick={toggleNav} />
-              <NavItem pageLink="/about" copy="About" handleClick={toggleNav} />
-              <NavItem pageLink="/residential" copy="Residential" handleClick={toggleNav} />
-              <NavItem pageLink="/commercial" copy="Commercial" handleClick={toggleNav} />
-              <NavItem pageLink="/exterior" copy="Exterior" handleClick={toggleNav} />
-              <NavItem pageLink="/testimonials" copy="Testimonials" handleClick={toggleNav} />
-              <NavItem pageLink="/contact" copy="Contact" handleClick={toggleNav} />
+              {navItems.map((item, index) => (
+                <NavItem
+                  key={index}
+                  pageLink={item.pageLink}
+                  copy={item.title}
+                  handleClick={toggleNav}
+                />
+              ))}
             </ul>
           </div>
         </section>
       </nav>
     </div>
   );
-}
+};
 
 export default BurgerMenu;

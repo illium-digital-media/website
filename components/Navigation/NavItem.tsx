@@ -6,7 +6,7 @@ const NavItem: React.FC<{
   copy: string;
 }> = (props) => {
   return (
-    <li className="p-3 m-auto uppercase text-xs font-bold text-blue-900  hover:bg-gray-200 hover:rounded-full duration-200">
+    <li className="p-3 m-auto uppercase text-xs font-bold text-primary  hover:bg-gray-200 hover:rounded-full duration-200">
       <Link href={props.pageLink} onClick={props.handleClick}>
         {props.copy}
       </Link>

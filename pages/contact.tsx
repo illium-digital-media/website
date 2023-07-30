@@ -1,6 +1,5 @@
 import ContactCard from "../components/ContactCard";
 import ContactForm from "../components/ContactForm";
-import GetQuoteSection from "../components/sections/GetQuoteSection";
 import Head from "next/head";
 
 const ContactPage: React.FC = () => {
