@@ -1,6 +1,5 @@
 import CommonLanding from "../components/sections/CommonLanding";
 import ExteriorSection from "../components/sections/ExteriorSection";
-import GetQuoteSection from "../components/sections/GetQuoteSection";
 import Head from "next/head";
 
 const ExteriorPage: React.FC = () => {
@@ -15,7 +14,6 @@ const ExteriorPage: React.FC = () => {
       </Head>
       <CommonLanding heading={"Exterior Painting & Decorating"} />
       <ExteriorSection />
-      <GetQuoteSection />
     </>
   );
 };

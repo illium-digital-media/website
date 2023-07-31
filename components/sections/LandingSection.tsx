@@ -1,5 +1,4 @@
 import ContactButton from "../CTAs/ContactButton";
-import GetAQuoteButton from "../CTAs/GetAQuoteButton";
 
 const LandingSection: React.FC = () => {
   return (
@@ -10,8 +9,6 @@ const LandingSection: React.FC = () => {
           Painters &amp; Decorators
         </h3>
         <p className="py-4">Professional Painters and Decorators in London.</p>
-
-        <GetAQuoteButton />
         <ContactButton />
       </div>
     </section>

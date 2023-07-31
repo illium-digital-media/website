@@ -17,7 +17,7 @@ const NavItem: React.FC<{
   ></header>;
   return (
     <li
-      className={`p-3 m-auto uppercase text-xs font-bold  hover:bg-gray-200 hover:rounded-full duration-200 
+      className={`p-5 m-auto text-md font-bold  hover:bg-gray-200 hover:rounded-full duration-200 
       ${darkMode ? "text-white hover:text-primary" : "text-primary "}`}
     >
       <Link href={props.pageLink} onClick={props.handleClick}>

@@ -34,11 +34,7 @@ const ExteriorSection: React.FC = () => {
           <ContactButton />
         </div>
         <div className="">
-          <Image
-            className=""
-            src="https://theperfectpainter.co.uk/wp-content/themes/theperfectpainter/images/pages/exterior/paint.jpg"
-            alt=""
-          ></Image>
+
         </div>
         <div></div>
       </div>
