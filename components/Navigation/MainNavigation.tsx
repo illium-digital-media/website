@@ -14,7 +14,6 @@ const navItems = [
   { pageLink: "/residential", title: "Residential" },
   { pageLink: "/commercial", title: "Commercial" },
   { pageLink: "/exterior", title: "Exterior" },
-  { pageLink: "/testimonials", title: "Testimonials" },
   { pageLink: "/contact", title: "Contact" },
 ];
 
