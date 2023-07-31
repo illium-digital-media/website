@@ -1,6 +1,7 @@
 import AboutUsSection from "../components/sections/AboutUsSection";
 import CommonLanding from "../components/sections/CommonLanding";
 import Head from "next/head";
+import Section from "@/components/Section";
 
 const AboutPage: React.FC = () => {
   return (
@@ -13,7 +14,9 @@ const AboutPage: React.FC = () => {
         />
       </Head>
       <CommonLanding heading={"About Us"} />
-      <AboutUsSection />
+      <Section index={0}>
+        <AboutUsSection />
+      </Section>
     </>
   );
 };
