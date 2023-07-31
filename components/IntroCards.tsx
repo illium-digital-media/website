@@ -3,7 +3,7 @@ import Image from "next/image";
 import residentialImage from "../assets/residential-intro.svg";
 import commercialImage from "../assets/commercial-intro.svg";
 import exteriorImage from "../assets/exterior-intro.svg";
-// import { DarkModeContext } from "./DarkModeContext";
+import { DarkModeContext } from "./DarkModeContext";
 import React, { useContext } from "react";
 
 const introCards = [
@@ -32,7 +32,7 @@ const introCards = [
 ];
 
 const IntroCards = () => {
-  // const { darkMode, setDarkMode } = useContext(DarkModeContext);
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   return (
     <div className="justify-between max-md:flex-wrap sm:flex sm:px-5">
@@ -40,7 +40,7 @@ const IntroCards = () => {
         <div
           key={index}
           className={`sm:mx-1 px-5 py-20 max-md:w-full max-sm:py-10 max-sm:mb-3 text-center border border-gray-300 rounded-lg mb-4 shadow-lg ${
-            true ? "bg-zinc-700" : "bg-white"
+            darkMode ? "bg-zinc-700" : "bg-white"
           }`}
           // Add margin here to create spacing
         >

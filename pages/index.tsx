@@ -1,11 +1,11 @@
 import IntroSection from "../components/sections/IntroSection";
 import AboutUsSection from "../components/sections/AboutUsSection";
-import GetQuoteSection from "../components/sections/GetQuoteSection";
 import PerfectPainterSection from "../components/sections/PerfectPainterSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import WhyUsSection from "../components/sections/WhyUsSection";
 import LandingSection from "../components/sections/LandingSection";
 import Head from "next/head";
+import Section from "@/components/Section";
 
 const HomePage: React.FC = () => {
   return (
@@ -18,11 +18,12 @@ const HomePage: React.FC = () => {
         />
       </Head>
       <LandingSection />
-      <IntroSection />
+      <Section index={0}>
+        <IntroSection />
+      </Section>
       <PerfectPainterSection />
       <AboutUsSection />
       <WhyUsSection />
-      <GetQuoteSection />
       <TestimonialsSection />
     </>
   );

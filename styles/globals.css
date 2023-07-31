@@ -3,23 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  /* Light Theme */
+  --primary-bg-color: #ffffff;
+  --primary-text-color: #333333;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  /* Dark Theme */
+  --primary-bg-color-dark: #333333;
+  --primary-text-color-dark: #ffffff;
+
+  /* Set the initial theme to light */
+  --current-bg-color: var(--primary-bg-color);
+  --current-text-color: var(--primary-text-color);
 }
 
 body {
   color: black;
   background-color: white;
 }
+
+/* Additional styles for light theme */
+body.light-theme {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+/* Additional styles for dark theme */
+body.dark-theme {
+  background-color: var(--primary-bg-color-dark);
+  color: var(--primary-text-color-dark);
+}
+
 
 
 body {
