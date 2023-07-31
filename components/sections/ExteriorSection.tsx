@@ -5,7 +5,7 @@ import Image from 'next/image';
 const ExteriorSection: React.FC = () => {
   return (
     <section className="p-10">
-      <div className="flex max-w-screen-lg m-auto">
+      <div className="flex max-w-screen-xl m-auto">
         <div className="f-right col-1-2 left pr-10">
           <h5 className="text-blue-900 font-bold text-2xl">
             Exterior Painters and Decorators in London

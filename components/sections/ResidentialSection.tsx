@@ -7,7 +7,7 @@ import Check from "../../assets/check.svg";
 const ResidentialSection: React.FC = () => {
   return (
     <section className="p-10 max-sm:p-4 max-sm:py-10">
-      <div className="flex max-w-screen-lg m-auto max-lg:block">
+      <div className="flex max-w-screen-xl m-auto max-lg:block">
         <Image src={Painter} alt="" className="sm:hidden pb-10" />
         <div className="f-right col-1-2 left sm:pr-10">
           <h5 className="text-blue-900 font-bold text-2xl">

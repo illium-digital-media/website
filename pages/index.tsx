@@ -6,6 +6,16 @@ import WhyUsSection from "../components/sections/WhyUsSection";
 import LandingSection from "../components/sections/LandingSection";
 import Head from "next/head";
 import Section from "@/components/Section";
+import Gallery from "@/components/Gallery";
+
+const sections = [
+  <IntroSection />,
+  <PerfectPainterSection />,
+  <AboutUsSection />,
+  <WhyUsSection />,
+  <Gallery />,
+  <TestimonialsSection />,
+];
 
 const HomePage: React.FC = () => {
   return (
@@ -18,13 +28,9 @@ const HomePage: React.FC = () => {
         />
       </Head>
       <LandingSection />
-      <Section index={0}>
-        <IntroSection />
-      </Section>
-      <PerfectPainterSection />
-      <AboutUsSection />
-      <WhyUsSection />
-      <TestimonialsSection />
+      {sections.map((section, index) => (
+        <Section index={index}>{section}</Section>
+      ))}
     </>
   );
 };

@@ -5,9 +5,9 @@ import Painter from "../../assets/painter.jpg";
 const AboutUsSection: React.FC = () => {
   return (
     <section id="about-us">
-      <div className="flex max-w-screen-lg m-auto lg:pt-20 max-lg:py-10 max-lg:px-4">
+      <div className="flex max-w-screen-xl m-auto lg:pt-20 max-lg:py-10 max-lg:px-4">
         <Image className="max-lg:hidden" src={Painter} alt="painter" />
-        <div className="lg:ml-15 m-auto max-lg:max-w-screen-lg">
+        <div className="lg:ml-15 m-auto max-lg:max-w-screen-xl">
           <div className="text-blue-900 font-bold">
             <h3 className="text-4xl max-lg:text-3xl">About Us</h3>
             <p className="">

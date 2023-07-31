@@ -29,15 +29,18 @@ const socialMediaLinks = [
 
 const Footer = () => {
   return (
-    <footer className="text-white bg-zinc-800 ">
-      <div className="max-w-screen-lg m-auto">
-        <div className="py-10 flex justify-between">
-          <div className="flex">
-            <ContactItem
-              icon={<EmailIcon />} // Replace with the actual email icon component
-              title="Email Address"
-              value="example@gmail.com"
-            />
+    <footer className="text-white bg-zinc-800 max-lg:px-4">
+      <div className="max-w-screen-xl m-auto">
+        <div className="py-10 md:flex justify-between">
+          <div className="sm:flex max-sm:pb-5">
+            <div className="max-sm:pb-5">
+              <ContactItem
+                icon={<EmailIcon />} // Replace with the actual email icon component
+                title="Email Address"
+                value="example@gmail.com"
+              />
+            </div>
+
             <ContactItem
               icon={<PhoneIcon />} // Replace with the actual phone icon component
               title="Phone Number"

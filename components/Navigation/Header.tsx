@@ -11,7 +11,7 @@ import Email from "../../assets/email.svg";
 const Header: React.FC = () => {
   return (
     <div className=" bg-gray-100 border-b border-solid border-gray-200 max-sm:hidden">
-      <div className="max-w-screen-lg mx-auto overflow-hidden flex justify-between">
+      <div className="max-w-screen-xl mx-auto overflow-hidden flex justify-between">
         <div className="flex">
           <div className="border-l border-r border-solid border-gray-200 p-2">
             <a

@@ -14,14 +14,14 @@ const ContactPage: React.FC = () => {
         />
       </Head>
       <section className="flex items-center justify-center bg-gray-200 h-[350px]">
-        <div className="max-w-screen-lg m-auto">
+        <div className="max-w-screen-xl m-auto">
           <h3 className="text-blue-900 letter-spacing-1 text-5xl font-bold">
             Contact Us
           </h3>
         </div>
       </section>
       <section className="py-10 max-sm:px-4">
-        <div className="max-w-screen-lg flex m-auto max-sm:block">
+        <div className="max-w-screen-xl flex m-auto max-sm:block">
           <div className="pr-20">
             <h3 className="f-w-900 text-blue-900 text-4xl font-bold pb-1">
               Say Hi!

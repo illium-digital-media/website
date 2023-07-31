@@ -1,31 +1,29 @@
-import TestimonialsCarousel from "../TestimonialsCarousel";
-import Image from "next/image";
-import Bg from "../../assets/bg.jpg";
+import TestimonialsCards from "../TestimonialsCards";
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <section id="what-they-say">
-      <div className="flex max-lg:px-4 max-lg:py-10">
-        <div className="h-50 max-lg:hidden">
-          <Image src={Bg} alt="" className="h-96" />
-        </div>
-        <div className="w-96">
-          <div className="col flex center-left">
-            <div>
-              <div>
-                <h3 className="font-bold text-blue-900 text-4xl">
-                  Testimonials
-                </h3>
-                <p>Find out what out happy customer have to say!</p>
-                <br />
-                <TestimonialsCarousel />
-                <p>Get your free quote today!</p>
-              </div>
+    <div className="flex m-auto max-w-screen-xl max-lg:px-4 max-lg:py-10">
+      <div className="">
+        <div className="col flex center-left">
+          <div>
+            <div className="text-center pb-6">
+              <h3 className="font-bold text-blue-900 text-1xl">Testimonials</h3>
+              <h4 className="font-bold text-blue-900 text-3xl pb-2">
+                What Clients Say About Us
+              </h4>
+              <p>
+                From enhancing interiors to reviving exteriors, our painting and
+                decorating services have left a lasting impression on our
+                clients, bringing smiles to their faces and beauty to their
+                spaces.
+              </p>
             </div>
+
+            <TestimonialsCards />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -6,7 +6,7 @@ import Painter from "../../assets/painter.jpg";
 const CommercialSection: React.FC = () => {
   return (
     <section id="service-content">
-      <div className="flex max-w-screen-lg m-auto py-10">
+      <div className="flex max-w-screen-xl m-auto py-10">
         <div className="f-right col-1-2 left pr-10">
           <h5 className="text-blue-900 font-bold text-2xl">
             Commercial Painters and Decorators in London

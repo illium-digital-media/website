@@ -54,13 +54,13 @@ const MainNavigation: React.FC = () => {
 
   return (
     <header
-      className={`w-full max-lg:shadow-lg max-lg:fixed ${
+      className={`w-full max-lg:shadow-lg max-lg:fixed z-10 ${
         navbarVisible ? "fixed shadow-lg " : "absolute "
       }  ${darkMode ? 'bg-zinc-800' : 'bg-white'}`}
 
       style={{ transition: "background-color 0.3s ease" }}
     >
-      <nav className="flex justify-between m-auto max-w-screen-lg max-lg:px-4 max-lg:bg-white">
+      <nav className="flex justify-between m-auto max-w-screen-xl max-lg:px-4 max-lg:bg-white">
         <BurgerMenu />
         <div className="py-2">
           <Link href="/">

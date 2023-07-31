@@ -15,7 +15,7 @@ const WhyUsSection: React.FC = () => {
         backgroundImage: "url(" + { Bg } + ")",
       }}
     >
-      <div className="m-auto max-w-screen-lg max-sm:px-4 max-lg:max-w-screen-sm">
+      <div className="m-auto max-w-screen-xl max-sm:px-4 max-lg:max-w-screen-sm">
         <div className=" text-white">
           <div className="w-1/2 max-lg:w-full">
             <h3 className="font-bold text-4xl max-lg:text-3xl">
