@@ -7,12 +7,14 @@ import LandingSection from "../components/sections/LandingSection";
 import Head from "next/head";
 import Section from "@/components/Section";
 import Gallery from "@/components/Gallery";
+import FAQ from "@/components/FAQ";
 
 const sections = [
   <IntroSection />,
   <PerfectPainterSection />,
   <AboutUsSection />,
   <WhyUsSection />,
+  <FAQ />,
   <Gallery />,
   <TestimonialsSection />,
 ];
