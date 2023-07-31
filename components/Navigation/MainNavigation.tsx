@@ -60,7 +60,7 @@ const MainNavigation: React.FC = () => {
 
       style={{ transition: "background-color 0.3s ease" }}
     >
-      <nav className="flex justify-between m-auto max-w-screen-xl max-lg:px-4 max-lg:bg-white">
+      <nav className="flex justify-between m-auto max-w-screen-xl max-xl:px-5  max-lg:bg-white">
         <BurgerMenu />
         <div className="py-2">
           <Link href="/">

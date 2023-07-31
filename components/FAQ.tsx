@@ -51,21 +51,21 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="max-w-screen-xl m-auto max-lg:px-5 sm:flex">
+    <div className="sm:flex">
       <div className="max-sm:hidden sm:w-1/2">
         <Image src={examplePainting} width={500} height={500} alt={"Test"} />
       </div>
       <div className="sm:w-1/2">
         <div className="pb-6">
           <h3 className="font-bold text-blue-900 text-1xl">FAQ</h3>
-          <h4 className="font-bold text-blue-900 text-3xl pb-2">
+          <h4 className="font-bold text-4xl pb-2">
             Our Most Common Questions
           </h4>
           <p>
             Browse through our frequently asked questions to find quick and
             helpful answers about our painting and decorating solutions.
           </p>
-        </div>{" "}
+        </div>
         {faqs.map((item, index) => (
           <div key={index} className={`mb-4 rounded-lg shadow-lg bg-primary`}>
             <div

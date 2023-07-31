@@ -1,62 +1,88 @@
-import WhyUsCard from "../WhyUsCard";
-import Free from "../../assets/free.svg";
-import Cost from "../../assets/cost.svg";
-import Hour from "../../assets/hour.svg";
-import Safe from "../../assets/safe.svg";
-import Insured from "../../assets/insured.svg";
-import Bg from "../../assets/bg.jpg";
+import Image from "next/image";
+import examplePainting from "../../assets/example-painter.png";
+import GraduationIcon from "../../components/Icons/Graduation";
+import TickIcon from "../Icons/Tick";
+import HourglassIcon from "../Icons/Hourglass";
+import HeadsetIcon from "../Icons/Headset";
+import PriceIcon from "../Icons/Price";
+import RecycleIcon from "../Icons/Recycle";
+import React, { useState, useContext } from "react";
+import { DarkModeContext } from "../DarkModeContext";
+
+const chooseUs = [
+  {
+    title: "Experienced Professionals",
+    content: "Years of expertise for expert advice and craftsmanship.",
+    image: <GraduationIcon />,
+  },
+  {
+    title: "Quality Assurance",
+    content: "Top-grade materials and proven methods for a stunning finish.",
+    image: <TickIcon />,
+  },
+  {
+    title: "Exceptional Customer Service",
+    content: "Attentive, personalized service from start to finish.",
+    image: <HeadsetIcon />,
+  },
+  {
+    title: "Timely Delivery",
+    content: "Adhering strictly to project timelines for on-time completion.",
+    image: <HourglassIcon />,
+  },
+  {
+    title: "Competitive Pricing",
+    content: "Exceptional services at fair rates, no compromise on quality.",
+    image: <PriceIcon />,
+  },
+  {
+    title: "Environmentally Conscious",
+    content: "Eco-friendly materials and sustainable practices.",
+    image: <RecycleIcon />,
+  },
+];
 
 const WhyUsSection: React.FC = () => {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
   return (
-    <section
-      id="why-us"
-      className="cover-Image py-10 bg-cover"
-      style={{
-        backgroundImage: "url(" + { Bg } + ")",
-      }}
-    >
-      <div className="m-auto max-w-screen-xl max-sm:px-4 max-lg:max-w-screen-sm">
-        <div className=" text-white">
-          <div className="w-1/2 max-lg:w-full">
-            <h3 className="font-bold text-4xl max-lg:text-3xl">
-              Why Choose Us
-            </h3>
-            <h6 className="font-bold text-lg">
-              London Painting and Decorating
-            </h6>
-            <br />
-            <h5 className="text-2xl font-bold  max-lg:text-2xl">
-              Customer satisfaction is our priority
-            </h5>
-            <br />
-            <div className="pb-5">
-              <p>
-                At The Perfect Painter, we provide top quality workmanship at
-                very competitive prices. Our friendly team of dedicated and
-                experienced professionals can help with all your painting and
-                decorating needs.
-              </p>
-              <br />
-              <p>
-                We always use the necessary health and safety precautions. We
-                will always go through all aspects of the job with you before we
-                start any works.
-              </p>
-            </div>
-          </div>
+    <div className="lg:flex">
+      <div className="sm:w-1/2 lg:hidden  flex justify-center pb-10">
+        <Image src={examplePainting} width={500} height={500} alt={"Test"} />
+      </div>
+      <div className="w-1/2 max-lg:w-full  max-lg:px-5">
+        <div className="pb-6 max-lg:text-center">
+          <h3 className="font-bold text-primary text-1xl">Why Choose Us</h3>
+          <h4 className="font-bold  text-4xl pb-2">
+            Always on Time And Never Delay A Project
+          </h4>
+          <p>
+            Choosing us means choosing excellence. Explore what sets us apart
+            and why we are the go-to experts for all your painting and
+            decorating needs.
+          </p>
         </div>
-        <div className="flex justify-between max-lg:block">
-          <WhyUsCard image={{ Free }} copy={"Free Detailed Quick Notes"} />
-          <WhyUsCard
-            image={{ Cost }}
-            copy={"Transparent prices, no hidden costs"}
-          />
-          <WhyUsCard image={{ Hour }} copy={"Flexible hours"} />
-          <WhyUsCard image={{ Safe }} copy={"Health and Safety"} />
-          <WhyUsCard image={{ Insured }} copy={"Liability insurance"} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {chooseUs.map((item, index) => (
+            <div
+              key={index}
+              className={`sm:mx-1 max-sm:mb-3  rounded-lg mb-2  flex`}
+            >
+              <div className="flex">
+                <div className=" mr-5 text-primary">{item.image}</div>
+                <div>
+                  <h3 className="text-1xl font-bold pb-2 ">{item.title}</h3>
+                  <p className="">{item.content}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+      <div className="sm:w-1/2 max-lg:hidden">
+        <Image src={examplePainting} width={500} height={500} alt={"Test"} />
+      </div>
+    </div>
   );
 };
 

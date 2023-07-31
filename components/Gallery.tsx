@@ -67,10 +67,10 @@ const Gallery: React.FC = () => {
   }, [imagesLoaded]);
 
   return (
-    <div className="max-w-screen-xl m-auto items-start max-lg:px-4">
+    <div className=" items-start">
       <div className="text-center pb-6">
         <h3 className="font-bold text-blue-900 text-1xl">Latest Projects</h3>
-        <h4 className="font-bold text-blue-900 text-3xl pb-2">
+        <h4 className="font-bold text-4xl pb-2">
           Awesome Projects That Could Inspire You
         </h4>
         <p>

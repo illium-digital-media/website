@@ -1,42 +1,44 @@
-import GetAQuoteButton from "../CTAs/GetAQuoteButton";
 import Image from "next/image";
-import Painter from "../../assets/painter.jpg";
+import examplePainting from "../../assets/example-painter.png";
+import CheckIcon from "@/components/Icons/Check";
+
+const aboutContent = [
+  "Over 5 years of industry experience",
+  "Personalized consultations for tailored solutions",
+  "Timely project completion and adherence to deadlines  ",
+  "Expert advice and creative expertise for stunning results  ",
+  "High-quality materials and eco-friendly practices",
+];
 
 const AboutUsSection: React.FC = () => {
   return (
-    <section id="about-us">
-      <div className="flex max-w-screen-xl m-auto lg:pt-20 max-lg:py-10 max-lg:px-4">
-        <Image className="max-lg:hidden" src={Painter} alt="painter" />
-        <div className="lg:ml-15 m-auto max-lg:max-w-screen-xl">
-          <div className="text-blue-900 font-bold">
-            <h3 className="text-4xl max-lg:text-3xl">About Us</h3>
-            <p className="">
-              <strong>Professional Painters and Decorators in London.</strong>
-            </p>
-          </div>
-          <br />
-          <p>We are your local team of painters and decorators in London.</p>
-          <p>
-            No job is too big or too small; from a small flat to commercial
-            offices, we can help.
-          </p>
-          <br />
-          <p>
-            If you are looking for a painter or decorator in London please give
-            us a call.
-          </p>
-          <br />
-          <h4 className="text-3xl text-blue-900 font-bold">
-            <a href="tel:02031055111">0203 105 5111</a>
-          </h4>
-          <br />
-          <p>OR, get your FREE quote today!</p>
-          <br />
-
-          <GetAQuoteButton />
-        </div>
+    <div className="flex ">
+      <div className="max-sm:hidden sm:w-1/2">
+        <Image src={examplePainting} width={500} height={500} alt={"Test"} />
       </div>
-    </section>
+      <div className="pb-6 sm:w-1/2">
+        <h3 className="font-bold text-blue-900 text-1xl">About Us</h3>
+        <h4 className="font-bold  text-4xl">
+          We Are The Best Painting Service Company
+        </h4>
+        <p className="py-5">
+          Welcome to Brushstrokes - your premier painting and decorating
+          partner. With a passion for transforming spaces into works of art, we
+          take pride in delivering exceptional results and top-notch customer
+          service. As a team of experienced professionals, we are committed to
+          making your vision a reality, ensuring every brushstroke leaves a
+          lasting impression.
+        </p>
+        {aboutContent.map((item, index) => (
+          <div className="flex align-center pb-2">
+            <div className="text-primary pr-2">
+              <CheckIcon />
+            </div>
+            <p>{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
