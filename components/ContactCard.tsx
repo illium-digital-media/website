@@ -1,15 +1,23 @@
+import { DarkModeContext } from "../components/DarkModeContext";
+import React, { useContext } from "react";
+
 const ContactCard: React.FC<{
   heading: string;
   copy: string;
   link: string;
   linkText: string;
 }> = (props) => {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
   return (
-    <div className="one bg-gray-200 p-5 rounded-lg mt-4">
-      <h5 className="text-blue-900 text-2xl font-bold pb-2">{props.heading}</h5>
-      <p className="color-gray">{props.copy}</p>
+    <div
+      className={`p-5 rounded-lg mt-4 ${darkMode ? "bg-zinc-700" : "bg-gray-200"}`}
+      style={{ transition: "background-color 0.3s ease" }}
+    >
+      <h5 className="text-primary text-2xl font-bold pb-2">{props.heading}</h5>
+      <p className="">{props.copy}</p>
       <p>
-        <a className="text-blue-900 text-base" href={props.link}>
+        <a className="text-primary text-base" href={props.link}>
           <strong>{props.linkText}</strong>
         </a>
       </p>

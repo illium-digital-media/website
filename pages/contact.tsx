@@ -38,7 +38,18 @@ const ContactPage: React.FC = () => {
       <CommonLanding heading={"Contact Us"} />
       <Section index={0}>
         <div className="flex max-sm:block max-w-screen-lg m-auto">
-          <div className="pr-20 w-1/2">
+          <div className="sm:hidden sm:w-1/2 pb-5">
+            {contactData.map((contact, index) => (
+              <ContactCard
+                key={index}
+                heading={contact.heading}
+                copy={contact.copy}
+                linkText={contact.linkText}
+                link={contact.link}
+              />
+            ))}
+          </div>
+          <div className="sm:pr-20 sm:w-1/2">
             <h3 className="f-w-900 text-blue-900 text-4xl font-bold pb-1">
               Say Hi!
             </h3>
@@ -47,7 +58,7 @@ const ContactPage: React.FC = () => {
             </p>
             <ContactForm />
           </div>
-          <div className="w-1/2">
+          <div className="max-sm:hidden sm:w-1/2">
             {contactData.map((contact, index) => (
               <ContactCard
                 key={index}
