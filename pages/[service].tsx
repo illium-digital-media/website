@@ -140,7 +140,7 @@ const ServicePage: React.FC = () => {
                   </p>
                   <ul>
                     {Object.keys(servicesData).map((serviceKey) => (
-                      <li className="hover:text-primary">
+                      <li className="hover:text-primary" key={serviceKey}>
                         <Link href={serviceKey}>
                           {servicesData[serviceKey].title}
                         </Link>

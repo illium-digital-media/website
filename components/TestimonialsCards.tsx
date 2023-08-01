@@ -39,7 +39,7 @@ const Testimonials = () => {
         >
           <div className="p-6">
             <StarRating rating={4} />
-            <p className="py-3">"{testimonial.comment}"</p>
+            <p className="py-3">&quot;{testimonial.comment}&quot;</p>
             <div className="flex justify-between">
               <div>
                 <p className="font-semibold">{testimonial.name}</p>

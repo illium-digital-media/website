@@ -9,13 +9,14 @@ import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
 
 const sections = [
-  <IntroSection />,
-  <AboutUsSection />,
-  <WhyUsSection />,
-  <FAQ />,
-  <Gallery />,
-  <TestimonialsSection />,
+  <IntroSection key="intro" />,
+  <AboutUsSection key="about" />,
+  <WhyUsSection key="why-us" />,
+  <FAQ key="faq" />,
+  <Gallery key="gallery" />,
+  <TestimonialsSection key="testimonials" />,
 ];
+
 
 const HomePage: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ const HomePage: React.FC = () => {
       </Head>
       <LandingSection />
       {sections.map((section, index) => (
-        <Section index={index}>{section}</Section>
+        <Section index={index} key={index}>{section}</Section>
       ))}
     </>
   );

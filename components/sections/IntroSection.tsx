@@ -11,8 +11,8 @@ const IntroSection: React.FC = () => {
         <p>
           From elegant interiors to striking exteriors, our expert team delivers
           top-notch painting services that breathe life into your spaces.
-          Whether it's residential or commercial, trust us to add the perfect
-          touch of color and style, leaving you with a masterpiece you'll love.
+          Whether it&apos;s residential or commercial, trust us to add the perfect
+          touch of color and style, leaving you with a masterpiece you&apos;ll love.
         </p>
       </div>
       <IntroCards />

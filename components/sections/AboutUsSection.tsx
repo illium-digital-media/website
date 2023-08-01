@@ -30,7 +30,7 @@ const AboutUsSection: React.FC = () => {
           lasting impression.
         </p>
         {aboutContent.map((item, index) => (
-          <div className="flex align-center pb-2">
+          <div className="flex align-center pb-2" key={index}>
             <div className="text-primary pr-2">
               <CheckIcon />
             </div>
