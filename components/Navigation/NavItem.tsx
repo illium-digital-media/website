@@ -1,5 +1,4 @@
 import Link from "next/link";
-import DarkModeToggle from "./DarkModeToggle";
 import { DarkModeContext } from "../DarkModeContext";
 import React, { useContext } from "react";
 
@@ -14,7 +13,7 @@ const NavItem: React.FC<{
       darkMode ? "bg-zinc-800" : "bg-white"
     }`}
     style={{ transition: "background-color 0.3s ease" }}
-  ></header>;
+  />;
   return (
     <li
       className={`p-5 m-auto text-md font-bold  hover:bg-gray-200 hover:rounded-full duration-200 

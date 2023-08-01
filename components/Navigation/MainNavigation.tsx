@@ -3,7 +3,6 @@ import BurgerMenu from "../BurgerMenu";
 import NavItem from "./NavItem";
 import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
-import Logo from "../../assets/logo.svg";
 import DarkModeToggle from "./DarkModeToggle";
 import { DarkModeContext } from "../DarkModeContext";
 import LogoPlaceholder from "../../assets/logo-placeholder.png";
@@ -58,7 +57,7 @@ const MainNavigation: React.FC = () => {
       }  ${darkMode ? "bg-zinc-800" : "bg-white"}`}
       style={{ transition: "background-color 0.3s ease" }}
     >
-      <nav className="flex justify-between m-auto max-w-screen-xl max-xl:px-5  max-lg:bg-white">
+      <nav className="flex justify-between m-auto max-w-screen-xl max-xl:px-5  ">
         <BurgerMenu />
         <div className="py-2">
           <Link href="/">

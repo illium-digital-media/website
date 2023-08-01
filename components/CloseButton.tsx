@@ -1,8 +1,15 @@
-import React from "react";
+import { DarkModeContext } from "../components/DarkModeContext";
+import React, { useContext } from "react";
 
 const CloseButton: React.FC<{ handleClose: () => void }> = (props) => {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
   return (
-    <button className="top-0 left-0 text-black" onClick={props.handleClose}>
+    <button
+      className={`top-0 left-0    ${darkMode ? "text-white" : "text-black"}`}
+      onClick={props.handleClose}
+      style={{ transition: "background-color 0.3s ease" }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6"
