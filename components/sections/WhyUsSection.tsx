@@ -6,7 +6,7 @@ import HourglassIcon from "../Icons/Hourglass";
 import HeadsetIcon from "../Icons/Headset";
 import PriceIcon from "../Icons/Price";
 import RecycleIcon from "../Icons/Recycle";
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { DarkModeContext } from "../DarkModeContext";
 
 const chooseUs = [

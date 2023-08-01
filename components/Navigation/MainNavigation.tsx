@@ -11,7 +11,7 @@ import LogoPlaceholder from "../../assets/logo-placeholder.png";
 const navItems = [
   { pageLink: "/", title: "Home" },
   { pageLink: "/about", title: "About" },
-  { pageLink: "/residential", title: "Residential" },
+  { pageLink: "/interior", title: "Interior" },
   { pageLink: "/commercial", title: "Commercial" },
   { pageLink: "/exterior", title: "Exterior" },
   { pageLink: "/contact", title: "Contact" },
