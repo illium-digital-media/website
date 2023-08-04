@@ -9,7 +9,7 @@ const NavItem: React.FC<{
 }> = (props) => {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
   <header
-    className={`w-full max-lg:shadow-lg max-lg:fixed   ${
+    className={`w-full max-lg:shadow-lg max-lg:fixed  ${
       darkMode ? "bg-zinc-800" : "bg-white"
     }`}
     style={{ transition: "background-color 0.3s ease" }}
