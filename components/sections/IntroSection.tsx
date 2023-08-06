@@ -1,11 +1,15 @@
 import IntroCards from "../IntroCards";
+import { DarkModeContext } from "../DarkModeContext";
+import React, { useContext } from "react";
 
 const IntroSection: React.FC = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <div className="">
       <div className="text-center pb-6">
-        <h3 className="font-bold text-blue-900 text-1xl">Services</h3>
-        <h4 className="font-bold  text-4xl pb-2">
+        <h3 className={`font-bold text-1xl ${darkMode ? "text-white" : "text-primary"}`}>Services</h3>
+        <h4 className="font-bold text-4xl pb-2">
           Transforming Spaces into Masterpieces
         </h4>
         <p>
