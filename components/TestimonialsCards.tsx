@@ -45,7 +45,9 @@ const Testimonials = () => {
                 <p className="font-semibold">{testimonial.name}</p>
                 <p className="">{testimonial.city}</p>
               </div>
-              <QuoteIcon />
+              <div className={`${darkMode ? "text-white" : "text-black"}`}>
+                <QuoteIcon />
+              </div>
             </div>
           </div>
         </div>

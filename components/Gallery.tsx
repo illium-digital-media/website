@@ -1,28 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Example1 from "../assets/example-1.png";
-import Example2 from "../assets/example-2.png";
-import Example3 from "../assets/example-3.png";
-import Image, { StaticImageData } from "next/image";
-// Sample image data (replace with your actual image data)
-const imageData = [
-  {
-    id: 1,
-    url: Example1,
-    category: "Exterior",
-  },
-  {
-    id: 2,
-    url: Example2,
-    category: "Interior",
-  },
-  {
-    id: 3,
-    url: Example3,
-    category: "Other",
-  },
-
-  // Add more image objects for other categories
-];
+import React, { useState, useEffect, useContext } from "react";
+import Image from "next/image";
+import { galleryPhotos } from "./data/galleryphotos";
+import { DarkModeContext } from "./DarkModeContext";
 
 // Sample service categories (replace with your actual categories)
 const serviceCategories = ["All", "Exterior", "Interior", "Other"];
@@ -31,12 +10,13 @@ const Gallery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [fadeOut, setFadeOut] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const { darkMode } = useContext(DarkModeContext);
 
   // Filter images based on the selected category
   const filteredImages =
     selectedCategory === "All"
-      ? imageData
-      : imageData.filter((image) => image.category === selectedCategory);
+      ? galleryPhotos
+      : galleryPhotos.filter((image) => image.category === selectedCategory);
 
   // Handle category button clicks
   const handleCategoryClick = (category: string) => {
@@ -69,7 +49,7 @@ const Gallery: React.FC = () => {
   return (
     <div className=" items-start">
       <div className="text-center pb-6">
-        <h3 className="font-bold text-blue-900 text-1xl">Latest Projects</h3>
+        <h3 className={`font-bold text-1xl ${darkMode ? "text-white" : "text-primary"}`}>Latest Projects</h3>
         <h4 className="font-bold text-4xl pb-2">
           Awesome Projects That Could Inspire You
         </h4>

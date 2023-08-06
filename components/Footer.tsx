@@ -29,7 +29,7 @@ const socialMediaLinks = [
 
 const Footer = () => {
   return (
-    <footer className="text-white bg-zinc-800 max-lg:px-4">
+    <footer className="text-white bg-zinc-600 max-lg:px-4">
       <div className="max-w-screen-xl m-auto">
         <div className="py-10 md:flex justify-between">
           <div className="sm:flex max-sm:pb-5">
@@ -57,8 +57,8 @@ const Footer = () => {
         </div>
         <hr />
         <div className="text-center">
-          <div className=" p-2">
-            <p className="text-sm ">
+          <div className="p-2">
+            <p className="text-sm">
               &copy; 2023 Your Website. All Rights Reserved.
             </p>
           </div>
