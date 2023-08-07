@@ -1,7 +1,7 @@
 import Image from "next/image";
 import examplePainting from "../../assets/example-painter.png";
 import CheckIcon from "@/components/Icons/Check";
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useContext } from "react";
 import { DarkModeContext } from "@/components/DarkModeContext";
 
 

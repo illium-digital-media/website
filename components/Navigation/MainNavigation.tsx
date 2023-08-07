@@ -7,7 +7,6 @@ import DarkModeToggle from "./DarkModeToggle";
 import { DarkModeContext } from "../DarkModeContext";
 import LogoPlaceholder from "../../assets/logo-placeholder.png";
 
-
 const navItems = [
   { pageLink: "/", title: "Home" },
   { pageLink: "/about", title: "About" },
@@ -18,7 +17,7 @@ const navItems = [
 ];
 
 const MainNavigation: React.FC = () => {
-  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeContext);
 
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -61,7 +60,7 @@ const MainNavigation: React.FC = () => {
         <BurgerMenu />
         <div className="py-2">
           <Link href="/">
-          <Image
+            <Image
               src={LogoPlaceholder}
               alt="Logo Placeholder"
               className="w-24"

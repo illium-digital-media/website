@@ -9,7 +9,7 @@ interface ContactItemProps {
 const ContactItem: React.FC<ContactItemProps> = ({ icon, title, value }) => {
   return (
     <div className="flex items-center pr-4">
-      <div className="p-2 shadow-lg rounded-full inline-block overflow-hidden mr-3 bg-white">
+      <div className="p-2 shadow-lg rounded-full inline-block overflow-hidden mr-3 bg-white text-primary">
         {icon}
       </div>
       <div className="grid">

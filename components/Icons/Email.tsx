@@ -20,7 +20,7 @@ const EmailIcon: React.FC = () => {
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-300.000000, -922.000000)"
-          fill="#000000"
+          fill="currentColor"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path

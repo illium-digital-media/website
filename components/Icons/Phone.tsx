@@ -1,7 +1,7 @@
 const PhoneIcon: React.FC = () => {
   return (
     <svg
-      fill="#000000"
+      fill="currentColor"
       width="30"
       height="30"
       viewBox="0 0 32 32"
