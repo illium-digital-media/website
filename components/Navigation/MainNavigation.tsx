@@ -3,33 +3,18 @@ import BurgerMenu from "../BurgerMenu";
 import NavItem from "./NavItem";
 import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
-import DarkModeToggle from "./DarkModeToggle";
 import { DarkModeContext } from "../DarkModeContext";
 import LogoPlaceholder from "../../assets/logo-placeholder.png";
 
 const navItems = [
   { pageLink: "/", title: "Home" },
   { pageLink: "/about", title: "About" },
-  { pageLink: "/interior", title: "Interior" },
-  { pageLink: "/commercial", title: "Commercial" },
-  { pageLink: "/exterior", title: "Exterior" },
+  { pageLink: "/services", title: "Services" },
   { pageLink: "/contact", title: "Contact" },
 ];
 
 const MainNavigation: React.FC = () => {
   const { darkMode } = useContext(DarkModeContext);
-
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => {
-    document.body.style.overflow = "hidden";
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    document.body.style.overflow = "auto";
-    setModalOpen(false);
-  };
 
   const [navbarVisible, setNavbarVisible] = useState(false);
 
@@ -51,9 +36,9 @@ const MainNavigation: React.FC = () => {
 
   return (
     <header
-      className={`w-full max-lg:shadow-lg max-lg:fixed z-10 ${
-        navbarVisible ? "fixed shadow-lg " : "absolute "
-      }  ${darkMode ? "bg-zinc-800" : "bg-white"}`}
+      className={`w-full max-lg:shadow-lg max-lg:fixed z-10 absolute  ${
+        darkMode ? "bg-zinc-800" : "bg-transparent"
+      }`}
       style={{ transition: "background-color 0.3s ease" }}
     >
       <nav className="flex justify-between m-auto max-w-screen-xl max-xl:px-5  ">
@@ -79,7 +64,6 @@ const MainNavigation: React.FC = () => {
               />
             ))}
           </ul>
-          <DarkModeToggle />
         </div>
       </nav>
     </header>

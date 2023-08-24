@@ -10,7 +10,7 @@ const Footer = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <footer className={`text-white ${darkMode ? 'bg-zinc-600' : 'bg-primary' } max-xl:px-4`}>
+    <footer className={`text-white bg-gradient-to-t from-black to-gray-800 max-xl:px-4`}>
       <div className="max-w-screen-xl m-auto">
         <div className="py-10 md:flex justify-between">
           <div className="sm:flex max-sm:pb-5">
@@ -36,7 +36,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <hr />
+        <hr className="border-t-2 border-t-red"/>
         <div className="text-center">
           <div className="p-2">
             <p className="text-sm">
