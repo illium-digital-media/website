@@ -2,21 +2,13 @@ import ContactButton from "../CTAs/ContactButton";
 
 const LandingSection: React.FC = () => {
   return (
-    <section
-      className=" bg-cover bg-center max-sm:px-4 flex items-center justify-center h-[500px] max-lg:h-[450px]  max-xl:px-5"
-      style={{
-        backgroundImage: `url("/space-background.jpg")`,
-      }}
-    >
-      <div className="max-w-screen-xl w-full text-white">
-        <h3 className="text-white text-5xl font-bold max-lg:text-4xl">
-          Small Business Web Design <br />
-          &amp; Development
+    <section className="max-w-screen-xl max-lg:max-w-screen-sm max-sm:px-4 m-auto pt-20 h-[500px] max-lg:h-[450px] flex items-center max-xl:px-5">
+      <div className="">
+        <h3 className="text-blue-900 text-5xl font-bold max-lg:text-4xl">
+          Your local London <br />
+          Painters &amp; Decorators
         </h3>
-        <p className="py-4">
-          No page builders or WordPress - We offer 100% hand-coded websites with
-          superior results starting at $150/mo.
-        </p>
+        <p className="py-4">Professional Painters and Decorators in London.</p>
         <ContactButton />
       </div>
     </section>
