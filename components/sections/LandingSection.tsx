@@ -9,7 +9,10 @@ const LandingSection: React.FC = () => {
       
       {/* Actual background image */}
       <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-40" style={{ backgroundImage: `url("/digital.jpg")` }}></div>
-      
+
+      {/* Fade to black gradient at the bottom */}
+      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-b from-transparent to-black z-0"></div>
+
       {/* Wrapper for content to maintain max-width */}
       <div className="max-w-screen-xl m-auto w-full z-10 flex">
         <div className="text-white w-1/2">

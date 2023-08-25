@@ -1,39 +1,34 @@
-import GraduationIcon from "../../components/Icons/Graduation";
 import TickIcon from "../Icons/Tick";
-import HourglassIcon from "../Icons/Hourglass";
-import HeadsetIcon from "../Icons/Headset";
-import PriceIcon from "../Icons/Price";
-import RecycleIcon from "../Icons/Recycle";
 
 export const whyChooseUs = [
     {
-      title: "Experienced Professionals",
-      content: "Years of expertise for expert advice and craftsmanship.",
-      image: <GraduationIcon />,
-    },
-    {
-      title: "Quality Assurance",
-      content: "Top-grade materials and proven methods for a stunning finish.",
+      title: "Ownership Stays With You",
+      content: "Your domain, content, and profiles? They're yours. Leave at any point without any fuss or hidden fees.",
       image: <TickIcon />,
     },
     {
-      title: "Exceptional Customer Service",
-      content: "Attentive, personalized service from start to finish.",
-      image: <HeadsetIcon />,
+      title: "All-Inclusive Hosting",
+      content: "Your monthly commitment includes hosting. No surprises there.",
+      image: <TickIcon />,
     },
     {
-      title: "Timely Delivery",
-      content: "Adhering strictly to project timelines for on-time completion.",
-      image: <HourglassIcon />,
+      title: "On-the-Fly Updates",
+      content: "Wish to tweak something? Consider it done on the same day.",
+      image: <TickIcon />,
     },
     {
-      title: "Competitive Pricing",
-      content: "Exceptional services at fair rates, no compromise on quality.",
-      image: <PriceIcon />,
+      title: "Round-the-Clock Support",
+      content: "Dial us directly, anytime. Experience genuine human assistance without endless automated menus.",
+      image: <TickIcon />,
     },
     {
-      title: "Environmentally Conscious",
-      content: "Eco-friendly materials and sustainable practices.",
-      image: <RecycleIcon />,
+      title: "Comprehensive Web Solutions",
+      content: "Benefit from 40+ hours of dedicated design, development, and rigorous testing.",
+      image: <TickIcon />,
+    },
+    {
+      title: "Peak Performance Metrics",
+      content: "Aim for the zenith with a 100 score on Google Page Speed, enhancing your online visibility.",
+      image: <TickIcon />,
     },
   ];

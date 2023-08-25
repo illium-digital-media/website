@@ -32,9 +32,10 @@ const HomePage: React.FC = () => {
       <div className="bg-primary">
         <LandingSection />
         {sections.map((section, index) => (
-          <Section index={index} key={index}>{section}</Section>
+          <Section index={index} key={index} gradient={index === 0}>{section}</Section>
         ))}
       </div>
+
 
     </>
   );
