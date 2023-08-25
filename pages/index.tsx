@@ -16,7 +16,7 @@ const sections = [
   <FAQ key="faq" />,
   <Gallery key="gallery" />,
   <TestimonialsSection key="testimonials" />,
-  <ContactUsSection />
+  <ContactUsSection key="contact"/>
 ];
 
 const HomePage: React.FC = () => {
