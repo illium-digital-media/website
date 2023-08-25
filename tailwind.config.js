@@ -18,7 +18,8 @@ module.exports = {
       backgroundColor: {
         primary: '#0F172A',
         secondary: '#152037',
-        tertiary: '#1A2944'
+        tertiary: '#1A2944',
+        primaryDark: '#0B121F'
       }
     },
   },

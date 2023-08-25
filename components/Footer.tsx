@@ -1,13 +1,12 @@
 import Link from "next/link";
 import EmailIcon from "../components/Icons/Email";
 import PhoneIcon from "../components/Icons/Phone";
-import ContactItem from "./ContactItem";
 import Image from "next/image";
 import LogoPlaceholder from "../assets/logo-placeholder.png";
 
 const Footer = () => {
   return (
-    <footer className={`text-gray-300 bg-black max-xl:px-4`}>
+    <footer className={`text-gray-300 bg-primaryDark max-xl:px-4`}>
       <div className="max-w-screen-xl m-auto">
         <div className="py-10">
           <div className="sm:flex max-sm:pb-5 flex justify-between">
@@ -52,7 +51,7 @@ const Footer = () => {
 
           </div>
         </div>
-        <hr />
+        <hr className="bg-cyan-400 h-px border-none"/>
         <div className="">
           <div className="p-2 flex justify-between text-sm">
             <div>
