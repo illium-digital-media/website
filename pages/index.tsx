@@ -7,6 +7,7 @@ import Head from "next/head";
 import Section from "@/components/Section";
 import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
+import ContactUsSection from "@/components/sections/ContactUsSection";
 
 const sections = [
   <IntroSection key="intro" />,
@@ -15,6 +16,8 @@ const sections = [
   <FAQ key="faq" />,
   <Gallery key="gallery" />,
   <TestimonialsSection key="testimonials" />,
+  <ContactUsSection />
+
 ];
 
 
@@ -28,10 +31,13 @@ const HomePage: React.FC = () => {
           content="Welcome to our painting and decorating site"
         />
       </Head>
-      <LandingSection />
-      {sections.map((section, index) => (
-        <Section index={index} key={index}>{section}</Section>
-      ))}
+      <div className="bg-primary">
+        <LandingSection />
+        {sections.map((section, index) => (
+          <Section index={index} key={index}>{section}</Section>
+        ))}
+      </div>
+
     </>
   );
 };

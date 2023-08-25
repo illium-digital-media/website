@@ -3,10 +3,7 @@ import BurgerMenu from "../BurgerMenu";
 import NavItem from "./NavItem";
 import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
-import DarkModeToggle from "./DarkModeToggle";
 import LogoPlaceholder from "../../assets/logo-placeholder.png";
-import { useSelector } from 'react-redux';
-import { DarkModeState } from '../../store/slices/darkmode';
 
 const navItems = [
   { pageLink: "/", title: "Home" },
@@ -16,8 +13,6 @@ const navItems = [
 ];
 
 const MainNavigation: React.FC = () => {
-  const showDarkMode = useSelector((state: DarkModeState) => state.showDarkMode);
-
   const [navbarVisible, setNavbarVisible] = useState(false);
 
   useEffect(() => {
@@ -38,12 +33,10 @@ const MainNavigation: React.FC = () => {
 
   return (
     <header
-      className={`w-full max-lg:shadow-lg max-lg:fixed z-10 ${
-        navbarVisible ? "fixed shadow-lg " : "absolute "
-      }  ${showDarkMode ? "bg-zinc-800" : "bg-white"}`}
+      className={`w-full max-lg:shadow-lg max-lg:fixed z-10 ${navbarVisible ? "fixed shadow-lg bg-primary " : "absolute bg-transparent"}`}
       style={{ transition: "background-color 0.3s ease" }}
     >
-      <nav className="flex justify-between m-auto max-w-screen-xl max-xl:px-5  ">
+      <nav className="flex justify-between m-auto max-w-screen-xl max-xl:px-5">
         <BurgerMenu />
         <div className="py-2">
           <Link href="/">
@@ -66,7 +59,6 @@ const MainNavigation: React.FC = () => {
               />
             ))}
           </ul>
-          <DarkModeToggle />
         </div>
       </nav>
     </header>

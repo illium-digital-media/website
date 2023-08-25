@@ -25,7 +25,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="" onSubmit={handleSubmit}>
+    <form className="border-l-2 border-cyan-400 p-5 bg-secondary" onSubmit={handleSubmit}>
       <Input
         value={formData.name}
         handleInputChange={handleChange}
@@ -45,7 +45,7 @@ const ContactForm = () => {
 
       <div className="mb-4">
         <textarea
-          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-900 h-[150px]"
+          className="w-full px-3 py-2 bg-tertiary text-white rounded focus:outline-none focus:border-blue-900 h-[150px]"
           id="message"
           name="message"
           placeholder="Message"
@@ -54,10 +54,7 @@ const ContactForm = () => {
           required
         ></textarea>
       </div>
-      <button
-        className="bg-blue-900 text-white font-bold py-2 px-4 rounded mt-4"
-        type="submit"
-      >
+      <button className="bg-cyan-400 rounded font-bold text-blue-900 px-6 py-3 hover:bg-blue-900 hover:text-white duration-200" type="submit">
         Submit
       </button>
     </form>

@@ -11,7 +11,7 @@ const Input: React.FC<{
   return (
     <div className="pb-3">
       <input
-        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-900"
+        className="w-full px-3 py-2 text-white bg-tertiary rounded focus:outline-none focus:border-blue-900"
         type={props.type}
         id={props.id}
         placeholder={props.placeholder}

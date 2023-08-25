@@ -2,8 +2,8 @@ const PhoneIcon: React.FC = () => {
   return (
     <svg
       fill="currentColor"
-      width="30"
-      height="30"
+      width="25"
+      height="25"
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
     >

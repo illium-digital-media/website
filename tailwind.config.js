@@ -15,6 +15,11 @@ module.exports = {
        colors: {
         primary: "#1E3A8A",
       },
+      backgroundColor: {
+        primary: '#0F172A',
+        secondary: '#152037',
+        tertiary: '#1A2944'
+      }
     },
   },
   plugins: [],

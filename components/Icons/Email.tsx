@@ -1,8 +1,8 @@
 const EmailIcon: React.FC = () => {
   return (
     <svg
-      width="30"
-      height="30"
+      width="25"
+      height="25"
       viewBox="0 -2.5 20 20"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
