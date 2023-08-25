@@ -17,9 +17,7 @@ const sections = [
   <Gallery key="gallery" />,
   <TestimonialsSection key="testimonials" />,
   <ContactUsSection />
-
 ];
-
 
 const HomePage: React.FC = () => {
   return (

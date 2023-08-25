@@ -1,27 +1,31 @@
-import residentialImage from "../../assets/residential-intro.svg";
-import commercialImage from "../../assets/commercial-intro.svg";
-import exteriorImage from "../../assets/exterior-intro.svg";
+import CodeIcon from "../Icons/Code";
+import MagnifyingGlassIcon from "../Icons/MagnifyingGlass";
+import PuzzlePieceIcon from "../Icons/PuzzlePiece";
+import SmartPhoneIcon from "../Icons/SmartPhone";
 
 export const introCards = [
-    {
-      name: "Interior Painting",
-      comment:
-        "Transform homes with expert interior painting services, bringing your vision to life with flawless finishes.",
-      image: residentialImage,
-      link: "/services/interior",
-    },
-    {
-      name: "Commercial Painting",
-      comment:
-        "Elevate business spaces with professional commercial painting, creating inviting environments aligned with your brand identity.",
-      image: commercialImage,
-      link: "/services/commercial",
-    },
-    {
-      name: "Exterior Painting",
-      comment:
-        "Protect and beautify properties with top-quality exterior painting, leaving a lasting impression with eye-catching finishes.",
-      image: exteriorImage,
-      link: "/services/exterior",
-    },
-  ];
+  {
+    name: "Handcrafted Solutions",
+    comment:
+      "We hand-code for US-based small businesses, ensuring top performance. This drives more visitors and elevates your revenue. ",
+    icon: <CodeIcon />,
+  },
+  {
+    name: "Mobile-First Approach",
+    comment:
+      "We prioritize mobile design, then enhance for tablets and desktops, ensuring a seamless user experience across devices.",
+    icon: <SmartPhoneIcon />,
+  },
+  {
+    name: "Fully Responsive",
+    comment:
+      "Our designs adapt effortlessly to all devices, from mobiles to desktops, providing a consistent brand experience.",
+    icon: <PuzzlePieceIcon />,
+  },
+  {
+    name: "Optimized for Visibility",
+    comment:
+      "With 60% of web traffic from mobiles, we fine-tune your site for top search engine rankings.",
+    icon: <MagnifyingGlassIcon />,
+  },
+];
