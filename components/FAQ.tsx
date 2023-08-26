@@ -25,7 +25,6 @@ const FAQ: React.FC = () => {
       </div>
       <div className="sm:w-1/2">
         <div className="pb-6">
-          <h3 className={`font-bold text-1xl ${darkMode ? "text-white" : "text-primary"}`}>FAQ</h3>
           <h4 className="font-bold text-4xl pb-2">Our Most Common Questions</h4>
           <p>
             Browse through our frequently asked questions to find quick and
