@@ -1,5 +1,4 @@
 import FadeInText from "../FadeInTypingText";
-import IntroCards from "../IntroCards";
 import TestimonialCards from "../TestimonialsCards";
 
 const TestimonialsSection: React.FC = () => {
