@@ -1,3 +1,4 @@
+import CommonLanding from "@/components/sections/CommonLanding";
 import Head from "next/head";
 
 const HomePage: React.FC = () => {
@@ -10,7 +11,8 @@ const HomePage: React.FC = () => {
           content="Welcome to our painting and decorating site"
         />
       </Head>
-      <h1>Services Page</h1>
+      <CommonLanding heading={"Services"} />
+
     </>
   );
 };

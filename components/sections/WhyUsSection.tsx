@@ -1,4 +1,5 @@
-import { whyChooseUs } from "../data/whychooseus";
+import FadeInText from "../FadeInTypingText";
+import { whyChooseUs } from "../../data/whychooseus";
 
 const WhyUsSection: React.FC = () => {
 
@@ -7,7 +8,7 @@ const WhyUsSection: React.FC = () => {
       <div className="max-lg:w-full  max-lg:px-5">
         <div className="pb-6 text-center">
           <h4 className="font-bold  text-4xl pb-2">
-          Transparent Pricing, Tangible Results
+            <FadeInText text="Transparent Pricing, Tangible Results"/>
           </h4>
           <p className="text-gray-400">
           Begin with our comprehensive package for small businesses at no initial cost. For more intricate requirements, we provide tailor-made solutions to match your vision.

@@ -35,13 +35,13 @@ const Footer = () => {
 
                   <li className="pb-2">
                     <div className="flex overflow-hidden mr-3">
-                      <div className="pr-3 text-cyan-400"><PhoneIcon /></div>
+                      <div className="pr-3 text-orange-400"><PhoneIcon /></div>
                       +44 123 456 789
                     </div>
                   </li>
                   <li className="">
                     <div className="flex overflow-hidden mr-3">
-                      <div className="pr-3 text-cyan-400"><EmailIcon /></div>
+                      <div className="pr-3 text-orange-400"><EmailIcon /></div>
                       example@gmail.com
                     </div>
                   </li>

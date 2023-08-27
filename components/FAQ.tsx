@@ -1,12 +1,12 @@
-import Image from "next/image";
-import React, { useState, useContext, useEffect } from "react";
-import { DarkModeContext } from "./DarkModeContext";
-import examplePainting from "../assets/example-painter.png";
-import { faqs } from "./data/faqs";
+import React, { useState } from "react";
+import { faqs } from "../data/faqs";
+import FadeInText from "./FadeInTypingText";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import styles from "./faq.module.css"; // Replace with the actual filename
 
 const FAQ: React.FC = () => {
   const [openItemIndices, setOpenItemIndices] = useState<number[]>([]);
-  const { darkMode } = useContext(DarkModeContext);
+  const [activeTab, setActiveTab] = useState<number>(0);
 
   const toggleItem = (index: number) => {
     setOpenItemIndices((prevIndices) => {
@@ -19,47 +19,68 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="sm:flex">
-      <div className="max-sm:hidden sm:w-1/2">
-        <Image src={examplePainting} width={500} height={500} alt={"Test"} />
-      </div>
-      <div className="sm:w-1/2">
-        <div className="pb-6">
-          <h4 className="font-bold text-4xl pb-2">Our Most Common Questions</h4>
-          <p>
-            Browse through our frequently asked questions to find quick and
-            helpful answers about our painting and decorating solutions.
-          </p>
-        </div>
-        {faqs.map((item, index) => (
-          <div key={index} className={`mb-4 rounded-lg shadow-lg bg-primary`}>
-            <div
-              className={`faq-section ${
-                openItemIndices.includes(index) ? "open" : "closed"
-              } overflow w-hidden transition-max-h duration-300`}
+    <div className="max-w-4xl mx-auto">
+      <div className="w-full">
+        <h4 className="pb-6 text-center font-bold text-4xl pb-2 text-white">
+          <FadeInText text="Frequently Asked Questions" />
+        </h4>
+
+        {/* Tabs */}
+        <div className="flex justify-center space-x-4 mb-6">
+          {faqs.map((category, index) => (
+            <button
+              key={index}
+              className={`px-4 py-2 rounded-lg ${
+                activeTab === index
+                  ? "bg-orange-400 text-white"
+                  : "bg-tertiary text-gray-300"
+              } hover:bg-orange-400 hover:text-white transition-colors duration-200`}
+              onClick={() => setActiveTab(index)}
             >
-              <div
-                className="flex justify-between cursor-pointer"
-                onClick={() => toggleItem(index)}
-              >
-                <div className="flex p-3 justify-between text-white items-center w-full">
-                  <div className="font-semibold">{item.question}</div>
-                  <div>{openItemIndices.includes(index) ? "-" : "+"}</div>
+              {category.category}
+            </button>
+          ))}
+        </div>
+
+        <TransitionGroup className={`${styles["animate-fade-in"]} bg-tertiary p-5 rounded-lg`}>
+          {faqs[activeTab].questions.map((item, index) => (
+            <CSSTransition
+              key={index}
+              timeout={500}
+              classNames={{
+                enter: styles["fade-enter"],
+                enterActive: styles["fade-enter-active"],
+                exit: styles["fade-exit"],
+                exitActive: styles["fade-exit-active"],
+              }}
+            >
+              <div className={`mb-4 rounded-lg shadow-lg border bg-secondary border-cyan-400`}>
+                <div className="faq-section">
+                  <div
+                    className="flex justify-between cursor-pointer p-3 justify-between text-white items-center w-full"
+                    onClick={() => toggleItem(index)}
+                  >
+                    <div className="font-semibold">{item.question}</div>
+                    <div>{openItemIndices.includes(index) ? "-" : "+"}</div>
+                  </div>
+
+                  {/* FAQ Answer */}
+                  <div
+                    className={`overflow-hidden transition-all ease-in-out duration-500 ${
+                      openItemIndices.includes(index)
+                        ? "max-h-96"
+                        : "max-h-0"
+                    }`}
+                  >
+                    <div className="p-3 pt-1 rounded-b-lg text-gray-300">
+                      {item.answer}
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              {openItemIndices.includes(index) && (
-                <div
-                  className={`mt-2 bg-white p-3 rounded-b-lg ${
-                    darkMode ? "bg-zinc-500" : "bg-white"
-                  }`}
-                >
-                  {item.answer}
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
       </div>
     </div>
   );

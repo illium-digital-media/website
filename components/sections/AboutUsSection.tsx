@@ -1,5 +1,4 @@
 import Image from "next/image";
-import examplePainting from "../../assets/example-painter.png";
 import CheckIcon from "@/components/Icons/Check";
 import React, { useContext } from "react";
 import { DarkModeContext } from "@/components/DarkModeContext";
@@ -19,7 +18,6 @@ const AboutUsSection: React.FC = () => {
   return (
     <div className="flex ">
       <div className="max-sm:hidden sm:w-1/2">
-        <Image src={examplePainting} width={500} height={500} alt={"Test"} />
       </div>
       <div className="pb-6 sm:w-1/2">
         <h3 className={`font-bold text-1xl ${darkMode ? "text-white" : "text-primary"}`}>About Us</h3>

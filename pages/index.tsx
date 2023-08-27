@@ -5,16 +5,18 @@ import WhyUsSection from "../components/sections/WhyUsSection";
 import LandingSection from "../components/sections/LandingSection";
 import Head from "next/head";
 import Section from "@/components/Section";
-import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
 import ContactUsSection from "@/components/sections/ContactUsSection";
+import ProcessSection from "@/components/sections/ProcessSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
 
 const sections = [
   <IntroSection key="intro" />,
   <AboutUsSection key="about" />,
   <WhyUsSection key="why-us" />,
+  <PortfolioSection key="portfolio" />,
+  <ProcessSection key="process" />,
   <FAQ key="faq" />,
-  <Gallery key="gallery" />,
   <TestimonialsSection key="testimonials" />,
   <ContactUsSection key="contact"/>
 ];

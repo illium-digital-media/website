@@ -1,5 +1,5 @@
 import StarRating from "./StarRating";
-import { testimonials } from "./data/testimonials";
+import { testimonials } from "../data/testimonials";
 
 const TestimonialCards = () => {
   return (

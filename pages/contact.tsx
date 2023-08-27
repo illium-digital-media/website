@@ -3,7 +3,7 @@ import ContactForm from "../components/ContactForm";
 import Head from "next/head";
 import CommonLanding from "@/components/sections/CommonLanding";
 import Section from "@/components/Section";
-import { contactCards } from "@/components/data/contactcards";
+import { contactCards } from "@/data/contactcards";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 
 const ContactPage: React.FC = () => {

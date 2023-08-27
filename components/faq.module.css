@@ -1,0 +1,32 @@
+/* Fade-in transition for individual items */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 500ms, transform 500ms;
+}
+
+/* Fade-in transition for the entire FAQ section */
+.animate-fade-in-enter {
+  opacity: 0;
+}
+
+.animate-fade-in-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+}

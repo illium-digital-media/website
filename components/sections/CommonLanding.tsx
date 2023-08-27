@@ -1,3 +1,4 @@
+import FadeInText from "../FadeInTypingText";
 
 const CommonLanding: React.FC<{ heading: string }> = (props) => {
   return (
@@ -11,7 +12,7 @@ const CommonLanding: React.FC<{ heading: string }> = (props) => {
 
       {/* Wrapper for content to maintain max-width */}
       <div className="max-w-screen-xl m-auto w-full z-10 flex justify-center">
-        <h3 className="text-5xl font-bold max-lg:text-4xl text-white">{props.heading}</h3>
+        <h3 className="text-5xl font-bold max-lg:text-4xl text-white"><FadeInText text={props.heading} /></h3>
       </div>
     </section>
   );

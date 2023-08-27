@@ -54,7 +54,9 @@ const ContactForm = () => {
           required
         ></textarea>
       </div>
-      <button className="bg-cyan-400  hover:bg-orange-400 rounded font-bold text-blue-900 px-6 py-3 hover:bg-blue-900 hover:text-white duration-200" type="submit">
+      {/* <button className="bg-orange-400 text-xs rounded font-bold uppercase text-white px-6 py-3 hover:bg-orange-400 hover:scale-105  hover:shadow-cyan-glow duration-200 focus:ring focus:outline-none"> */}
+
+      <button className="bg-orange-400 text-sm rounded font-bold text-blue-900 px-6 py-3 text-white duration-200 hover:scale-105 hover:shadow-cyan-glow duration-200 focus:ring focus:outline-none" type="submit">
         Submit
       </button>
     </form>
