@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
         />
       </Head>
       <CommonLanding heading={"About Us"} />
-      <Section index={0}>
+      <Section index={0} totalSections={1}>
         <AboutUsSection />
       </Section>
     </>

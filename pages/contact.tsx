@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {
       </Head>
       <CommonLanding heading={"Contact Us"} />
       <div className="bg-primary">
-        <Section index={0}>
+        <Section index={0} totalSections={1}>
           <ContactUsSection />
         </Section>
       </div>

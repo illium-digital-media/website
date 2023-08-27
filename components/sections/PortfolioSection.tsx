@@ -12,16 +12,22 @@ const PortfolioSection: React.FC = () => {
         <>
             <h2 className="text-4xl font-bold mb-6 text-center text-white pb-10"><FadeInText text='Our Latest Projects' /></h2>
             <div className="flex">
-                <div className="w-1/2 flex items-center ">
-                    <div className='w-full'>
+                <div className="w-1/2 flex items-center">
+                    <div className='w-3/4'>
                         {projects.map((project) => (
-                            <div
-                                key={project.id}
-                                onClick={() => setActiveSite(project.id)}
-                                className={`p-4 w-3/4 hover:text-cyan-400 cursor-pointer border-b border-cyan-400 ${activeSite === project.id ? 'font-bold text-cyan-400' : 'text-white'}`}
-                            >
-                                {project.name}
-                            </div>
+                            <>
+                                <div
+                                    key={project.id}
+                                    onClick={() => setActiveSite(project.id)}
+                                    className={`p-4  hover:text-cyan-400 cursor-pointer ${activeSite === project.id ? 'font-bold text-cyan-400' : 'text-white'}`}
+                                >
+                                    {project.name}
+
+                                </div>
+                                <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-none max-w-screen-lg m-auto" />
+                            </>
+
+
                         ))}
                     </div>
                 </div>
@@ -30,7 +36,7 @@ const PortfolioSection: React.FC = () => {
                     {projects.map((project) => (
                         activeSite === project.id &&
                         <div className="relative">
-                            <a href={project.url} className="absolute top-4 right-4">
+                            <a href={project.url} target="_blank" className="absolute top-4 right-4">
                                 <div className="text-white hover:text-cyan-400 cursor-pointer">
                                     <RightUpArrowIcon />
                                 </div>
