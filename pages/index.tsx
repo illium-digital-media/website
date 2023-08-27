@@ -9,16 +9,18 @@ import FAQ from "@/components/FAQ";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
+import ServicesSection from "@/components/sections/ServicesSection";
 
 const sections = [
   <IntroSection key="intro" />,
   <AboutUsSection key="about" />,
+  <ServicesSection key="services" />,
   <WhyUsSection key="why-us" />,
   <PortfolioSection key="portfolio" />,
   <ProcessSection key="process" />,
   <FAQ key="faq" />,
   <TestimonialsSection key="testimonials" />,
-  <ContactUsSection key="contact"/>
+  <ContactUsSection key="contact" />
 ];
 
 const HomePage: React.FC = () => {
@@ -31,14 +33,10 @@ const HomePage: React.FC = () => {
           content="Welcome to our painting and decorating site"
         />
       </Head>
-      <div className="bg-primary">
-        <LandingSection />
-        {sections.map((section, index) => (
-          <Section index={index} key={index} gradient={index === 0} totalSections={sections.length}>{section}</Section>
-        ))}
-      </div>
-
-
+      <LandingSection />
+      {sections.map((section, index) => (
+        <Section index={index} key={index} gradient={index === 0} totalSections={sections.length}>{section}</Section>
+      ))}
     </>
   );
 };

@@ -22,12 +22,9 @@ const PortfolioSection: React.FC = () => {
                                     className={`p-4  hover:text-cyan-400 cursor-pointer ${activeSite === project.id ? 'font-bold text-cyan-400' : 'text-white'}`}
                                 >
                                     {project.name}
-
                                 </div>
                                 <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-none max-w-screen-lg m-auto" />
                             </>
-
-
                         ))}
                     </div>
                 </div>

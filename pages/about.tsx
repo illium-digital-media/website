@@ -2,6 +2,12 @@ import AboutUsSection from "../components/sections/AboutUsSection";
 import CommonLanding from "../components/sections/CommonLanding";
 import Head from "next/head";
 import Section from "@/components/Section";
+import ContactUsSection from "@/components/sections/ContactUsSection";
+
+const sections = [
+  <AboutUsSection key="about" />,
+  <ContactUsSection key="contact" />
+];
 
 const AboutPage: React.FC = () => {
   return (
@@ -14,9 +20,9 @@ const AboutPage: React.FC = () => {
         />
       </Head>
       <CommonLanding heading={"About Us"} />
-      <Section index={0} totalSections={1}>
-        <AboutUsSection />
-      </Section>
+      {sections.map((section, index) => (
+        <Section index={index} key={index} totalSections={sections.length}>{section}</Section>
+      ))}
     </>
   );
 };

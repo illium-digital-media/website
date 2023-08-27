@@ -7,8 +7,6 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ children, index, classes, gradient = false, totalSections }) => {
-  const bgColorDarkMode = index % 2 === 0 ? "bg-primary" : "bg-zinc-800";
-
   const gradientStyle = gradient ? {
     backgroundImage: 'linear-gradient(to top, transparent 90%, black 100%)'
   } : {};
@@ -21,7 +19,8 @@ const Section: React.FC<SectionProps> = ({ children, index, classes, gradient = 
       >
         <div className="m-auto max-w-screen-xl">{children}</div>
       </section>
-      {index + 1 !== totalSections && <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-none max-w-screen-lg m-auto" />}
+      {index + 1 !== totalSections && <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-t-0 border-transparent max-w-screen-lg m-auto" />
+}
     </>
   );
 };
