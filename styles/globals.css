@@ -59,6 +59,20 @@ body {
   /* ... add other gradient borders similarly */
 }
 
-.slick-slide {
-    display: inline-block;
+/* styles.css */
+.slick-track {
+  display: flex !important;
+}
+
+
+
+.slick-dots li button:before {
+    color: rgba(0, 255, 255, 0.3) !important; /* This is a transparent version of cyan */
+    opacity: 1 !important;
+    font-size:12px !important;
+}
+
+/* Active dot */
+.slick-dots li.slick-active button:before {
+    color: cyan !important;
 }
