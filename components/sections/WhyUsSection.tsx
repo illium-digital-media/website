@@ -17,7 +17,7 @@ const WhyUsSection: React.FC = () => {
               key={index}
               className={`sm:mx-1 max-sm:mb-3 rounded-lg mb-2 flex`}
             >
-              <div className="flex">
+              <div className="flex items-center">
                 <div className={`mr-5 text-orange-400`}>{item.image}</div>
                 <div>
                   <h3 className="text-1xl font-bold pb-2">{item.title}</h3>

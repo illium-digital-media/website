@@ -9,12 +9,10 @@ import FAQ from "@/components/FAQ";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
-import ServicesSection from "@/components/sections/ServicesSection";
 
 const sections = [
   <IntroSection key="intro" />,
   <AboutUsSection key="about" />,
-  <ServicesSection key="services" />,
   <WhyUsSection key="why-us" />,
   <PortfolioSection key="portfolio" />,
   <ProcessSection key="process" />,
