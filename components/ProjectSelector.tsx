@@ -19,9 +19,9 @@ const ProjectSelector: React.FC<{ activeSite: string; setActiveSite: (id: string
 
     return (
         <div className="pt-5 text-white font-bold flex justify-between items-center">
-            <button onClick={prevProject} className="text-gray-500"><LeftArrowIcon/></button>
+            <button onClick={prevProject} className="text-orange-400"><LeftArrowIcon/></button>
             <div>{projects.find(p => p.id === activeSite)?.name}</div>
-            <button onClick={nextProject} className="text-gray-500"><RightArrowIcon/></button>
+            <button onClick={nextProject} className="text-orange-400"><RightArrowIcon/></button>
         </div>
     );
 };

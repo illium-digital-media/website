@@ -1,37 +1,12 @@
 
 
-import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import dualScreen from '../../assets/dual.png';
 import FadeInText from '../FadeInTypingText';
+import useVisibilityOnScroll from "@/hooks/useVisibilityonScroll";
 
 const AboutUsSection: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-          observer.unobserve(sectionRef.current!);
-        }
-      },
-      {
-        threshold: 0.1 // Adjust if needed
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+  const { isVisible, sectionRef } = useVisibilityOnScroll();
 
   return (
     <div ref={sectionRef} className="sm:flex items-center">

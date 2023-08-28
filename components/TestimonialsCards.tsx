@@ -3,13 +3,13 @@ import { testimonials } from "../data/testimonials";
 
 const TestimonialCards = () => {
   return (
-    <div className="md:flex md:space-x-4 text-white">
+    <div className="md:flex text-white">
       {testimonials.map((testimonial, index) => (
         <div
           key={index}
           className={`mx-3 rounded-lg mb-4 bg-gradient-to-r from-secondary to-cyan-400 p-0.5`}
         >
-          <div className="bg-gradient-to-r from-secondary via-tertiary to-secondary">
+          <div className="h-full bg-gradient-to-r from-secondary via-tertiary to-secondary">
             <div className="p-5">
               <StarRating rating={4} />
               <p className="py-3">&quot;{testimonial.comment}&quot;</p>

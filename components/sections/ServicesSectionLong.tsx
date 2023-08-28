@@ -88,9 +88,6 @@ const ServicesSectionLong = () => {
 
     return (
         <div className="">
-            <h4 className="text-center font-bold text-white text-4xl pb-5">
-                Our Services
-            </h4>
             <div className="sm:flex justify-center pb-6">
                 {servicesContent.map((service, index) => (
                     <button
