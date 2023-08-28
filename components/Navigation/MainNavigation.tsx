@@ -1,16 +1,10 @@
 import Link from "next/link";
 import BurgerMenu from "../BurgerMenu";
 import NavItem from "./NavItem";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import LogoPlaceholder from "../../assets/logo-placeholder.png";
-
-const navItems = [
-  { pageLink: "/", title: "Home" },
-  { pageLink: "/about", title: "About" },
-  { pageLink: "/services", title: "Services" },
-  { pageLink: "/contact", title: "Contact" },
-];
+import { navigationItems } from "@/data/navigationitems";
 
 const MainNavigation: React.FC = () => {
   const [navbarVisible, setNavbarVisible] = useState(false);
@@ -50,7 +44,7 @@ const MainNavigation: React.FC = () => {
 
         <div className="flex">
           <ul className="menu-list max-lg:hidden menu flex pr-5">
-            {navItems.map((item, index) => (
+            {navigationItems.map((item, index) => (
               <NavItem
                 key={index}
                 pageLink={item.pageLink}

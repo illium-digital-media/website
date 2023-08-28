@@ -3,7 +3,7 @@ import FadingText from "../FadeInTypingText";
 
 const LandingSection: React.FC = () => {
   return (
-    <section className="relative max-sm:px-4 pt-20 flex items-center max-xl:px-5 w-full h-[650px]">
+    <section className="relative max-sm:px-4 pt-20 flex items-center max-xl:px-5 w-full max-sm:h-[450px] sm:h-[650px]">
 
       {/* Background pseudo-element */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-0"></div>
@@ -16,7 +16,7 @@ const LandingSection: React.FC = () => {
 
       {/* Wrapper for content to maintain max-width */}
       <div className="max-w-screen-xl m-auto w-full z-10 flex">
-        <div className="text-white w-1/2">
+        <div className="text-white sm:w-1/2">
           <h3 className="text-5xl font-bold max-lg:text-4xl">
             <FadingText text="Web Development Beyond the Ordinary" />
           </h3>

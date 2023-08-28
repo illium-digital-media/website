@@ -4,14 +4,14 @@ import FadeInText from "../FadeInTypingText";
 
 const AboutUsSection: React.FC = () => {
   return (
-    <div className="flex items-center">
-      <div className="max-sm:hidden w-1/2 rounded-lg pr-20">
+    <div className="sm:flex items-center">
+      <div className="sm:w-1/2 rounded-lg sm:pr-20">
         <Image alt="web-design" src={dualScreen} />
       </div>
-      <div className="max-w-5xl m-auto w-1/2">
-        <h4 className="font-bold text-4xl text-white pb-5">
+      <div className="max-w-5xl m-auto sm:w-1/2">
+        <h4 className="font-bold sm:text-center text-4xl text-white pb-5">
           <FadeInText text="Helping Small Businesses Thrive, One Website at a Time" />
-          </h4>
+        </h4>
         <p className="pb-5 text-gray-300">
           Hey there, I'm Clay. The heart, soul, and coding brain behind Illium Digital Media. You know, it's funny – even as I immersed myself in the intricate world of computer science during my Master's, I had never actually built a website from scratch.
         </p>
