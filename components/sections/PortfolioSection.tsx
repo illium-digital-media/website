@@ -31,9 +31,9 @@ const PortfolioSection: React.FC = () => {
                 </div>
                 <div className={`sm:w-1/2 bg-secondary rounded-lg flex items-center justify-center transition-transform duration-500 ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400">
-                        {projects.map((project) => (
+                        {projects.map((project, index) => (
                             activeSite === project.id &&
-                            <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
+                            <div key={index} className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
                                 <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary p-5 max-sm:p-3">
                                     <div className="relative">
                                         <a href={project.url} target="_blank" className="absolute top-0 right-0  bg-transparent">
