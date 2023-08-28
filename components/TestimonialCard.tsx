@@ -2,10 +2,8 @@ import StarRating from "./StarRating";
 
 const TestimonialCard: React.FC<{ comment: string; name: string; company: string; }> = (props) => {
     return (
-        <div
-            className={`mx-3 rounded-lg mb-4 bg-gradient-to-r from-secondary to-cyan-400 p-0.5`}
-        >
-            <div className="h-full bg-gradient-to-r from-secondary via-tertiary to-secondary">
+        <div className={`max-sm:w-80 max-sm:h-80 mx-3 rounded-lg mb-4 bg-gradient-to-r from-secondary to-cyan-400 p-0.5 `} >
+            <div className="h-full bg-gradient-to-r from-secondary via-tertiary to-secondary text-white">
                 <div className="p-5">
                     <StarRating rating={4} />
                     <p className="py-3">&quot;{props.comment}&quot;</p>
