@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { services } from "@/data/services";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 const ServicesSectionLong = () => {
     const [activeTab, setActiveTab] = useState<number>(0);
+    const [activeImage, setActiveImage] = useState<StaticImageData>(services[activeTab].image);
+
+    useEffect(() => {
+        setActiveImage(services[activeTab].image);
+    }, [activeTab]);
 
     return (
         <div className="">
@@ -26,7 +31,7 @@ const ServicesSectionLong = () => {
                 <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary px-5 py-5">
                     <div className="pb-6 text-center font-bold text-4xl pb-2 text-white">{services[activeTab].name}</div>
                     <div className="flex justify-center">
-                        <Image src={services[activeTab].image} alt={services[activeTab].name} className="h-72 w-96 max-lg:w-56 max-lg:h-32" />
+                        <Image src={activeImage} alt={services[activeTab].name} className="h-72 w-96 max-lg:w-56 max-lg:h-32" />
                     </div>
                     {services[activeTab].content.map((contentItem, contentIndex) => (
                         <div key={contentIndex} className="mb-6">
