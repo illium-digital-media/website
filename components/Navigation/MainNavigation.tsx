@@ -27,7 +27,7 @@ const MainNavigation: React.FC = () => {
 
   return (
     <header
-      className={`w-full max-lg:shadow-lg max-lg:fixed z-10 ${navbarVisible ? "fixed shadow-lg bg-primary " : "absolute bg-transparent"}`}
+      className={`w-full max-lg:shadow-lg max-lg:fixed z-10 ${navbarVisible ? "fixed shadow-lg bg-gradient-to-r from-primary via-secondary to-primary " : "absolute bg-transparent"}`}
       style={{ transition: "background-color 0.3s ease" }}
     >
       <nav className="flex justify-between m-auto max-w-screen-xl max-xl:px-5">

@@ -6,7 +6,7 @@ const IntroCards = () => {
       {introCards.map((intro, index) => (
         <div
           key={index}
-          className={`sm:mx-2 w-1/4 max-md:w-full max-sm:mb-3 text-center rounded-lg mb-4 shadow-lg bg-secondary horizontal-gradient-border`}
+          className={`sm:mx-2 w-1/4 max-md:w-full max-sm:mb-3 text-center rounded-lg mb-4 shadow-lg bg-secondary`}
         >
           <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
             <div className="h-full w-full  bg-gradient-to-r from-secondary via-tertiary to-secondary px-5 py-5">
