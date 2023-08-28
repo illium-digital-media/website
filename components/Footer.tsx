@@ -7,10 +7,10 @@ import LogoPlaceholder from "../assets/logo-placeholder.png";
 const Footer = () => {
   return (
     <footer className={`text-gray-300 bg-primaryDark max-xl:px-4`}>
-      <div className="max-w-screen-xl m-auto">
+      <div className="max-w-screen-xl m-auto max-sm:text-center">
         <div className="py-10">
-          <div className="sm:flex max-sm:pb-5 flex justify-between">
-            <div>
+          <div className="sm:flex max-sm:pb-5 sm:flex justify-between">
+            <div className="max-sm:pb-10">
               <Image
                 src={LogoPlaceholder}
                 alt="Logo Placeholder"
@@ -18,8 +18,8 @@ const Footer = () => {
               />
             </div>
 
-            <div className="flex">
-              <div className="pr-20">
+            <div className="sm:flex">
+              <div className="max-sm:pb-10 sm:pr-20">
                 <div className="text-white font-bold pb-4">Links</div>
                 <ul>
                   <Link href={'/'}><li className="hover:text-cyan-400 duration-200 pb-2">Home</li></Link>
@@ -29,42 +29,32 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className="">
+              <div className="sm:pb-10">
                 <div className="text-white font-bold pb-4">Contact</div>
-                <ul>
-
-                  <li className="pb-2">
-                    <div className="flex overflow-hidden mr-3">
+                <div className="flex items-center justify-center">  {/* This centers the <ul> within its parent */}
+                  <ul>
+                    <li className="pb-2 flex items-center sm:mr-3">
                       <div className="pr-3 text-orange-400"><PhoneIcon /></div>
                       +44 123 456 789
-                    </div>
-                  </li>
-                  <li className="">
-                    <div className="flex overflow-hidden mr-3">
-                      <div className="pr-3 text-orange-400"><EmailIcon /></div>
-                      example@gmail.com
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+                    <li className="flex items-center sm:mr-3">
+                      <div className="flex">
+                        <div className="pr-3 text-orange-400"><EmailIcon /></div>
+                        example@gmail.com
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
             </div>
 
           </div>
         </div>
-        <hr className="bg-cyan-400 h-px border-none"/>
-        <div className="">
-          <div className="p-2 flex justify-between text-sm">
-            <div>
-              <p className="">
-                &copy; 2023 Your Website. All Rights Reserved.
-              </p>
-            </div>
-            <div className="flex">
-              <Link href={'/'}><p className="pr-8 hover:text-cyan-400 duration-200">Terms of Use</p></Link>
-              <Link href={'/'}><p className="hover:text-cyan-400 duration-200">Privacy Policy</p></Link>
-            </div>
+        <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-t-0 border-transparent m-auto" />
 
-          </div>
+        <div className="p-2 text-center text-sm">
+          &copy; 2023 Your Website. All Rights Reserved.
         </div>
       </div>
     </footer>
