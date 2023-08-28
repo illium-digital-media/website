@@ -6,7 +6,7 @@ import LogoPlaceholder from "../assets/logo-placeholder.png";
 
 const Footer = () => {
   return (
-    <footer className={`text-gray-300 bg-primaryDark max-xl:px-4`}>
+    <footer className={`text-gray-300 bg-primary max-xl:px-4`}>
       <div className="max-w-screen-xl m-auto max-sm:text-center">
         <div className="py-10">
           <div className="sm:flex max-sm:pb-5 sm:flex justify-between">

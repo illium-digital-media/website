@@ -19,8 +19,7 @@ const Section: React.FC<SectionProps> = ({ children, index, classes, gradient = 
       >
         <div className="m-auto max-w-screen-xl">{children}</div>
       </section>
-      {index + 1 !== totalSections && <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-t-0 border-transparent max-w-screen-lg m-auto" />
-}
+      <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-t-0 border-transparent max-w-screen-lg m-auto" />
     </>
   );
 };
