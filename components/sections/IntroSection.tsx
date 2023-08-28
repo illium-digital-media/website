@@ -1,5 +1,6 @@
 import FadeInText from "../FadeInTypingText";
 import IntroCards from "../IntroCards";
+import IntroCardsSlider from "../IntroCardsSlider";
 
 const IntroSection: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const IntroSection: React.FC = () => {
       </div>
       <IntroCards />
     </div>
+    // <IntroCardsSlider/>
   );
 };
 

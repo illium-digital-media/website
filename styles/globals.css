@@ -58,3 +58,7 @@ body {
   }
   /* ... add other gradient borders similarly */
 }
+
+.slick-slide {
+    display: inline-block;
+}
