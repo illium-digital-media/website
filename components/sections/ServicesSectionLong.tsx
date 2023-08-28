@@ -97,7 +97,7 @@ const ServicesSectionLong = () => {
                         key={index}
                         className={`max-sm:w-full max-sm:mb-3 sm:mx-3 px-4 py-2 rounded-lg ${activeTab === index
                             ? "bg-orange-400 text-white"
-                            : "bg-tertiary text-gray-300"
+                            : "bg-tertiary text-gray-300 hover:shadow-cyan-glow"
                             } hover:bg-orange-400 hover:text-white transition-colors duration-200`}
                         onClick={() => setActiveTab(index)}
                     >

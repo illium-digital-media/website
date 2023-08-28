@@ -25,6 +25,7 @@ const FAQ: React.FC = () => {
           <FadeInText text="Frequently Asked Questions" />
         </h4>
 
+
         <div className="sm:flex justify-center mb-6">
           {faqs.map((category, index) => (
             <button
@@ -32,7 +33,7 @@ const FAQ: React.FC = () => {
               className={`max-sm:w-full max-sm:mb-3 sm:mx-3 px-4 py-2 rounded-lg ${
                 activeTab === index
                   ? "bg-orange-400 text-white"
-                  : "bg-tertiary text-gray-300"
+                  : "bg-tertiary text-gray-300 hover:shadow-cyan-glow"
               } hover:bg-orange-400 hover:text-white transition-colors duration-200`}
               onClick={() => setActiveTab(index)}
             >
