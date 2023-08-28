@@ -43,7 +43,7 @@ const AboutUsSection: React.FC = () => {
       <div 
         className={`max-w-5xl m-auto sm:w-1/2 transform transition-transform duration-500 ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}
       >
-          <h4 className="font-bold sm:text-center text-4xl text-white pb-5">
+          <h4 className="font-bold max-sm:text-center text-4xl text-white pb-5">
             <FadeInText text="Helping Small Businesses Thrive, One Website at a Time" />
           </h4>
           <p className="pb-5 text-gray-300">

@@ -52,9 +52,8 @@ const Footer = () => {
           </div>
         </div>
         <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-t-0 border-transparent m-auto" />
-
         <div className="p-2 text-center text-sm">
-          &copy; 2023 Your Website. All Rights Reserved.
+          &copy; 2023 Illium Digital Media. All Rights Reserved.
         </div>
       </div>
     </footer>

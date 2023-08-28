@@ -6,15 +6,20 @@ const IntroCards = () => {
       {introCards.map((intro, index) => (
         <div
           key={index}
-          className={`sm:mx-1 px-5 py-5 w-1/4 max-md:w-full max-sm:py-10 max-sm:mb-3 text-center border border-cyan-400 rounded-lg mb-4 shadow-lg bg-secondary`}
+          className={`sm:mx-2 w-1/4 max-md:w-full max-sm:mb-3 text-center rounded-lg mb-4 shadow-lg bg-secondary horizontal-gradient-border`}
         >
-          <div className="p-3 shadow-lg inline-block overflow-hidden mb-5 text-orange-400">
-            {intro.icon}
+          <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
+            <div className="h-full w-full  bg-gradient-to-r from-secondary via-tertiary to-secondary px-5 py-5">
+              <div className="p-3 shadow-lg inline-block overflow-hidden mb-5 text-orange-400">
+                {intro.icon}
+              </div>
+              <div className="w-full">
+                <h3 className="text-2xl font-semibold pb-2 text-white">{intro.name}</h3>
+                <p className="pb-5 text-gray-300">{intro.comment}</p>
+              </div>
+            </div>
           </div>
-          <div className="w-full">
-            <h3 className="text-2xl font-semibold pb-2 text-white">{intro.name}</h3>
-            <p className="pb-5 text-gray-300">{intro.comment}</p>
-          </div>
+
         </div>
       ))}
     </div>

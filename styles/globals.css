@@ -34,8 +34,27 @@ body.dark-theme {
   color: var(--primary-text-color-dark);
 }
 
+.slide-up-enter {
+  @apply translate-y-full opacity-0;
+}
+
+.slide-up-enter-active {
+  @apply translate-y-0 opacity-100 transition-all duration-500;
+}
 
 
 body {
   transition: color 0.5s, background-color 1s;
+}
+
+@layer components {
+  .horizontal-gradient-border {
+    @apply relative border-transparent;
+  }
+  
+  .horizontal-gradient-border::before {
+    content: '';
+    @apply absolute inset-0 z-[-1] bg-gradient-to-r from-cyan-400 to-orange-400 -m-0.5;
+  }
+  /* ... add other gradient borders similarly */
 }

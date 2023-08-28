@@ -9,7 +9,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
         <MainNavigation />
         <ProgressBar/>
-
         <Component {...pageProps} />
         <Footer />
     </>

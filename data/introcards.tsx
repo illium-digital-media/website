@@ -7,7 +7,7 @@ export const introCards = [
   {
     name: "Handcrafted Solutions",
     comment:
-      "We hand-code for US-based small businesses, ensuring top performance. This drives more visitors and elevates your revenue. ",
+      "We hand-code for UK-based small businesses, ensuring top performance. This drives more visitors and elevates your revenue. ",
     icon: <CodeIcon />,
   },
   {

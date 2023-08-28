@@ -28,31 +28,38 @@ const PortfolioSection: React.FC = () => {
                         ))}
                     </div>
                 </div>
-                <div className="sm:w-1/2 bg-secondary border border-cyan-400 rounded-lg flex items-center justify-center">
-                    {projects.map((project) => (
-                        activeSite === project.id &&
-                        <div className="relative">
-                            <a href={project.url} target="_blank" className="absolute max-sm:top-1 max-sm:right-1 top-4 right-4">
-                                <div className="text-white hover:text-cyan-400 cursor-pointer">
-                                    <RightUpArrowIcon />
+                <div className="sm:w-1/2 bg-secondary rounded-lg flex items-center justify-center bg-secondary horizontal-gradient-border">
+                    <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400">
+
+                        {projects.map((project) => (
+                            activeSite === project.id &&
+                            <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
+                                <div className="h-full w-full  bg-gradient-to-r from-secondary via-tertiary to-secondary p-5">
+                                    <div className="relative">
+                                        <a href={project.url} target="_blank" className="absolute max-sm:top-1 max-sm:right-1 top-0 right-0">
+                                            <div className="text-white hover:text-cyan-400 cursor-pointer">
+                                                <RightUpArrowIcon />
+                                            </div>
+                                        </a>
+
+                                        <Image
+                                            key={project.id}
+                                            alt={project.name}
+                                            src={project.imagePath}
+                                            className="transition-opacity duration-500 max-sm:p-10 sm:p-20"
+                                        />
+
+                                        <div className="text-white">{project.name}</div>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
 
-                            <Image
-                                key={project.id}
-                                alt={project.name}
-                                src={project.imagePath}
-                                className="transition-opacity duration-500 max-sm:p-10 sm:p-20"
-                            />
-
-                            <div className="text-white px-5 pb-5">{project.name}</div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+                    <div className='sm:hidden'>
+                        <ProjectSelector activeSite={activeSite} setActiveSite={setActiveSite} />
+                    </div>
                 </div>
-                <div className='sm:hidden'>
-                    <ProjectSelector activeSite={activeSite} setActiveSite={setActiveSite} />
-                </div>
-
             </div>
         </>
 
@@ -60,3 +67,5 @@ const PortfolioSection: React.FC = () => {
 };
 
 export default PortfolioSection;
+
+
