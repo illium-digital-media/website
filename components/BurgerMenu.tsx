@@ -32,6 +32,10 @@ const BurgerMenu: React.FC = () => {
       className="flex items-center lg:justify-between p-3 lg:hidden"
       style={{ transition: "background-color 0.3s ease" }}
     >
+       <div
+        className={`fixed inset-0 bg-black opacity-80 transition-opacity duration-300 z-9 ${isNavOpen ? 'block' : 'hidden'}`}
+        onClick={toggleNav}
+      ></div>
       <nav>
         <section className="flex lg:hidden">
           <div className="space-y-2 cursor-pointer" onClick={toggleNav}>
@@ -41,7 +45,7 @@ const BurgerMenu: React.FC = () => {
           <div
             ref={menuRef}
             className={`menu-nav z-10 flex flex-col transition-left duration-300 ease-in-out absolute w-2/4 h-screen top-0 -left-3/4 shadow-lg ${isNavOpen ? "left-0" : ""
-              } bg-primary z-10`}
+              } bg-primary`}
             style={{ transition: "background-color 0.3s ease" }}
           >
             <div className="top-0 p-3">
