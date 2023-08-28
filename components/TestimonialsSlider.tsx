@@ -17,7 +17,6 @@ const TestimonialsSlider: React.FC<{}> = ({ }) => {
     adaptiveHeight: false,
     variableWidth: true,
     innerHeight: '20px',
-    // Default is true, but you can explicitly set it here.
     responsive: [
       {
         breakpoint: 600,
