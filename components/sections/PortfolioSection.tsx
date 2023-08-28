@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import Image, { StaticImageData } from 'next/image';
 import FadeInText from '../FadeInTypingText';
 import { projects } from '@/data/projects';
 import RightUpArrowIcon from '../Icons/RightUpArrow';
@@ -8,8 +8,17 @@ import useVisibilityOnScroll from "@/hooks/useVisibilityonScroll";
 
 const PortfolioSection: React.FC = () => {
     const [activeSite, setActiveSite] = useState<string>(projects[0].id);
+    const [activeImage, setActiveImage] = useState<StaticImageData>(projects[0].imagePath); // Add this state
     const { isVisible, sectionRef } = useVisibilityOnScroll();
 
+    useEffect(() => {
+        // Update active image when activeSite changes
+        const selectedProject = projects.find((project) => project.id === activeSite);
+        if (selectedProject) {
+            setActiveImage(selectedProject.imagePath);
+        }
+    }, [activeSite]);
+    
     return (
         <div className="overflow-x-hidden">
             <div ref={sectionRef}>
@@ -45,7 +54,7 @@ const PortfolioSection: React.FC = () => {
                                             <Image
                                                 key={project.id}
                                                 alt={project.name}
-                                                src={project.imagePath}
+                                                src={activeImage}
                                                 className="transition-opacity duration-500 max-sm:p-10 sm:p-20"
                                             />
 
