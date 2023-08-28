@@ -1,12 +1,13 @@
 import Section from "@/components/Section";
 import CommonLanding from "@/components/sections/CommonLanding";
 import ContactUsSection from "@/components/sections/ContactUsSection";
+import ServicesSectionLong from "@/components/sections/ServicesSectionLong";
 import Head from "next/head";
 
 const sections = [
+  <ServicesSectionLong key="services" />,
   <ContactUsSection key="contact" />
 ];
-
 
 const HomePage: React.FC = () => {
   return (
