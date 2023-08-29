@@ -1,20 +1,20 @@
 export const testimonials = [
     {
-      name: "John Doe",
+      name: "Emily Thompson",
       comment:
-        "The team at ABC Painting did a fantastic job refreshing the look of my home. The attention to detail and friendly service made the entire experience seamless and enjoyable.",
-      company: "Apple",
+        "Working with Illium Digital Media was an absolute pleasure. Their web development expertise brought our vision to life, and the user experience they crafted exceeded our expectations. The team's attention to detail and dedication to creating a captivating digital platform truly impressed us.",
+      company: "Blossom Beauty",
     },
     {
-      name: "Jane Smith",
+      name: "Mark Davis",
       comment:
-        "I highly recommend XYZ Decorators for their professional approach and timely completion of our office renovation. The new interior design has breathed new life into our workspace.",
-      company: "Tesla",
+        "Illium Digital Media transformed our website with their exceptional UX design services. They truly understand the essence of user-centric experiences. Our website's navigation has become seamless, and the design is both visually appealing and intuitive. We're delighted with the results!",
+      company: "TechTrail Innovations",
     },
     {
-      name: "Mike Johnson",
+      name: "Sarah Martinez",
       comment:
-        "From start to finish, DEF Painters exceeded my expectations with their skillful work and courteous team. The result is a beautifully transformed exterior that has garnered numerous compliments from neighbors.",
-      company: "Meta",
+        "The digital marketing strategies provided by Illium Digital Media have significantly boosted our online presence. Their tailored approach to our brand's goals resulted in increased website traffic and higher engagement on social media. Their expertise in the dynamic digital landscape is evident, and we're thrilled with the results!",
+      company: "Foodie Haven",
     },
   ];
