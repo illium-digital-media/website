@@ -15,8 +15,8 @@ const TickIcon: React.FC = () => {
             points="3.7 14.3 9.6 19 20.3 5"
             stroke="currentColor"
             strokeLinecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
         </g>
       </g>

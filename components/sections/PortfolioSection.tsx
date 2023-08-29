@@ -12,13 +12,12 @@ const PortfolioSection: React.FC = () => {
     const { isVisible, sectionRef } = useVisibilityOnScroll();
 
     useEffect(() => {
-        // Update active image when activeSite changes
         const selectedProject = projects.find((project) => project.id === activeSite);
         if (selectedProject) {
             setActiveImage(selectedProject.imagePath);
         }
     }, [activeSite]);
-    
+
     return (
         <div className="overflow-x-hidden">
             <div ref={sectionRef}>
@@ -27,14 +26,15 @@ const PortfolioSection: React.FC = () => {
                     <div className={`max-sm:hidden w-1/2 flex items-center transition-transform duration-500 ${isVisible ? 'translate-x-0' : '-translate-x-full'}`}>
                         <div className='w-3/4'>
                             {projects.map((project) => (
-                                <>
-                                    <div key={project.id} onClick={() => setActiveSite(project.id)}
+                                <div key={project.id}>
+                                    <div onClick={() => setActiveSite(project.id)}
                                         className={`p-4 hover:text-cyan-400 cursor-pointer ${activeSite === project.id ? 'font-bold text-cyan-400' : 'text-white'}`}
                                     >
                                         {project.name}
                                     </div>
                                     <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-none max-w-screen-lg m-auto" />
-                                </>
+                                </div>
+
                             ))}
                         </div>
                     </div>
