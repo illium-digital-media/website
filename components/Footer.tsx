@@ -30,15 +30,15 @@ const Footer = () => {
 
               <div className="sm:pb-10">
                 <div className="text-white font-bold pb-4">Contact</div>
-                <div className="flex items-center justify-center">  {/* This centers the <ul> within its parent */}
+                <div className="">  {/* This centers the <ul> within its parent */}
                   <ul>
-                    <li className="pb-2 flex items-center justify-center sm:mr-3">
+                    <li className="pb-2 flex items-center max-sm:justify-center sm:mr-3">
                       <div className="flex">
                         <div className="pr-3 text-orange-400"><PhoneIcon /></div>
                         +44 123 456 789
                       </div>
                     </li>
-                    <li className="flex items-center sm:mr-3">
+                    <li className="flex items-center max-sm:justify-center sm:mr-3">
                       <div className="flex">
                         <div className="pr-3 text-orange-400"><EmailIcon /></div>
                         enquiries@illiumdigitalmedia.com
