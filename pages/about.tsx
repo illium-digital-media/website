@@ -14,10 +14,8 @@ const AboutPage: React.FC = () => {
     <>
       <Head>
         <title>About Us</title>
-        <meta
-          name="description"
-          content="Welcome to our painting and decorating site"
-        />
+        <meta name="description" content="Discover the story behind Illium Digital Media. Meet the team of experienced web developers and learn about our mission to make quality web presence accessible to businesses of all sizes." />
+
       </Head>
       <CommonLanding heading={"About Us"} />
       {sections.map((section, index) => (

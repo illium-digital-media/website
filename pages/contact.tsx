@@ -8,10 +8,7 @@ const ContactPage: React.FC = () => {
     <>
       <Head>
         <title>Contact Us</title>
-        <meta
-          name="description"
-          content="Welcome to our painting and decorating site"
-        />
+        <meta name="description" content="Get in touch with Illium Digital Media for all your web development needs. Reach out to our team for consultations, inquiries, and collaborations. Let's build your digital dreams together." />
       </Head>
       <CommonLanding heading={"Contact Us"} />
       <div className="bg-primary">

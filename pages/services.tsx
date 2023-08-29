@@ -14,10 +14,8 @@ const HomePage: React.FC = () => {
     <>
       <Head>
         <title>Home</title>
-        <meta
-          name="description"
-          content="Welcome to our painting and decorating site"
-        />
+        <meta name="description" content="Explore our comprehensive range of web design and development services at Illium Digital Media. From user-centric UI/UX design to modern development techniques, we're here to elevate your online presence." />
+
       </Head>
       <CommonLanding heading={"Services"} />
       {sections.map((section, index) => (
