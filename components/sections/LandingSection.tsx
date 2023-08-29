@@ -13,7 +13,7 @@ const LandingSection: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-40">
         {/* Use the Image component */}
         <Image
-          src="/digital.webp"
+          src="/digital.jpg"
           alt="Background Image"
           layout="fill"
           objectFit="cover"
