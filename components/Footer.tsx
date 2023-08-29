@@ -17,7 +17,6 @@ const Footer = () => {
                 className="w-24"
               />
             </div>
-
             <div className="sm:flex">
               <div className="max-sm:pb-10 sm:pr-20">
                 <div className="text-white font-bold pb-4">Links</div>
@@ -33,9 +32,11 @@ const Footer = () => {
                 <div className="text-white font-bold pb-4">Contact</div>
                 <div className="flex items-center justify-center">  {/* This centers the <ul> within its parent */}
                   <ul>
-                    <li className="pb-2 flex items-center sm:mr-3">
-                      <div className="pr-3 text-orange-400"><PhoneIcon /></div>
-                      +44 123 456 789
+                    <li className="pb-2 flex items-center justify-center sm:mr-3">
+                      <div className="flex">
+                        <div className="pr-3 text-orange-400"><PhoneIcon /></div>
+                        +44 123 456 789
+                      </div>
                     </li>
                     <li className="flex items-center sm:mr-3">
                       <div className="flex">
