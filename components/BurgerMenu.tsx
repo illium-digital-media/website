@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CloseButton from "./CloseButton";
 import NavItem from "./Navigation/NavItem";
 import BurgerMenuIcon from "./Icons/BurgerMenuIcon";
@@ -32,7 +32,7 @@ const BurgerMenu: React.FC = () => {
       className="flex items-center lg:justify-between p-3 lg:hidden"
       style={{ transition: "background-color 0.3s ease" }}
     >
-       <div
+      <div
         className={`fixed inset-0 bg-black opacity-80 transition-opacity duration-300 z-9 ${isNavOpen ? 'block' : 'hidden'}`}
         onClick={toggleNav}
       ></div>
@@ -46,7 +46,7 @@ const BurgerMenu: React.FC = () => {
             ref={menuRef}
             className={`menu-nav z-10 flex flex-col transition-left duration-300 ease-in-out absolute w-2/4 h-screen top-0 -left-3/4 shadow-lg ${isNavOpen ? "left-0" : ""
               } bg-gradient-to-r from-secondary via-tertiary to-secondary`}
-            
+
           >
             <div className="top-0 p-3">
               <CloseButton handleClose={toggleNav} />

@@ -40,7 +40,7 @@ const Footer = () => {
                     <li className="flex items-center sm:mr-3">
                       <div className="flex">
                         <div className="pr-3 text-orange-400"><EmailIcon /></div>
-                        example@gmail.com
+                        enquiries@illiumdigitalmedia.com
                       </div>
                     </li>
                   </ul>
