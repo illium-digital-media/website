@@ -61,7 +61,7 @@ const ContactForm = () => {
         </button>
       </form>
       {formSubmitted && <div className="bg-green-400 text-center text-green-800 p-3">
-        <span className="font-bold">Thanks for contacting us!</span> We'll be in touch shortly
+        <span className="font-bold">Thanks for contacting us!</span> We&apos;ll be in touch shortly
       </div>}
     </>
 

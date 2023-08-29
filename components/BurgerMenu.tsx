@@ -45,8 +45,8 @@ const BurgerMenu: React.FC = () => {
           <div
             ref={menuRef}
             className={`menu-nav z-10 flex flex-col transition-left duration-300 ease-in-out absolute w-2/4 h-screen top-0 -left-3/4 shadow-lg ${isNavOpen ? "left-0" : ""
-              } bg-primary`}
-            style={{ transition: "background-color 0.3s ease" }}
+              } bg-gradient-to-r from-secondary via-tertiary to-secondary`}
+            
           >
             <div className="top-0 p-3">
               <CloseButton handleClose={toggleNav} />
