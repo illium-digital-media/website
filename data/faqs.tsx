@@ -5,7 +5,7 @@ export const faqs = [
       {
         question: "What services does Illium Digital Media offer?",
         answer:
-          "llium Digital Media offers a range of services including web development, UX design, copywriting, SEO, lifetime updates, and digital marketing. Our team is committed to creating captivating digital experiences that drive growth and engagement. With expertise in crafting websites, enhancing user experiences, creating compelling content, improving online visibility, and navigating the dynamic digital landscape, we ensure your brand remains at the forefront of innovation and success.",
+          "Illium Digital Media offers a range of services including web development, UX design, copywriting, SEO, lifetime updates, and digital marketing. Our team is committed to creating captivating digital experiences that drive growth and engagement. With expertise in crafting websites, enhancing user experiences, creating compelling content, improving online visibility, and navigating the dynamic digital landscape, we ensure your brand remains at the forefront of innovation and success.",
       },
       {
         question: "What software do you use to make websites?",

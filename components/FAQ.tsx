@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { faqs } from "../data/faqs";
 import FadeInText from "./FadeInTypingText";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import styles from "./faq.module.css"; // Replace with the actual filename
+import { motion, AnimatePresence } from "framer-motion";
 
 const FAQ: React.FC = () => {
   const [openItemIndices, setOpenItemIndices] = useState<number[]>([]);
@@ -16,6 +15,11 @@ const FAQ: React.FC = () => {
         return [...prevIndices, index];
       }
     });
+  };
+
+  const handleTabClick = (index: number) => {
+    setActiveTab(index);
+    setOpenItemIndices([]); // Reset the open items
   };
 
   return (
@@ -33,26 +37,26 @@ const FAQ: React.FC = () => {
                 ? "bg-orange-400 text-white"
                 : "bg-tertiary text-gray-300 hover:shadow-cyan-glow"
                 } hover:bg-orange-400 hover:text-white transition-colors duration-200`}
-              onClick={() => setActiveTab(index)}
+              // ... other classes ...
+              onClick={() => handleTabClick(index)}
             >
               {category.category}
             </button>
           ))}
         </div>
-        <TransitionGroup className={`${styles["animate-fade-in"]} rounded-lg bg-gradient-to-r from-secondary to-cyan-400 p-0.5`}>
-          <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary p-5">
-            {faqs[activeTab].questions.map((item, index) => (
-              <CSSTransition
-                key={index}
-                timeout={500}
-                classNames={{
-                  enter: styles["fade-enter"],
-                  enterActive: styles["fade-enter-active"],
-                  exit: styles["fade-exit"],
-                  exitActive: styles["fade-exit-active"],
-                }}
-              >
-                <div className={`mb-4 rounded-lg shadow-lg border bg-secondary border-cyan-400`}>
+
+        <AnimatePresence exitBeforeEnter>
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className={`rounded-lg bg-gradient-to-r from-secondary to-cyan-400 p-0.5`}
+          >
+            <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary p-5">
+              {faqs[activeTab].questions.map((item, index) => (
+                <div key={index} className={`mb-4 rounded-lg shadow-lg border bg-secondary border-cyan-400`}>
                   <div className="faq-section">
                     <div
                       className="flex justify-between cursor-pointer p-3 justify-between text-white items-center w-full"
@@ -75,10 +79,10 @@ const FAQ: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </CSSTransition>
-            ))}
-          </div>
-        </TransitionGroup>
+              ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
