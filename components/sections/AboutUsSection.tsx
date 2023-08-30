@@ -1,24 +1,23 @@
-
-
 import Image from 'next/image';
 import dualScreen from '../../assets/dual.png';
 import FadeInText from '../FadeInTypingText';
 import useVisibilityOnScroll from "@/hooks/useVisibilityonScroll";
 
 const AboutUsSection: React.FC = () => {
-  const { isVisible, sectionRef } = useVisibilityOnScroll();
+  const { isVisible: isImageVisible, sectionRef: imageRef } = useVisibilityOnScroll();
+  const { isVisible: isContentVisible, sectionRef: contentRef } = useVisibilityOnScroll();
 
   return (
     <div className="overflow-x-hidden">
-      <div ref={sectionRef}>
+      <div>
         <div className="lg:flex items-center">
           <div
-            className={`lg:w-1/2 rounded-lg lg:pr-20 transform transition-transform duration-500 ${isVisible ? 'translate-x-0' : '-translate-x-full'}`}
+            ref={imageRef} className={`lg:w-1/2 rounded-lg lg:pr-20 transform transition-transform duration-500 ${isImageVisible ? 'translate-x-0' : '-translate-x-full'}`}
           >
             <Image alt="web-design" src={dualScreen} />
           </div>
           <div
-            className={`max-w-5xl m-auto lg:w-1/2 transform transition-transform duration-500 ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}
+            ref={contentRef} className={`max-w-5xl m-auto lg:w-1/2 transform transition-transform duration-500 ${isContentVisible ? 'translate-x-0' : 'translate-x-full'}`}
           >
             <h4 className="font-bold max-lg:text-center text-4xl text-white pb-5">
               <FadeInText text="Helping Small Businesses Thrive, One Website at a Time" />
@@ -34,7 +33,8 @@ const AboutUsSection: React.FC = () => {
             </p>
             <p className="text-gray-300">
               And that&apos;s how I came up with my unique offering: £0 upfront and just £50 per month. It&apos;s not merely a pricing model; it&apos;s my commitment to you. I want to ensure that every business, no matter the size, can have its own digital narrative without the heavy financial weight. At Illium Digital Media, we&apos;re crafting digital tales together, ensuring each one shines bright.
-            </p>      </div>
+            </p>
+          </div>
         </div>
       </div>
     </div>
