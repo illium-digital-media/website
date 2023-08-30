@@ -1,5 +1,6 @@
 import ContactButton from "../CTAs/ContactButton";
 import FadingText from "../FadeInTypingText";
+import Image from 'next/image';
 
 const LandingSection: React.FC = () => {
   return (
@@ -9,7 +10,9 @@ const LandingSection: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-0"></div>
 
       {/* Actual background image */}
-      <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-40" style={{ backgroundImage: `url("/digital.jpg")` }}></div>
+      <div className="absolute top-0 left-0 w-full h-full z-0 opacity-40">
+        <Image src="/digital.jpg" layout="fill" objectFit="cover" alt="Digital background" />
+      </div>
 
       {/* Fade to black gradient at the bottom */}
       <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-b from-transparent to-black z-0"></div>
