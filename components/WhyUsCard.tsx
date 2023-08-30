@@ -1,12 +1,27 @@
-import Image from 'next/image';
+import React from "react";
+import { motion } from "framer-motion";
+import useVisibilityOnScroll from "@/hooks/useVisibilityonScroll";
 
-const WhyUsCard: React.FC<{ image: any; copy: string }> = (props) => {
-  return (
-    <div className="bg-white rounded-lg p-4 w-1/6 max-lg:w-full max-lg:flex text-center grid items-center justify-items-center text-blue-900 font-bold max-lg:mb-2 max-lg:text-sm">
-      {/* <Image src={props.image} alt="" className="max-lg:pr-2" width={20} height={10}></Image> */}
-      <p className="color-blue">{props.copy}</p>
-    </div>
-  );
+const WhyUsCard: React.FC<{ title: string; content: string; image: any }> = (props) => {
+    const { isVisible, sectionRef } = useVisibilityOnScroll();
+
+    return (
+        <motion.div
+            ref={sectionRef}
+            initial={{ opacity: 0, y: 50 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5 }}
+            className={`sm:mx-1 max-sm:mb-3 rounded-lg mb-2 flex`}
+        >
+            <div className="flex items-center">
+                <div className={`mr-5 text-orange-400`}>{props.image}</div>
+                <div>
+                    <h3 className="text-1xl font-bold pb-2">{props.title}</h3>
+                    <p className="text-gray-400">{props.content}</p>
+                </div>
+            </div>
+        </motion.div>
+    );
 };
 
 export default WhyUsCard;

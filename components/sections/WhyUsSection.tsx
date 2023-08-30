@@ -1,5 +1,6 @@
 import FadeInText from "../FadeInTypingText";
 import { whyChooseUs } from "../../data/whychooseus";
+import WhyUsCard from "../WhyUsCard";
 
 const WhyUsSection: React.FC = () => {
 
@@ -13,18 +14,7 @@ const WhyUsSection: React.FC = () => {
         </div>
         <div className="grid sm:grid-cols-3 gap-4">
           {whyChooseUs.map((item, index) => (
-            <div
-              key={index}
-              className={`sm:mx-1 max-sm:mb-3 rounded-lg mb-2 flex`}
-            >
-              <div className="flex items-center">
-                <div className={`mr-5 text-orange-400`}>{item.image}</div>
-                <div>
-                  <h3 className="text-1xl font-bold pb-2">{item.title}</h3>
-                  <p className="text-gray-400">{item.content}</p>
-                </div>
-              </div>
-            </div>
+            <WhyUsCard key={index} title={item.title} content={item.content} image={item.image} />
           ))}
         </div>
       </div>
