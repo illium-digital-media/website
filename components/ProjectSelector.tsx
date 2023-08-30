@@ -3,15 +3,15 @@ import RightArrowIcon from "./Icons/RightArrow";
 import LeftArrowIcon from "./Icons/LeftArrow";
 
 const ProjectSelector: React.FC<{ activeSite: string; setActiveSite: (id: string) => void }> = ({ activeSite, setActiveSite }) => {
+    const currentIndex = projects.findIndex(p => p.id === activeSite);
+
     const nextProject = () => {
-        const currentIndex = projects.findIndex(p => p.id === activeSite);
         if (currentIndex < projects.length - 1) {
             setActiveSite(projects[currentIndex + 1].id);
         }
     };
 
     const prevProject = () => {
-        const currentIndex = projects.findIndex(p => p.id === activeSite);
         if (currentIndex > 0) {
             setActiveSite(projects[currentIndex - 1].id);
         }
@@ -19,9 +19,20 @@ const ProjectSelector: React.FC<{ activeSite: string; setActiveSite: (id: string
 
     return (
         <div className="pt-5 text-white font-bold flex justify-between items-center">
-            <button onClick={prevProject} className="text-orange-400"><LeftArrowIcon/></button>
+            <button 
+                onClick={prevProject} 
+                className={currentIndex === 0 ? "opacity-0 cursor-default" : "text-gray-500 cursor-pointer"}
+            >
+                <LeftArrowIcon/>
+            </button>
             <div>{projects.find(p => p.id === activeSite)?.name}</div>
-            <button onClick={nextProject} className="text-orange-400"><RightArrowIcon/></button>
+            <button 
+                onClick={nextProject} 
+                className={currentIndex === projects.length - 1 ? "opacity-0 cursor-default" : "text-gray-500 cursor-pointer"}
+                disabled={currentIndex === projects.length - 1}
+            >
+                <RightArrowIcon/>
+            </button>
         </div>
     );
 };

@@ -11,19 +11,19 @@ const AboutUsSection: React.FC = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <div className="lg:flex items-center">
-        <motion.div
-          ref={imageRef}
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: isImageVisible ? 0 : -100, opacity: isImageVisible ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
-          className={`lg:w-1/2 rounded-lg lg:pr-20`}
-        >
-          <Image alt="web-design" src={dualScreen} />
-        </motion.div>
-        <div className="max-w-5xl m-auto lg:w-1/2">
-          <div ref={textRef}>
-            <motion.h4
+      <div>
+        <div className="lg:flex items-center">
+          <motion.div
+            ref={imageRef}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: isImageVisible ? 0 : -100, opacity: isImageVisible ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
+            className={`lg:w-1/2 rounded-lg lg:pr-20`}
+          >
+            <Image alt="web-design" src={dualScreen} />
+          </motion.div>
+          <motion.h4
+              ref={textRef}
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: isTextVisible ? 0 : 100, opacity: isTextVisible ? 1 : 0 }}
               transition={{ duration: 0.5 }}
@@ -31,13 +31,14 @@ const AboutUsSection: React.FC = () => {
             >
               <FadeInText text="Helping Small Businesses Thrive, One Website at a Time" />
             </motion.h4>
-          </div>
           <motion.div
             ref={contentRef}
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: isContentVisible ? 0 : 100, opacity: isContentVisible ? 1 : 0 }}
             transition={{ duration: 0.5 }}
+            className={`max-w-5xl m-auto lg:w-1/2`}
           >
+    
             <p className="pb-5 text-gray-300">
               Hey there, I&apos;m Clay. The heart, soul, and coding brain behind Illium Digital Media. You know, it&apos;s funny – even as I immersed myself in the intricate world of computer science during my Master&apos;s, I had never actually built a website from scratch.
             </p>

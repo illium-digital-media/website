@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import FadeInText from '../FadeInTypingText';
-import { projects } from '@/data/projects';
 import RightUpArrowIcon from '../Icons/RightUpArrow';
 import ProjectSelector from '../ProjectSelector';
 import useVisibilityOnScroll from "@/hooks/useVisibilityonScroll";
+import { motion } from 'framer-motion';
+import { projects } from '@/data/projects';
 
 const PortfolioSection: React.FC = () => {
     const [activeSite, setActiveSite] = useState<string>(projects[0].id);
-    const [activeImage, setActiveImage] = useState<StaticImageData>(projects[0].imagePath); // Add this state
+    const [activeImage, setActiveImage] = useState<StaticImageData>(projects[0].imagePath);
     const { isVisible, sectionRef } = useVisibilityOnScroll();
 
     useEffect(() => {
@@ -17,6 +18,11 @@ const PortfolioSection: React.FC = () => {
             setActiveImage(selectedProject.imagePath);
         }
     }, [activeSite]);
+
+    const imageVariants = {
+        hidden: { opacity: 0, scale: 0.9 },
+        visible: { opacity: 1, scale: 1 }
+    };
 
     return (
         <div className="overflow-x-hidden">
@@ -34,7 +40,6 @@ const PortfolioSection: React.FC = () => {
                                     </div>
                                     <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-px border-none max-w-screen-lg m-auto" />
                                 </div>
-
                             ))}
                         </div>
                     </div>
@@ -42,7 +47,15 @@ const PortfolioSection: React.FC = () => {
                         <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400">
                             {projects.map((project, index) => (
                                 activeSite === project.id &&
-                                <div key={index} className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
+                                <motion.div 
+                                    key={index}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="hidden"
+                                    variants={imageVariants}
+                                    transition={{ duration: 0.9 }}
+                                    className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5"
+                                >
                                     <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary p-5 max-sm:p-3">
                                         <div className="relative">
                                             <a href={project.url} target="_blank" className="absolute top-0 right-0  bg-transparent">
@@ -50,22 +63,18 @@ const PortfolioSection: React.FC = () => {
                                                     <RightUpArrowIcon />
                                                 </div>
                                             </a>
-
                                             <Image
                                                 key={project.id}
                                                 alt={project.name}
                                                 src={activeImage}
                                                 className="transition-opacity duration-500 max-sm:p-10 sm:p-20"
                                             />
-
                                             <div className="text-white">{project.name}</div>
                                         </div>
                                     </div>
-                                </div>
-
+                                </motion.div>
                             ))}
                         </div>
-
                     </div>
                     <div className='sm:hidden'>
                         <ProjectSelector activeSite={activeSite} setActiveSite={setActiveSite} />
@@ -73,10 +82,7 @@ const PortfolioSection: React.FC = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 
 export default PortfolioSection;
-
-
