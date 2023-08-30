@@ -1,4 +1,5 @@
 import FadeInText from "../FadeInTypingText";
+import Image from 'next/image';
 
 const CommonLanding: React.FC<{ heading: string }> = (props) => {
   return (
@@ -8,10 +9,12 @@ const CommonLanding: React.FC<{ heading: string }> = (props) => {
       <div className="absolute top-0 left-0 w-full h-full bg-black z-0"></div>
 
       {/* Actual background image */}
-      <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-40" style={{ backgroundImage: `url("/example-1.jpg")` }}></div>
+      <div className="absolute top-0 left-0 w-full h-full z-0 opacity-40">
+        <Image src="/example-1.jpg" layout="fill" objectFit="cover" alt="Background" />
+      </div>
 
       {/* Wrapper for content to maintain max-width */}
-      <div className="max-w-screen-xl m-auto w-full z-0 flex justify-center">
+      <div className="max-w-screen-xl m-auto w-full z-10 flex justify-center">
         <h3 className="text-5xl font-bold max-lg:text-4xl text-white"><FadeInText text={props.heading} /></h3>
       </div>
     </section>
