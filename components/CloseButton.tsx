@@ -2,6 +2,7 @@ const CloseButton: React.FC<{ handleClose: () => void }> = (props) => {
 
   return (
     <button
+    aria-label="close menu"
       className={`top-0 left-0 text-white`}
       onClick={props.handleClose}
       style={{ transition: "background-color 0.3s ease" }}

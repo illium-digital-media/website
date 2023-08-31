@@ -29,7 +29,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite }) => {
                     >
                         <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary p-5 max-sm:p-3">
                             <div className="relative">
-                                <a href={project.url} target="_blank" className="absolute top-0 right-0  bg-transparent">
+                                <a aria-label="go to project website" href={project.url} target="_blank" className="absolute top-0 right-0  bg-transparent">
                                     <div className="text-orange-600 cursor-pointer hover:scale-110">
                                         <RightUpArrowIcon />
                                     </div>
