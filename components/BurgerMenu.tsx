@@ -51,7 +51,7 @@ const BurgerMenu: React.FC = () => {
             <div className="top-0 p-3">
               <CloseButton handleClose={toggleNav} />
             </div>
-            <ul className="flex flex-col min-h-[250px]">
+            <div className="flex flex-col min-h-[250px]">
               {navigationItems.map((item, index) => (
                 <NavItem
                   key={index}
@@ -60,7 +60,7 @@ const BurgerMenu: React.FC = () => {
                   handleClick={toggleNav}
                 />
               ))}
-            </ul>
+            </div>
           </div>
         </section>
       </nav>
