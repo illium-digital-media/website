@@ -18,7 +18,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite }) => {
             <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400">
                 {projects.map((project, index) => (
                     activeSite === project.id &&
-                    <motion.div 
+                    <motion.div
                         key={index}
                         initial="hidden"
                         animate="visible"
@@ -34,12 +34,13 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite }) => {
                                         <RightUpArrowIcon />
                                     </div>
                                 </a>
-                                <link rel="prefetch" href={project.imagePath.src} as="image" />
-                                                                <Image
+                                <link rel="preload" href={project.imagePath.src} as="image" />
+                                <Image
                                     key={project.id}
                                     alt={project.name}
                                     src={project.imagePath}
                                     className="transition-opacity duration-500 max-sm:p-10 sm:p-20"
+                                    loading="eager"
                                 />
                                 <div className="text-white">{project.name}</div>
                             </div>
