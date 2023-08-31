@@ -43,7 +43,7 @@ const MainNavigation: React.FC = () => {
         </div>
 
         <div className="flex items-center">
-          <ul className="menu-list max-lg:hidden menu flex pr-5">
+          <div className="menu-list max-lg:hidden menu flex pr-5">
             {navigationItems.map((item, index) => (
               <NavItem
                 key={index}
@@ -52,7 +52,7 @@ const MainNavigation: React.FC = () => {
                 handleClick={() => {}}
               />
             ))}
-          </ul>
+          </div>
         </div>
       </nav>
     </header>

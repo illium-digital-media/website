@@ -10,9 +10,9 @@ const NavItem: React.FC<{
   const isActive = router.pathname === props.pageLink;
   return (
     <Link href={props.pageLink} onClick={props.handleClick}>
-      <li className={`${isActive ? 'lg:border-b-2 lg:border-cyan-400 text-cyan-400 max-lg:font-bold' : 'text-white'} p-5 m-auto hover:text-cyan-400 duration-200 max-lg:flex justify-center`}>
+      <span className={`${isActive ? 'lg:border-b-2 lg:border-cyan-400 text-cyan-400 max-lg:font-bold' : 'text-white'} p-5 m-auto hover:text-cyan-400 duration-200 max-lg:flex justify-center`}>
         {props.copy}
-      </li>
+      </span>
     </Link>
 
   );

@@ -19,34 +19,27 @@ const Footer = () => {
             </div>
             <div className="sm:flex">
               <div className="max-sm:pb-10 sm:pr-20">
-                <div className="text-white font-bold pb-4">Links</div>
-                <ul>
-                  <li>
-                    <Link href={'/'}>
-                      <span className="block hover:text-cyan-400 duration-200 py-2">Home</span>
-                    </Link>
-                  </li>
-                  <li >
-                    <Link href={'/about'}>
-                      <span className="block hover:text-cyan-400 duration-200 py-2">About</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={'/services'}>
-                      <span className="block hover:text-cyan-400 duration-200 py-2">Services</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={'/contact'}>
-                      <span className="block hover:text-cyan-400 duration-200 py-2">Contact</span>
-                    </Link>
-                  </li>
-                </ul>
+                <div className="text-white font-bold pb-2">Links</div>
+                <Link href={'/'}>
+                  <span className="block hover:text-cyan-400 duration-200 py-2">Home</span>
+                </Link>
+
+                <Link href={'/about'}>
+                  <span className="block hover:text-cyan-400 duration-200 py-2">About</span>
+                </Link>
+
+                <Link href={'/services'}>
+                  <span className="block hover:text-cyan-400 duration-200 py-2">Services</span>
+                </Link>
+
+                <Link href={'/contact'}>
+                  <span className="block hover:text-cyan-400 duration-200 py-2">Contact</span>
+                </Link>
 
               </div>
 
               <div className="sm:pb-10">
-                <div className="text-white font-bold pb-4">Contact</div>
+                <div className="text-white font-bold pb-2">Contact</div>
                 <div className="">  {/* This centers the <ul> within its parent */}
                   <ul>
                     <li className="py-2 flex items-center max-sm:justify-center sm:mr-3">
