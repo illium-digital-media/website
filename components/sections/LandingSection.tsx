@@ -11,7 +11,7 @@ const LandingSection: React.FC = () => {
 
       {/* Actual background image */}
       <div className="absolute top-0 left-0 w-full h-full z-0 opacity-40">
-        <Image src="/digital.jpg" layout="fill" objectFit="cover" alt="Digital background" loading="eager"/>
+        <Image src="/digital.webp" priority={true} layout="fill" objectFit="cover" alt="Digital background" loading="eager"/>
       </div>
 
       {/* Fade to black gradient at the bottom */}

@@ -46,9 +46,9 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
                                         key={project.id}
                                         alt={project.name}
                                         src={project.imagePath}
-                                        className="transition-opacity duration-500 max-sm:p-10 sm:p-20"
+                                        className="transition-opacity duration-500 max-sm:p-10 sm:p-10"
                                     />
-                                    <div className="text-white">{project.name}</div>
+                                    <div className="text-white text-base">{project.name}</div>
                                 </div>
                             </div>
                         </div>
