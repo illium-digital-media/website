@@ -21,11 +21,28 @@ const Footer = () => {
               <div className="max-sm:pb-10 sm:pr-20">
                 <div className="text-white font-bold pb-4">Links</div>
                 <ul>
-                  <Link href={'/'}><li className="hover:text-cyan-400 duration-200 py-2">Home</li></Link>
-                  <Link href={'/about'}><li className="hover:text-cyan-400 duration-200 py-2">About</li></Link>
-                  <Link href={'/services'}><li className="hover:text-cyan-400 duration-200 py-2">Services</li></Link>
-                  <Link href={'/contact'}><li className="hover:text-cyan-400 duration-200 py-2">Contact</li></Link>
+                  <li>
+                    <Link href={'/'}>
+                      <span className="block hover:text-cyan-400 duration-200 py-2">Home</span>
+                    </Link>
+                  </li>
+                  <li >
+                    <Link href={'/about'}>
+                      <span className="block hover:text-cyan-400 duration-200 py-2">About</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={'/services'}>
+                      <span className="block hover:text-cyan-400 duration-200 py-2">Services</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={'/contact'}>
+                      <span className="block hover:text-cyan-400 duration-200 py-2">Contact</span>
+                    </Link>
+                  </li>
                 </ul>
+
               </div>
 
               <div className="sm:pb-10">
