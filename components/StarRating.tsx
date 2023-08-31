@@ -12,7 +12,7 @@ const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
       {[...Array(5)].map((_, index) => (
         <span
           key={index}
-          className={`star pr-2 text-xl ${index < filledStars ? "filled" : "empty"}`}
+          className={`star pr-2 text-2xl ${index < filledStars ? "filled" : "empty"}`}
         >
           &#9733;
         </span>

@@ -34,13 +34,13 @@ const Footer = () => {
                   <ul>
                     <li className="pb-2 flex items-center max-sm:justify-center sm:mr-3">
                       <div className="flex">
-                        <div className="pr-3 text-orange-400"><PhoneIcon /></div>
+                        <div className="pr-3 text-orange-600"><PhoneIcon /></div>
                         +44 123 456 789
                       </div>
                     </li>
                     <li className="flex items-center max-sm:justify-center sm:mr-3">
                       <div className="flex">
-                        <div className="pr-3 text-orange-400"><EmailIcon /></div>
+                        <div className="pr-3 text-orange-600"><EmailIcon /></div>
                         enquiries@illiumdigitalmedia.com
                       </div>
                     </li>
