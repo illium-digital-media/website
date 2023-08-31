@@ -20,14 +20,14 @@ const FAQ: React.FC = () => {
     <div className="max-w-4xl mx-auto">
       <div className="w-full">
         <div ref={titleRef}>
-          <motion.h4
+          <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: titleVisible ? 1 : 0 }} // Use titleVisible here
             transition={{ duration: 0.5 }}
             className="pb-6 text-center font-bold text-4xl pb-2 text-white"
           >
             <FadeInText text="Frequently Asked Questions" />
-          </motion.h4>
+          </motion.h2>
         </div>
 
         <div ref={tabsRef}>

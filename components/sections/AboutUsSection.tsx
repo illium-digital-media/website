@@ -23,7 +23,7 @@ const AboutUsSection: React.FC = () => {
             <Image alt="web-design" src={dualScreen} />
           </motion.div>
           <div className='lg:w-1/2'>
-            <motion.h4
+            <motion.h2
               ref={textRef}
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: isTextVisible ? 0 : 100, opacity: isTextVisible ? 1 : 0 }}
@@ -31,7 +31,7 @@ const AboutUsSection: React.FC = () => {
               className="font-bold max-lg:text-center text-4xl text-white pb-5"
             >
               <FadeInText text="Helping Small Businesses Thrive, One Website at a Time" />
-            </motion.h4>
+            </motion.h2>
             <motion.div
               ref={contentRef}
               initial={{ x: 100, opacity: 0 }}

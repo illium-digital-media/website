@@ -19,9 +19,9 @@ const LandingSection: React.FC = () => {
 
       <div className="max-w-screen-xl m-auto w-full z-0 flex">
         <div className="text-white sm:w-1/2">
-          <h3 className="text-5xl font-bold max-lg:text-4xl">
+          <h1 className="text-5xl font-bold max-lg:text-4xl">
             <FadingText text="Web Development Beyond the Ordinary" />
-          </h3>
+          </h1>
           <p className="py-4">
             <FadingText text="Crafting digital landscapes with a touch of the extraordinary. Ready for a unique journey online?" />
           </p>

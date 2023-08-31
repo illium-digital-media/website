@@ -8,9 +8,9 @@ const WhyUsSection: React.FC = () => {
     <div className="lg:flex text-white">
       <div className="max-lg:w-full max-lg:px-5">
         <div className="pb-6 text-center">
-          <h4 className="font-bold text-4xl pb-2">
+          <h2 className="font-bold text-4xl pb-2">
             <FadeInText text="Transparent Pricing, Tangible Results"/>
-          </h4>
+          </h2>
         </div>
         <div className="grid sm:grid-cols-3 gap-4">
           {whyChooseUs.map((item, index) => (

@@ -44,7 +44,7 @@ const ServicesSectionLong = () => {
                             </div>
                             {services[activeTab].content.map((contentItem, contentIndex) => (
                                 <div key={contentIndex} className="mb-6">
-                                    <h5 className="text-white text-2xl mb-4 font-bold">{contentItem.heading}</h5>
+                                    <h3 className="text-white text-2xl mb-4 font-bold">{contentItem.heading}</h3>
                                     <p className="text-gray-300 mb-4">{contentItem.paragraph}</p>
                                     {contentItem.bulletPoints && (
                                         <ul className="list-disc pl-5 text-white">
