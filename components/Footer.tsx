@@ -21,10 +21,10 @@ const Footer = () => {
               <div className="max-sm:pb-10 sm:pr-20">
                 <div className="text-white font-bold pb-4">Links</div>
                 <ul>
-                  <Link href={'/'}><li className="hover:text-cyan-400 duration-200 pb-2">Home</li></Link>
-                  <Link href={'/about'}><li className="hover:text-cyan-400 duration-200 pb-2">About</li></Link>
-                  <Link href={'/services'}><li className="hover:text-cyan-400 duration-200 pb-2">Services</li></Link>
-                  <Link href={'/contact'}><li className="hover:text-cyan-400 duration-200">Contact</li></Link>
+                  <Link href={'/'}><li className="hover:text-cyan-400 duration-200 py-2">Home</li></Link>
+                  <Link href={'/about'}><li className="hover:text-cyan-400 duration-200 py-2">About</li></Link>
+                  <Link href={'/services'}><li className="hover:text-cyan-400 duration-200 py-2">Services</li></Link>
+                  <Link href={'/contact'}><li className="hover:text-cyan-400 duration-200 py-2">Contact</li></Link>
                 </ul>
               </div>
 
@@ -32,13 +32,13 @@ const Footer = () => {
                 <div className="text-white font-bold pb-4">Contact</div>
                 <div className="">  {/* This centers the <ul> within its parent */}
                   <ul>
-                    <li className="pb-2 flex items-center max-sm:justify-center sm:mr-3">
+                    <li className="py-2 flex items-center max-sm:justify-center sm:mr-3">
                       <div className="flex">
                         <div className="pr-3 text-orange-600"><PhoneIcon /></div>
                         +44 123 456 789
                       </div>
                     </li>
-                    <li className="flex items-center max-sm:justify-center sm:mr-3">
+                    <li className="py-2 flex items-center max-sm:justify-center sm:mr-3">
                       <div className="flex">
                         <div className="pr-3 text-orange-600"><EmailIcon /></div>
                         enquiries@illiumdigitalmedia.com
