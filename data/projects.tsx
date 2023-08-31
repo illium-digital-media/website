@@ -1,8 +1,8 @@
-import Opus from '../assets/opus.png';
-import Altech from '../assets/altech.png';
-import Asda from '../assets/asda.png';
-import Holistic from '../assets/holistic.png';
-import Sykes from '../assets/sykes.png';
+import Opus from '../assets/opus.webp';
+import Altech from '../assets/altech.webp';
+import Asda from '../assets/asda.webp';
+import Holistic from '../assets/holistic.webp';
+import Sykes from '../assets/sykes.webp';
 
 export const projects = [
     { id: 'opus', name: 'Opus', imagePath: Opus, url: 'https://www.sykescottages.co.uk/letyourcottage/' },
