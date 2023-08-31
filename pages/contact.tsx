@@ -7,7 +7,7 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Contact Us</title>
+        <title>Contact Us - Illium Digital Media</title>
         <meta name="description" content="Get in touch with Illium Digital Media for all your web development needs. Reach out to our team for consultations, inquiries, and collaborations. Let's build your digital dreams together." />
       </Head>
       <CommonLanding heading={"Contact Us"} />

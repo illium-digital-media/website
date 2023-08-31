@@ -42,7 +42,7 @@ const MainNavigation: React.FC = () => {
           </Link>
         </div>
 
-        <div className="flex">
+        <div className="flex items-center">
           <ul className="menu-list max-lg:hidden menu flex pr-5">
             {navigationItems.map((item, index) => (
               <NavItem

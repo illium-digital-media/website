@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Illium Digital Media</title>
         <meta
           name="description"
           content="Welcome to Illium Digital Media - Crafting extraordinary digital experiences. Explore our unique web development services, tailored to bring your vision to life."
