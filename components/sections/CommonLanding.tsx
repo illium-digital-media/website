@@ -8,7 +8,7 @@ const CommonLanding: React.FC<{ heading: string }> = (props) => {
       <div className="absolute top-0 left-0 w-full h-full bg-black z-0"></div>
 
       <div className="absolute top-0 left-0 w-full h-full z-0 opacity-40">
-        <Image src="/example-1.jpg" layout="fill" objectFit="cover" alt="Background" />
+        <Image src="/commonlanding.webp" priority={true} layout="fill" objectFit="cover" alt="Background" />
       </div>
 
       <div className="max-w-screen-xl m-auto w-full z-0 flex justify-center">
