@@ -56,9 +56,12 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button className="bg-orange-400 text-sm rounded font-bold px-6 py-3 text-white duration-200 hover:scale-105 hover:shadow-cyan-glow duration-200 focus:ring focus:outline-none" type="submit">
+        <button className="bg-gradient-to-t from-orange-800 via-orange-700 to-orange-800 text-sm rounded font-bold px-6 py-3 text-orange-100 duration-200 hover:scale-105 hover:shadow-cyan-glow duration-200 focus:ring focus:outline-none" type="submit">
           Submit
         </button>
+        {/* <button className="bg-gradient-to-t from-orange-800 via-orange-700 to-orange-800 text-xs rounded font-bold uppercase text-orange-100 px-6 py-3 hover:bg-orange-400 hover:scale-105  hover:shadow-cyan-glow duration-200 focus:ring focus:outline-none">
+      <Link href="/contact">Dive In</Link>
+    </button> */}
       </form>
       {formSubmitted && <div className="bg-green-400 text-center text-green-800 p-3">
         <span className="font-bold">Thanks for contacting us!</span> We&apos;ll be in touch shortly

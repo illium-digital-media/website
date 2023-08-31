@@ -6,10 +6,11 @@ interface FAQButtonProps {
   label: string;
 }
 
+
 const FAQButton: React.FC<FAQButtonProps> = ({ isActive, onClick, label }) => {
   const buttonClass = isActive
-    ? "bg-orange-400 text-white"
-    : "bg-tertiary text-gray-300 hover:shadow-cyan-glow hover:bg-orange-400 hover:text-white";
+    ? "bg-gradient-to-t from-orange-800 via-orange-700 to-orange-800 text-orange-100"
+    : "bg-tertiary text-gray-300 hover:shadow-cyan-glow hover:bg-gradient-to-t hover:from-orange-800 hover:via-orange-700 hover:to-orange-800 hover:text-orange-100 duration-200";
 
   return (
     <button

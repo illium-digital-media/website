@@ -16,7 +16,7 @@ const IntroCard: React.FC<{ icon: ReactNode; name: string; comment: string }> = 
             <div className="text-center rounded-lg shadow-lg bg-secondary h-full">
                 <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
                     <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary px-5 py-5">
-                        <div className="p-3 shadow-lg inline-block overflow-hidden mb-5 text-orange-400">
+                        <div className="p-3 shadow-lg inline-block overflow-hidden mb-5 text-orange-600">
                             {props.icon}
                         </div>
                         <div className="w-full">

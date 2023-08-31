@@ -14,7 +14,7 @@ const WhyUsCard: React.FC<{ title: string; content: string; image: any }> = (pro
             className={`sm:mx-1 max-sm:mb-3 rounded-lg mb-2 flex`}
         >
             <div className="flex items-center">
-                <div className={`mr-5 text-orange-400`}>{props.image}</div>
+                <div className={`mr-5 text-orange-600`}>{props.image}</div>
                 <div>
                     <h3 className="text-1xl font-bold pb-2">{props.title}</h3>
                     <p className="text-gray-400">{props.content}</p>
