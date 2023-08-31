@@ -9,6 +9,7 @@ import FAQ from "@/components/FAQ";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
+import { projects } from "@/data/projects";
 
 const sections = [
   <IntroSection key="intro" />,
@@ -30,6 +31,9 @@ const HomePage: React.FC = () => {
           name="description"
           content="Welcome to Illium Digital Media - Crafting extraordinary digital experiences. Explore our unique web development services, tailored to bring your vision to life."
         />
+        {projects.map((project) => (
+          <link key={project.id} rel="preload" href={project.imagePath.src} as="image" />
+        ))}
       </Head>
       <LandingSection />
       {sections.map((section, index) => (
