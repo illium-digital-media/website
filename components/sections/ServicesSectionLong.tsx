@@ -38,7 +38,7 @@ const ServicesSectionLong = () => {
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="pb-6 text-center font-bold text-4xl pb-2 text-white">{services[activeTab].name}</div>
+                            <h2 className="pb-6 text-center font-bold text-4xl pb-2 text-white">{services[activeTab].name}</h2>
                             <div className="flex justify-center">
                                 <Image src={activeImage} alt={services[activeTab].name} className="h-72 w-96 max-lg:w-56 max-lg:h-32" />
                             </div>
