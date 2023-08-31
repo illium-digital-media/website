@@ -35,7 +35,7 @@ const PortfolioSection: React.FC = () => {
                     <div className={`max-sm:hidden w-1/2 flex items-center transition-transform duration-500 ${isVisible ? 'translate-x-0' : '-translate-x-full'}`}>
                         <ProjectList activeSite={activeSite} setActiveSite={setActiveSite} />
                     </div>
-                    <ProjectDisplay activeSite={activeSite} />
+                    <ProjectDisplay activeSite={activeSite} setActiveSite={setActiveSite}/>
                     <div className='sm:hidden'>
                         <ProjectSelector activeSite={activeSite} setActiveSite={setActiveSite} />
                     </div>
