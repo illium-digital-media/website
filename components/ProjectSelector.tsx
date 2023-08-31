@@ -19,19 +19,21 @@ const ProjectSelector: React.FC<{ activeSite: string; setActiveSite: (id: string
 
     return (
         <div className="pt-5 text-white font-bold flex justify-between items-center">
-            <button 
-                onClick={prevProject} 
+            <button
+                aria-label="go to previous project"
+                onClick={prevProject}
                 className={currentIndex === 0 ? "opacity-0 cursor-default" : "text-gray-500 cursor-pointer"}
             >
-                <LeftArrowIcon/>
+                <LeftArrowIcon />
             </button>
             <div>{projects.find(p => p.id === activeSite)?.name}</div>
-            <button 
-                onClick={nextProject} 
+            <button
+                aria-label="go to next project"
+                onClick={nextProject}
                 className={currentIndex === projects.length - 1 ? "opacity-0 cursor-default" : "text-gray-500 cursor-pointer"}
                 disabled={currentIndex === projects.length - 1}
             >
-                <RightArrowIcon/>
+                <RightArrowIcon />
             </button>
         </div>
     );
