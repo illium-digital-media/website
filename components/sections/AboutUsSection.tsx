@@ -22,6 +22,7 @@ const AboutUsSection: React.FC = () => {
           >
             <Image alt="web-design" src={dualScreen} />
           </motion.div>
+          <div className='lg:w-1/2'>
           <motion.h4
               ref={textRef}
               initial={{ x: 100, opacity: 0 }}
@@ -36,7 +37,7 @@ const AboutUsSection: React.FC = () => {
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: isContentVisible ? 0 : 100, opacity: isContentVisible ? 1 : 0 }}
             transition={{ duration: 0.5 }}
-            className={`max-w-5xl m-auto lg:w-1/2`}
+            className={``}
           >
     
             <p className="pb-5 text-gray-300">
@@ -52,6 +53,8 @@ const AboutUsSection: React.FC = () => {
               And that&apos;s how I came up with my unique offering: £0 upfront and just £50 per month. It&apos;s not merely a pricing model; it&apos;s my commitment to you. I want to ensure that every business, no matter the size, can have its own digital narrative without the heavy financial weight. At Illium Digital Media, we&apos;re crafting digital tales together, ensuring each one shines bright.
             </p>
           </motion.div>
+          </div>
+   
         </div>
       </div>
     </div>

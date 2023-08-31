@@ -15,19 +15,19 @@ const ServicesSectionLong = () => {
         <div className="">
             <div className="sm:flex justify-center pb-6">
                 {services.map((service, index) => (
+
                     <button
                         key={index}
                         className={`max-sm:w-full max-sm:mb-3 sm:mx-3 px-4 py-2 rounded-lg ${activeTab === index
-                            ? "bg-orange-400 text-white"
-                            : "bg-tertiary text-gray-300 hover:shadow-cyan-glow"
-                            } hover:bg-orange-400 hover:text-white transition-colors duration-200`}
+                            ? "bg-gradient-to-t from-orange-800 via-orange-700 to-orange-800 text-orange-100"
+                            : "hover:bg-gradient-to-t hover:from-orange-800 hover:via-orange-700 hover:to-orange-800 hover:text-orange-100 bg-tertiary text-gray-300 hover:shadow-cyan-glow"
+                            } transition-colors duration-200`}
                         onClick={() => setActiveTab(index)}
                     >
                         {service.name}
                     </button>
                 ))}
             </div>
-
             <div className="bg-secondary rounded-lg bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
                 <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary px-5 py-5">
                     <AnimatePresence exitBeforeEnter>
