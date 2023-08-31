@@ -35,13 +35,14 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite }) => {
                                     </div>
                                 </a>
                                 <link rel="preload" href={project.imagePath.src} as="image" />
-                                <Image
+                                <img src={project.imagePath.src} alt="test" />
+                                {/* <Image
                                     key={project.id}
                                     alt={project.name}
                                     src={project.imagePath}
                                     className="transition-opacity duration-500 max-sm:p-10 sm:p-20"
                                     loading="eager"
-                                />
+                                /> */}
                                 <div className="text-white">{project.name}</div>
                             </div>
                         </div>
