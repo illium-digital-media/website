@@ -8,7 +8,7 @@ const WhyUsSection: React.FC = () => {
     <div className="lg:flex text-white">
       <div className="max-lg:w-full max-lg:px-5">
         <div className="pb-6 text-center">
-          <h2 className="font-bold text-4xl pb-2">
+          <h2 className="font-bold text-4xl max-sm:text-2xl pb-2">
             <FadeInText text="Transparent Pricing, Tangible Results"/>
           </h2>
         </div>

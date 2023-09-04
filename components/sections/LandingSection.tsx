@@ -19,7 +19,7 @@ const LandingSection: React.FC = () => {
 
       <div className="max-w-screen-xl m-auto w-full z-0 flex">
         <div className="text-white sm:w-1/2">
-          <h1 className="text-5xl font-bold max-lg:text-4xl">
+          <h1 className="text-5xl max-sm:text-3xl font-bold max-lg:text-4xl">
             <FadingText text="Web Development Beyond the Ordinary" />
           </h1>
           <p className="py-4">

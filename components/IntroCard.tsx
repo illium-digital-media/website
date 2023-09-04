@@ -20,7 +20,7 @@ const IntroCard: React.FC<{ icon: ReactNode; name: string; comment: string }> = 
                             {props.icon}
                         </div>
                         <div className="w-full">
-                            <h3 className="text-2xl font-semibold pb-2 text-white">{props.name}</h3>
+                            <h3 className="text-2xl max-sm:text-xl font-semibold pb-2 text-white">{props.name}</h3>
                             <p className="pb-5 text-gray-300">{props.comment}</p>
                         </div>
                     </div>

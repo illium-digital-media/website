@@ -24,7 +24,7 @@ const FAQ: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: titleVisible ? 1 : 0 }} // Use titleVisible here
             transition={{ duration: 0.5 }}
-            className="pb-6 text-center font-bold text-4xl pb-2 text-white"
+            className="pb-6 text-center font-bold text-4xl max-sm:text-2xl pb-2 text-white"
           >
             <FadeInText text="Frequently Asked Questions" />
           </motion.h2>

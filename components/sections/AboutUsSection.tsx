@@ -28,7 +28,7 @@ const AboutUsSection: React.FC = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: isTextVisible ? 0 : 100, opacity: isTextVisible ? 1 : 0 }}
               transition={{ duration: 0.5 }}
-              className="font-bold max-lg:text-center text-4xl text-white pb-5"
+              className="font-bold max-lg:text-center text-4xl max-sm:text-2xl text-white pb-5"
             >
               <FadeInText text="Helping Small Businesses Thrive, One Website at a Time" />
             </motion.h2>

@@ -22,7 +22,7 @@ const ContactUsSection = () => {
             className={`w-full sm:w-1/2 pb-10 transform ${isContentVisible ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-500`}
           >
             <div ref={titleContainerRef} className={`${isTitleVisible ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-500`}>
-              <h2 className={`font-bold text-white max-sm:text-center pb-8 text-4xl`}>
+              <h2 className={`font-bold text-white max-sm:text-center pb-8 text-4xl max-sm:text-2xl`}>
                 <FadeInText text="Connect with Us" />
               </h2>
             </div>

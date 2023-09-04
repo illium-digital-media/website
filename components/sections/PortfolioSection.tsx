@@ -30,7 +30,7 @@ const PortfolioSection: React.FC = () => {
     return (
         <div className="overflow-x-hidden">
             <div ref={sectionRef}>
-                <h2 className="text-4xl font-bold text-center text-white pb-10"><FadeInText text='Our Latest Projects' /></h2>
+                <h2 className="text-4xl max-sm:text-2xl font-bold text-center text-white pb-10"><FadeInText text='Our Latest Projects' /></h2>
                 <div className="sm:flex">
                     <div className={`max-sm:hidden w-1/2 flex items-center transition-transform duration-500 ${isVisible ? 'translate-x-0' : '-translate-x-full'}`}>
                         <ProjectList activeSite={activeSite} setActiveSite={setActiveSite} />

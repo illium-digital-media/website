@@ -10,7 +10,7 @@ const TestimonialsSection: React.FC = () => {
   return (
     <div className="">
       <div className="text-center pb-6" ref={titleRef}>
-        <h2 className={`font-bold text-white text-4xl pb-2 ${isTitleVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+        <h2 className={`font-bold text-white text-4xl max-sm:text-2xl pb-2 ${isTitleVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
           <FadeInText text="What They Say About Us" />
         </h2>
       </div>

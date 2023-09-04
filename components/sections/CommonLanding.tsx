@@ -12,7 +12,7 @@ const CommonLanding: React.FC<{ heading: string }> = (props) => {
       </div>
 
       <div className="max-w-screen-xl m-auto w-full z-0 flex justify-center">
-        <h1 className="text-5xl font-bold max-lg:text-4xl text-white"><FadeInText text={props.heading} /></h1>
+        <h1 className="text-5xl font-bold max-lg:text-5xl max-sm:text-3xl text-white"><FadeInText text={props.heading} /></h1>
       </div>
     </section>
   );
