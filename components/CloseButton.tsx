@@ -3,7 +3,7 @@ const CloseButton: React.FC<{ handleClose: () => void }> = (props) => {
   return (
     <button
       aria-label="close menu"
-      className={`flex justify-end text-white p-3`}
+      className={`text-white`}
       onClick={props.handleClose}
     >
       <svg
