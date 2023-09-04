@@ -2,10 +2,9 @@ const CloseButton: React.FC<{ handleClose: () => void }> = (props) => {
 
   return (
     <button
-    aria-label="close menu"
-      className={`top-0 left-0 text-white`}
+      aria-label="close menu"
+      className={`flex justify-end text-white p-3`}
       onClick={props.handleClose}
-      style={{ transition: "background-color 0.3s ease" }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

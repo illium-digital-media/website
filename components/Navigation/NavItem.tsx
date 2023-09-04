@@ -9,11 +9,18 @@ const NavItem: React.FC<{
   const router = useRouter();
   const isActive = router.pathname === props.pageLink;
   return (
-    <Link href={props.pageLink} onClick={props.handleClick}>
-      <span className={`${isActive ? 'lg:border-b-2 lg:border-cyan-400 text-cyan-400 max-lg:font-bold' : 'text-white'} p-5 m-auto hover:text-cyan-400 duration-200 max-lg:flex justify-center`}>
-        {props.copy}
-      </span>
-    </Link>
+    <>
+      <div className={`${isActive ? 'text-cyan-400 max-sm:font-bold sm:border-b-2 border-cyan-400' : 'text-white'} sm:h-full sm:flex items-center`}>
+        <Link href={props.pageLink} onClick={props.handleClick}>
+          <span className={`px-5 max-sm:py-7 m-auto hover:text-cyan-400 duration-200 max-sm:flex sm:justify-center`}>
+            {props.copy}
+          </span>
+        </Link>
+
+        <hr className="bg-gradient-to-l from-transparent via-cyan-400 to-transparent h-0.5 border-t-0 border-transparent sm:hidden " />
+      </div>
+
+    </>
 
   );
 };
