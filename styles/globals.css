@@ -2,37 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Light Theme */
-  --primary-bg-color: #ffffff;
-  --primary-text-color: #333333;
-
-  /* Dark Theme */
-  --primary-bg-color-dark: #333333;
-  --primary-text-color-dark: #ffffff;
-
-  /* Set the initial theme to light */
-  --current-bg-color: var(--primary-bg-color);
-  --current-text-color: var(--primary-text-color);
-}
-
 body {
   color: black;
   background-color: white;
-    font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', sans-serif;
+  
 }
 
-/* Additional styles for light theme */
-body.light-theme {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
-}
-
-/* Additional styles for dark theme */
-body.dark-theme {
-  background-color: var(--primary-bg-color-dark);
-  color: var(--primary-text-color-dark);
-}
 
 .slide-up-enter {
   @apply translate-y-full opacity-0;
@@ -42,29 +18,10 @@ body.dark-theme {
   @apply translate-y-0 opacity-100 transition-all duration-500;
 }
 
-
-body {
-  transition: color 0.5s, background-color 1s;
-}
-
-@layer components {
-  .horizontal-gradient-border {
-    @apply relative border-transparent;
-  }
-  
-  .horizontal-gradient-border::before {
-    content: '';
-    @apply absolute inset-0 z-[-1] bg-gradient-to-r from-cyan-400 to-orange-400 -m-0.5;
-  }
-  /* ... add other gradient borders similarly */
-}
-
 /* styles.css */
 .slick-track {
   display: flex !important;
 }
-
-
 
 .slick-dots li button:before {
     color: rgba(0, 255, 255, 0.3) !important; /* This is a transparent version of cyan */

@@ -30,7 +30,7 @@ const MainNavigation: React.FC = () => {
       className={`w-full shadow-lg fixed z-10 ${navbarVisible ? "fixed shadow-lg bg-gradient-to-r from-primary via-secondary to-primary" : "absolute bg-transparent"}`}
       style={{ transition: "background-color 0.3s ease" }}
     >
-      <nav className="flex justify-between m-auto max-w-screen-xl px-5 sm:pt-2">
+      <nav className="flex justify-between m-auto max-w-screen-xl px-5">
         <div className="py-2 text-white">
           <Link href="/">
             <Image src={Logo} alt="Logo Placeholder" />
