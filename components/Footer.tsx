@@ -2,7 +2,7 @@ import Link from "next/link";
 import EmailIcon from "../components/Icons/Email";
 import PhoneIcon from "../components/Icons/Phone";
 import Image from "next/image";
-import LogoPlaceholder from "../assets/logo-placeholder.png";
+import Logo from "../assets/full-logo.svg";
 
 const Footer = () => {
   return (
@@ -12,9 +12,8 @@ const Footer = () => {
           <div className="sm:flex max-sm:pb-5 sm:flex justify-between">
             <div className="max-sm:pb-10 max-sm:flex max-sm:justify-center">
               <Image
-                src={LogoPlaceholder}
+                src={Logo}
                 alt="Logo Placeholder"
-                className="w-24"
               />
             </div>
             <div className="sm:flex">

@@ -3,7 +3,7 @@ import BurgerMenu from "../BurgerMenu";
 import NavItem from "./NavItem";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import LogoPlaceholder from "../../assets/logo-placeholder.png";
+import Logo from "../../assets/full-logo.svg";
 import { navigationItems } from "@/data/navigationitems";
 
 const MainNavigation: React.FC = () => {
@@ -30,14 +30,13 @@ const MainNavigation: React.FC = () => {
       className={`w-full shadow-lg fixed z-10 ${navbarVisible ? "fixed shadow-lg bg-gradient-to-r from-primary via-secondary to-primary " : "absolute bg-transparent"}`}
       style={{ transition: "background-color 0.3s ease" }}
     >
-      <nav className="flex justify-between m-auto max-w-screen-xl max-xl:px-5">
+      <nav className="flex justify-between m-auto max-w-screen-xl max-xl:px-5 xl:py-2">
         <BurgerMenu />
-        <div className="py-2">
+        <div className="py-2 text-white">
           <Link href="/">
             <Image
-              src={LogoPlaceholder}
+              src={Logo}
               alt="Logo Placeholder"
-              className="w-24"
             />
           </Link>
         </div>
