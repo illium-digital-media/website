@@ -40,7 +40,7 @@ const ServicesSectionLong = () => {
                         >
                             <h2 className="pb-6 text-center font-bold text-4xl max-sm:text-2xl pb-2 text-white">{services[activeTab].name}</h2>
                             <div className="flex justify-center">
-                                <Image src={activeImage} alt={services[activeTab].name} className="h-72 w-96 max-lg:w-56 max-lg:h-32" />
+                                <Image src={activeImage} alt={services[activeTab].name} />
                             </div>
                             {services[activeTab].content.map((contentItem, contentIndex) => (
                                 <div key={contentIndex} className="mb-6">
