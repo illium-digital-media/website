@@ -50,7 +50,7 @@ const FAQ: React.FC = () => {
         </div>
 
         <div ref={itemsRef}>
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode='wait'>
             <motion.div
               key={activeTab}
               initial={{ opacity: 0 }}

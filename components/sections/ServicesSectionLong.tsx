@@ -30,7 +30,7 @@ const ServicesSectionLong = () => {
             </div>
             <div className="bg-secondary rounded-lg bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
                 <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary px-5 py-5">
-                    <AnimatePresence exitBeforeEnter>
+                    <AnimatePresence mode='wait'>
                         <motion.div
                             key={activeTab}
                             initial={{ opacity: 0 }}
