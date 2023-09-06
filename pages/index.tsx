@@ -7,16 +7,15 @@ import Head from "next/head";
 import Section from "@/components/Section";
 import FAQ from "@/components/FAQ";
 import ContactUsSection from "@/components/sections/ContactUsSection";
-import ProcessSection from "@/components/sections/ProcessSection";
+import TimelineSection from "@/components/sections/TimelineSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
-import { projects } from "@/data/projects";
 
 const sections = [
   <IntroSection key="intro" />,
   <AboutUsSection key="about" />,
   <WhyUsSection key="why-us" />,
   <PortfolioSection key="portfolio" />,
-  <ProcessSection key="process" />,
+  <TimelineSection key="process" />,
   <FAQ key="faq" />,
   <TestimonialsSection key="testimonials" />,
   <ContactUsSection key="contact" />

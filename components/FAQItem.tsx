@@ -19,7 +19,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
           className="flex justify-between cursor-pointer p-3 justify-between text-white items-center w-full"
           onClick={handleToggle}
         >
-          <div className="font-semibold">{question}</div>
+          <div className="font-semibold pr-3">{question}</div>
           <div>{isOpen ? "-" : "+"}</div>
         </div>
 

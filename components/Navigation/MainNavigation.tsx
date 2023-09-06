@@ -8,7 +8,7 @@ import { navigationItems } from "@/data/navigationitems";
 
 const TransparentNavbar: React.FC = () => {
   return (
-    <header className={`w-full shadow-lg z-10 absolute bg-transparent`} >
+    <header className={`w-full shadow-lg z-20 absolute bg-transparent`} >
       <nav className="flex justify-between m-auto max-w-screen-xl px-5">
         <div className="py-2 text-white">
           <Link href="/">
@@ -58,7 +58,7 @@ const BlueNavbar: React.FC = () => {
 
   return (
     <header
-      className="w-full shadow-lg fixed z-10 shadow-lg bg-gradient-to-r from-primary via-secondary to-primary"
+      className="w-full shadow-lg fixed z-20 shadow-lg bg-gradient-to-r from-primary via-secondary to-primary"
       style={{
         opacity, 
         transition: "opacity 0.5s ease-in-out", 
