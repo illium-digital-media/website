@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import Slider from "react-slick";
 import RightUpArrowIcon from './Icons/RightUpArrow';
 import { projects } from '@/data/projects';
+import useVisibilityOnScroll from '@/hooks/useVisibilityonScroll'; // Assuming you have this hook
 
 interface ProjectDisplayProps {
     activeSite: string;
@@ -11,7 +12,17 @@ interface ProjectDisplayProps {
 
 const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSite }) => {
     const sliderRef = useRef<Slider | null>(null);
+    const [shouldLoadImages, setShouldLoadImages] = useState(false);
 
+    const { isVisible, sectionRef } = useVisibilityOnScroll();
+
+    useEffect(() => {
+        if (isVisible && !shouldLoadImages) {
+            setShouldLoadImages(true);
+        }
+    }, [isVisible]);
+
+  
     const settings = {
         dots: false,
         draggable: false, 
@@ -30,7 +41,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
     }, [activeSite]);
 
     return (
-        <div className={`sm:w-1/2 bg-secondary rounded-lg flex items-center justify-center`}>
+        <div className={`sm:w-1/2 bg-secondary rounded-lg flex items-center justify-center`} ref={sectionRef}>
             <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400">
                 <Slider ref={sliderRef} {...settings}>
                     {projects.map((project, index) => (
@@ -42,13 +53,14 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
                                             <RightUpArrowIcon />
                                         </div>
                                     </a>
-                                    <Image
-                                        key={project.id}
-                                        alt={project.name}
-                                        src={project.imagePath}
-                                        className="transition-opacity duration-500 max-sm:p-10 sm:p-10"
-                                        priority={true}
-                                    />
+                                    {shouldLoadImages && (
+                                        <Image
+                                            key={project.id}
+                                            alt={project.name}
+                                            src={project.imagePath}
+                                            className="transition-opacity duration-500 max-sm:p-10 sm:p-10"
+                                        />
+                                    )}
                                     <div className="text-white text-base">{project.name}</div>
                                 </div>
                             </div>
