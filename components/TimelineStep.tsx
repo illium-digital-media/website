@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import useVisibilityOnScroll from "@/hooks/useVisibilityonScroll";
 
@@ -20,17 +21,16 @@ const TimelineStep: React.FC<TimelineStepProps> = ({ phase, step, isLast }) => {
             initial={{ opacity: 0, y: 50 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className={`relative group ${!isLast ? 'pb-8 ' : ''} transition duration-300`}
+            className={`relative group ${!isLast ? 'pb-8 ' : ''}`}
         >
-            <div className="relative flex items-start space-x-5">
-                <div className="relative z-10">
+            <div className="flex items-start space-x-5">
+                <div className="z-10">
                     <span className="block h-8 w-8 rounded-full group-hover:shadow-cyan-glow bg-tertiary flex items-center justify-center">
                         <span className="h-3 w-3 rounded-full duration-500 group-hover:bg-cyan-400" />
                     </span>
                 </div>
                 <div className={`lg:flex justify-between py-0 ${!isLast ? 'border-b border-cyan-950 pb-5' : ''}`}>
                     <div className="text-white font-semibold text-lg w-1/4 whitespace-nowrap w-1/2 pb-3">{phase + '. ' + step.title}</div>
-
                     <div className="text-gray-400 lg:w-2/3">
                         <div className="mb-4">
                             {step.keywords.map((keyword, kIndex) => (
@@ -47,7 +47,6 @@ const TimelineStep: React.FC<TimelineStepProps> = ({ phase, step, isLast }) => {
 
             {!isLast && <div className={`absolute top-4 left-4 -ml-px h-full w-0.5 bg-cyan-950`} />}
         </motion.div>
-
     );
 };
 
