@@ -57,9 +57,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
                                         alt={project.name}
                                         src={project.imagePath}
                                         className="transition-opacity duration-500 max-sm:p-10 sm:p-10"
-                                        // Prioritize loading for the active image and the next two images.
-                                        priority={index === projects.findIndex(p => p.id === activeSite) ||
-                                            index === projects.findIndex(p => p.id === activeSite) + 1 }
+                                        priority={true}
                                     />
                                     <div className="text-white text-base">{project.name}</div>
                                 </div>
