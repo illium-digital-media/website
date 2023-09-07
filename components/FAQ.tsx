@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { faqs } from "../data/faqs";
 import FadeInText from "./FadeInTypingText";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import FAQButton from "./FAQButton";
 import FAQItem from "./FAQItem";
 import useVisibilityOnScroll from "@/hooks/useVisibilityonScroll";

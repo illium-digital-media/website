@@ -32,9 +32,8 @@ module.exports = {
         primaryDark: '#0B121F'
       },
       boxShadow: {
-        'cyan-glow': '0 0 30px rgba(0, 255, 255, 0.7)', // Adjust color and opacity as needed
+        'cyan-glow': '0 0 30px rgba(0, 255, 255, 0.7)', 
       },
-          // Add this within the extend object
           scrollSnapType: {
             y: 'scroll-snap-type-y',
           },

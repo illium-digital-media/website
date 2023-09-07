@@ -32,7 +32,7 @@ const TimelineStep: React.FC<TimelineStepProps> = ({ phase, step, isLast }) => {
                 <div className={`lg:flex justify-between py-0 ${!isLast ? 'border-b border-cyan-950 pb-5' : ''}`}>
                     <div className="text-white font-semibold text-lg w-1/4 whitespace-nowrap w-1/2 pb-3">{phase + '. ' + step.title}</div>
                     <div className="text-gray-400 lg:w-2/3">
-                        <div className="mb-4">
+                        <div className="mb-4 max-sm:hidden">
                             {step.keywords.map((keyword, kIndex) => (
                                 <span key={kIndex} className="inline-block mr-4 px-4 py-2 bg-tertiary group-hover:bg-gradient-to-t group-hover:from-orange-800 group-hover:via-orange-700 group-hover:to-orange-800 group-hover:text-orange-100 duration-1000 text-gray-300 rounded-full">
                                     {keyword}
@@ -42,7 +42,6 @@ const TimelineStep: React.FC<TimelineStepProps> = ({ phase, step, isLast }) => {
                         <p>{step.description}</p>
                     </div>
                 </div>
-
             </div>
 
             {!isLast && <div className={`absolute top-4 left-4 -ml-px h-full w-0.5 bg-cyan-950`} />}
