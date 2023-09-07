@@ -39,6 +39,15 @@ const TestimonialsSlider: React.FC<{}> = ({ }) => {
           adaptiveHeight: true,
         },
       },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          adaptiveHeight: true,
+        },
+      }
     ],
   };
 
