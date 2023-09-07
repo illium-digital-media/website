@@ -43,8 +43,8 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
         >
             <div className={`w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5`}>
                 <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary via-tertiary to-secondary ">
-                <Slider ref={sliderRef} {...settings}>
-                    {projects.map((project, index) => (
+                    <Slider ref={sliderRef} {...settings}>
+                        {projects.map((project, index) => (
                             <div key={index} className="h-full w-full p-5 max-sm:p-3">
                                 <div className="relative">
                                     <a aria-label="go to project website" href={project.url} target="_blank" className="absolute top-0 right-0 bg-transparent">
@@ -57,12 +57,15 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
                                         alt={project.name}
                                         src={project.imagePath}
                                         className="transition-opacity duration-500 max-sm:p-10 sm:p-10"
+                                        // Prioritize loading for the active image and the next two images.
+                                        priority={index === projects.findIndex(p => p.id === activeSite) ||
+                                            index === projects.findIndex(p => p.id === activeSite) + 1 }
                                     />
                                     <div className="text-white text-base">{project.name}</div>
                                 </div>
                             </div>
-                    ))}
-                </Slider>
+                        ))}
+                    </Slider>
                 </div>
             </div>
         </motion.div>
