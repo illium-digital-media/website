@@ -9,6 +9,15 @@ body {
   
 }
 
+.slick-slide {
+  height: inherit !important;
+}
+
+.slick-slide > div {
+    height: 100%;
+}
+
+
 
 .slide-up-enter {
   @apply translate-y-full opacity-0;

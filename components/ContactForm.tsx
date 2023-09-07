@@ -56,7 +56,7 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button className="bg-gradient-to-t from-orange-800 via-orange-700 to-orange-800 text-sm rounded px-6 py-3 text-orange-100 duration-200 hover:scale-105 hover:shadow-cyan-glow duration-200 focus:ring focus:outline-none" type="submit">
+        <button className="bg-gradient-to-t from-orange-800 via-orange-700 to-orange-800 text-sm rounded px-6 py-3 text-orange-100 hover:scale-105 hover:shadow-cyan-glow duration-200 focus:ring focus:outline-none" type="submit">
           Submit
         </button>
       </form>

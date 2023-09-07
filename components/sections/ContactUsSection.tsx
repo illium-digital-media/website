@@ -13,7 +13,7 @@ const ContactUsSection = () => {
         <div className="flex flex-col-reverse sm:flex-row max-w-screen-lg m-auto">
           <div 
             ref={formRef} 
-            className={`w-full sm:w-1/2 sm:pr-20 transform ${isFormVisible ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-500`}
+            className={`w-full sm:w-1/2 lg:pr-20 sm:pr-10 transform ${isFormVisible ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-500`}
           >
             <ContactForm />
           </div>

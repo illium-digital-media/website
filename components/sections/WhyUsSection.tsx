@@ -12,7 +12,7 @@ const WhyUsSection: React.FC = () => {
             <FadeInText text="Transparent Pricing, Tangible Results"/>
           </h2>
         </div>
-        <div className="grid sm:grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-4">
           {whyChooseUs.map((item, index) => (
             <WhyUsCard key={index} title={item.title} content={item.content} image={item.image} />
           ))}

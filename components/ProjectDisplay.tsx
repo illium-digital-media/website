@@ -41,11 +41,11 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
             transition={{ duration: 0.5 }}
             className={`sm:w-1/2 bg-secondary rounded-lg flex items-center justify-center`}
         >
-            <div className={`w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400`}>
+            <div className={`w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5`}>
+                <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary via-tertiary to-secondary ">
                 <Slider ref={sliderRef} {...settings}>
                     {projects.map((project, index) => (
-                        <div key={index} className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
-                            <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary p-5 max-sm:p-3">
+                            <div key={index} className="h-full w-full p-5 max-sm:p-3">
                                 <div className="relative">
                                     <a aria-label="go to project website" href={project.url} target="_blank" className="absolute top-0 right-0 bg-transparent">
                                         <div className="text-orange-600 cursor-pointer hover:scale-110">
@@ -61,9 +61,9 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
                                     <div className="text-white text-base">{project.name}</div>
                                 </div>
                             </div>
-                        </div>
                     ))}
                 </Slider>
+                </div>
             </div>
         </motion.div>
 

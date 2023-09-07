@@ -18,7 +18,7 @@ const AboutUsSection: React.FC = () => {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: isImageVisible ? 0 : -100, opacity: isImageVisible ? 1 : 0 }}
             transition={{ duration: 0.5 }}
-            className={`lg:w-1/2 rounded-lg lg:pr-20`}
+            className={`lg:w-1/2 max-lg:flex max-lg:justify-center rounded-lg lg:pr-20`}
           >
             <Image alt="web-design" src={dualScreen} />
           </motion.div>
