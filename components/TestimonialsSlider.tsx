@@ -27,7 +27,6 @@ const TestimonialsSlider: React.FC<{}> = ({ }) => {
           slidesToScroll: 1,
           centerMode: false,
           adaptiveHeight: true,
-
           dots: false
         },
       },
@@ -36,8 +35,8 @@ const TestimonialsSlider: React.FC<{}> = ({ }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "80px",
+          centerPadding: "50px",
+          adaptiveHeight: true,
         },
       },
     ],
