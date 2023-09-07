@@ -9,8 +9,8 @@ const TestimonialCard: React.FC<{ comment: string; name: string; company: string
   return (
     <div className={`max-sm:w-80 h-auto mx-3 rounded-lg mb-4`} ref={sectionRef}>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isVisible ? 1 : 0 }}
+        initial={{ opacity: 0, y: 50  }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}
         className="bg-gradient-to-r from-secondary to-cyan-400 p-0.5 rounded-lg"
       >

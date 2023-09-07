@@ -19,58 +19,53 @@ const FAQ: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="w-full">
-        <div ref={titleRef}>
-          <motion.h2
-            initial={{ opacity: 0 }}
-            animate={{ opacity: titleVisible ? 1 : 0 }} // Use titleVisible here
-            transition={{ duration: 0.5 }}
-            className="pb-6 text-center font-bold text-4xl max-sm:text-2xl pb-2 text-white"
-          >
-            <FadeInText text="Frequently Asked Questions" />
-          </motion.h2>
-        </div>
 
-        <div ref={tabsRef}>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: tabsVisible ? 1 : 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="sm:flex justify-center mb-6">
-              {faqs.map((category, index) => (
-                <FAQButton
-                  key={index}
-                  isActive={activeTab === index}
-                  onClick={() => handleTabClick(index)}
-                  label={category.category}
-                />
-              ))}
-            </div>
-          </motion.div>
-        </div>
+        <motion.h2
+          ref={titleRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={titleVisible ? { opacity: 1, y: 0 } : {}} // Use titleVisible here
+          transition={{ duration: 0.5 }}
+          className="pb-6 text-center font-bold text-4xl max-sm:text-2xl pb-2 text-white"
+        >
+          <FadeInText text="Frequently Asked Questions" />
+        </motion.h2>
 
-        <div ref={itemsRef}>
-          <AnimatePresence mode='wait'>
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: itemsVisible ? 1 : 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className={`rounded-lg bg-gradient-to-r from-secondary to-cyan-400 p-0.5`}
-            >
-              <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary p-5">
-                {faqs[activeTab].questions.map((item, index) => (
-                  <FAQItem
-                    key={index}
-                    question={item.question}
-                    answer={item.answer}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        <motion.div
+          ref={tabsRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={tabsVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="sm:flex justify-center mb-6">
+            {faqs.map((category, index) => (
+              <FAQButton
+                key={index}
+                isActive={activeTab === index}
+                onClick={() => handleTabClick(index)}
+                label={category.category}
+              />
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          ref={itemsRef}
+          key={activeTab}
+          initial={{ opacity: 0, y: 50  }}
+          animate={itemsVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+          className={`rounded-lg bg-gradient-to-r from-secondary to-cyan-400 p-0.5`}
+        >
+          <div className="h-full w-full bg-gradient-to-r from-secondary via-tertiary to-secondary p-5">
+            {faqs[activeTab].questions.map((item, index) => (
+              <FAQItem
+                key={index}
+                question={item.question}
+                answer={item.answer}
+              />
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );

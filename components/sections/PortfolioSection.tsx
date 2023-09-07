@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { StaticImageData } from 'next/image';
+import React, { useState } from 'react';
 import FadeInText from '../FadeInTypingText';
 import ProjectSelector from '../ProjectSelector';
 import useVisibilityOnScroll from "@/hooks/useVisibilityonScroll";
@@ -37,10 +36,19 @@ const ProjectList: React.FC<{ activeSite: string; setActiveSite: (id: string) =>
 
 const PortfolioSection: React.FC = () => {
     const [activeSite, setActiveSite] = useState<string>(projects[0].id);
+    const { isVisible: headingVisible, sectionRef: headingRef } = useVisibilityOnScroll();
 
     return (
         <div className="overflow-x-hidden">
-            <h2 className="text-4xl max-sm:text-2xl font-bold text-center text-white pb-10"><FadeInText text='Our Latest Projects' /></h2>
+            <motion.h2
+                ref={headingRef}
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: headingVisible ? 0 : 100, opacity: headingVisible ? 1 : 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl max-sm:text-2xl font-bold text-center text-white pb-10"
+            >
+                <FadeInText text='Our Latest Projects' />
+            </motion.h2>
             <div className="sm:flex">
                 <ProjectList activeSite={activeSite} setActiveSite={setActiveSite} />
                 <ProjectDisplay activeSite={activeSite} setActiveSite={setActiveSite} />

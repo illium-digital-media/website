@@ -3,11 +3,16 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { testimonials } from "@/data/testimonials";
 import TestimonialCard from "./TestimonialCard";
+import { motion } from 'framer-motion';
+import useVisibilityOnScroll from "@/hooks/useVisibilityonScroll";
 
 const TestimonialsSlider: React.FC<{}> = ({ }) => {
+  const { isVisible, sectionRef } = useVisibilityOnScroll();
+
   var settings = {
     dots: true,
     infinite: false,
+    arrows: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -37,13 +42,20 @@ const TestimonialsSlider: React.FC<{}> = ({ }) => {
   };
 
   return (
-    <div className="overflow-x-clip h-full">
+    <motion.div
+      ref={sectionRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5 }}
+      className={`sm:hidden h-full`}
+    >
       <Slider {...settings}>
         {testimonials.map((item, index) => (
-          <TestimonialCard key={index} name={item.name} comment={item.comment} company={item.company}  />
+          <TestimonialCard key={index} name={item.name} comment={item.comment} company={item.company} />
         ))}
       </Slider>
-    </div>
+    </motion.div>
+
   );
 };
 
