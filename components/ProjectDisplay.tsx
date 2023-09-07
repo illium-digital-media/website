@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import RightUpArrowIcon from './Icons/RightUpArrow';
 import { projects } from '@/data/projects';
 import useVisibilityOnScroll from '@/hooks/useVisibilityonScroll'; // Assuming you have this hook
+import { motion } from 'framer-motion';
 
 interface ProjectDisplayProps {
     activeSite: string;
@@ -12,21 +13,13 @@ interface ProjectDisplayProps {
 
 const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSite }) => {
     const sliderRef = useRef<Slider | null>(null);
-    const [shouldLoadImages, setShouldLoadImages] = useState(false);
 
     const { isVisible, sectionRef } = useVisibilityOnScroll();
 
-    useEffect(() => {
-        if (isVisible && !shouldLoadImages) {
-            setShouldLoadImages(true);
-        }
-    }, [isVisible]);
-
-  
     const settings = {
         dots: false,
-        draggable: false, 
-        arrows: false,  
+        draggable: false,
+        arrows: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -41,8 +34,14 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
     }, [activeSite]);
 
     return (
-        <div className={`sm:w-1/2 bg-secondary rounded-lg flex items-center justify-center`} ref={sectionRef}>
-            <div className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400">
+        <motion.div
+            ref={sectionRef}
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: isVisible ? 0 : 100, opacity: isVisible ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
+            className={`sm:w-1/2 bg-secondary rounded-lg flex items-center justify-center`}
+        >
+            <div className={`w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400`}>
                 <Slider ref={sliderRef} {...settings}>
                     {projects.map((project, index) => (
                         <div key={index} className="w-full h-full rounded-md bg-gradient-to-r from-secondary to-cyan-400 p-0.5">
@@ -53,14 +52,12 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
                                             <RightUpArrowIcon />
                                         </div>
                                     </a>
-                                    {shouldLoadImages && (
-                                        <Image
-                                            key={project.id}
-                                            alt={project.name}
-                                            src={project.imagePath}
-                                            className="transition-opacity duration-500 max-sm:p-10 sm:p-10"
-                                        />
-                                    )}
+                                    <Image
+                                        key={project.id}
+                                        alt={project.name}
+                                        src={project.imagePath}
+                                        className="transition-opacity duration-500 max-sm:p-10 sm:p-10"
+                                    />
                                     <div className="text-white text-base">{project.name}</div>
                                 </div>
                             </div>
@@ -68,7 +65,8 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ activeSite, setActiveSi
                     ))}
                 </Slider>
             </div>
-        </div>
+        </motion.div>
+
     );
 }
 
