@@ -13,8 +13,7 @@ export const testimonials = [
     },
     {
       name: "Sarah Martinez",
-      comment:
-        "The digital marketing strategies provided by Illium Digital Media have significantly boosted our online presence. Their tailored approach to our brand's goals resulted in increased website traffic and higher engagement on social media. Their expertise in the dynamic digital landscape is evident, and we're thrilled with the results!",
+      comment:"Illium Digital Media's marketing strategies enhanced our online visibility impressively. Their tailored solutions amplified our website traffic and social media engagement. Their expertise in the digital domain shines through, and we couldn't be happier with the outcome!",
       company: "Foodie Haven",
     },
   ];
