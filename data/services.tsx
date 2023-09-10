@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
 import SEO from '../assets/seo.png';
-import UXDesign from '../assets/uxdesign.png';
 import WebDevelopment from '../assets/webdevelopment.png';
 import DigitalMarketing from '../assets/digitalmarketing.png';
 import LifetimeUpdates from '../assets/lifetimeupdates.png';
@@ -35,24 +34,6 @@ export const services: ServiceItem[] = [
                 paragraph: "With every line of code carefully written, we build a foundation that's both solid and flexible. This approach allows your digital presence to evolve alongside your business goals, whether you're expanding product offerings, implementing new features, or adapting to changing industry trends. We understand that your website is a reflection of your brand, and we're dedicated to ensuring it makes a lasting impression."
             },
 
-        ]
-    },
-    {
-        name: 'UX/UI Design',
-        image: UXDesign,
-        content: [
-            {
-                heading: "Shaping User-Centric Experiences",
-                paragraph: "User Experience (UX) isn't just a buzzword – it's a philosophy that underpins every successful digital interaction. At Illium Digital Media, we're passionate about creating user-centric experiences that resonate with your audience. Our UX design services go beyond aesthetics; they're focused on understanding your audience, their needs, and their behaviors."
-            },
-            {
-                heading: "Crafting Intuitive and Visually Appealing Interfaces",
-                paragraph: "By blending aesthetics, psychology, and human-centric design principles, we craft interfaces that are not only visually appealing but also intuitive to use. We believe that every click, scroll, and interaction should be a seamless journey, guiding your visitors toward their goals. Our design process involves in-depth research, wireframing, prototyping, and rigorous testing to ensure that your users are delighted with every interaction."
-            },
-            {
-                heading: "Leaving a Lasting Impression",
-                paragraph: "We understand that your website is a crucial touchpoint for your brand, and our UX design expertise ensures that it leaves a lasting impression. Whether you're launching a new site or revamping an existing one, we're here to ensure that your users have an exceptional experience from start to finish."
-            },
         ]
     },
     {
