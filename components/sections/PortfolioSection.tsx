@@ -47,7 +47,7 @@ const PortfolioSection: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 className="text-4xl max-sm:text-2xl font-bold text-center text-white pb-10"
             >
-                <FadeInText text='Our Latest Projects' />
+                <FadeInText text='Our Latest Projects' highlightedWords={['Our']}/>
             </motion.h2>
             <div className="sm:flex">
                 <ProjectList activeSite={activeSite} setActiveSite={setActiveSite} />

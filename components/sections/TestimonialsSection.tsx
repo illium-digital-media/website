@@ -16,7 +16,7 @@ const TestimonialsSection: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="font-bold text-white text-4xl max-sm:text-2xl pb-2"
         >
-          <FadeInText text="What They Say About Us" />
+          <FadeInText text="What They Say About Us" highlightedWords={['What']}/>
         </motion.h2>
       </div>
       <TestimonialCards />

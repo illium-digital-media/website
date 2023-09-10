@@ -27,7 +27,7 @@ const FAQ: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="pb-6 text-center font-bold text-4xl max-sm:text-2xl pb-2 text-white"
         >
-          <FadeInText text="Frequently Asked Questions" />
+          <FadeInText text="Frequently Asked Questions" highlightedWords={['Asked']}/>
         </motion.h2>
 
         <motion.div

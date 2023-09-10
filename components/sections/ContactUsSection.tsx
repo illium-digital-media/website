@@ -23,7 +23,7 @@ const ContactUsSection = () => {
           >
             <div ref={titleContainerRef} className={`${isTitleVisible ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-500`}>
               <h2 className={`font-bold text-white max-sm:text-center pb-8 text-4xl max-sm:text-2xl`}>
-                <FadeInText text="Connect with Us" />
+                <FadeInText text="Connect with Us" highlightedWords={['Connect']}/>
               </h2>
             </div>
             <p className="text-gray-300">
