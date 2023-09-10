@@ -34,7 +34,7 @@ const ProjectSelector: React.FC<{ activeSite: string; setActiveSite: (id: string
                 <button
                     aria-label="go to previous project"
                     onClick={prevProject}
-                    className={currentIndex === 0 ? "opacity-0 cursor-default" : "text-cyan-500 cursor-pointer"}
+                    className={currentIndex === 0 ? "opacity-0 cursor-default" : "text-gray-400 cursor-pointer"}
                 >
                     <LeftArrowIcon />
                 </button>
@@ -42,7 +42,7 @@ const ProjectSelector: React.FC<{ activeSite: string; setActiveSite: (id: string
                 <button
                     aria-label="go to next project"
                     onClick={nextProject}
-                    className={currentIndex === projects.length - 1 ? "opacity-0 cursor-default" : "text-cyan-500 cursor-pointer"}
+                    className={currentIndex === projects.length - 1 ? "opacity-0 cursor-default" : "text-gray-400 cursor-pointer"}
                     disabled={currentIndex === projects.length - 1}
                 >
                     <RightArrowIcon />

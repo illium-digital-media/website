@@ -1,11 +1,10 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { testimonials } from "@/data/testimonials";
-import TestimonialCard from "./TestimonialCard";
+import { servicesShort } from "@/data/servicesshort";
+import ServiceCard from "./ServiceCard";
 
-const TestimonialsSlider: React.FC<{}> = ({ }) => {
-
+const ServiceCardsSlider: React.FC<{}> = ({ }) => {
   var settings = {
     dots: true,
     infinite: true,
@@ -15,13 +14,19 @@ const TestimonialsSlider: React.FC<{}> = ({ }) => {
     slidesToScroll: 1,
     draggable: true,
     centerMode: true,
-    centerPadding: "100px",
+    centerPadding: "150px",
     adaptiveHeight: false,
-    variableWidth: false,
+    variableWidth: true,
     innerHeight: '20px',
     responsive: [
       {
         breakpoint: 600,
+        settings: {
+          centerPadding: "100px",
+        },
+      },
+      {
+        breakpoint: 500,
         settings: {
           centerPadding: "50px",
         },
@@ -29,22 +34,21 @@ const TestimonialsSlider: React.FC<{}> = ({ }) => {
       {
         breakpoint: 450,
         settings: {
-          centerPadding: "10px",
+          centerPadding: "30px",
         },
       },
-
     ],
   };
 
   return (
-    <div className="lg:hidden flex flex-col">
+    <div className="sm:hidden flex flex-col">
       <Slider {...settings}>
-        {testimonials.map((item, index) => (
-          <TestimonialCard key={index} name={item.name} comment={item.comment} company={item.company} />
+        {servicesShort.map((item, index) => (
+          <ServiceCard key={index} name={item.name} comment={item.comment} icon={item.icon} />
         ))}
       </Slider>
     </div>
   );
 };
 
-export default TestimonialsSlider;
+export default ServiceCardsSlider;

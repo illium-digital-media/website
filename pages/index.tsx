@@ -1,5 +1,3 @@
-import IntroSection from "../components/sections/IntroSection";
-import AboutUsSection from "../components/sections/AboutUsSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import WhyUsSection from "../components/sections/WhyUsSection";
 import LandingSection from "../components/sections/LandingSection";
@@ -9,10 +7,10 @@ import FAQ from "@/components/FAQ";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TimelineSection from "@/components/sections/TimelineSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
+import ServicesSectionShort from "@/components/sections/ServicesSectionShort";
 
 const sections = [
-  <IntroSection key="intro" />,
-  <AboutUsSection key="about" />,
+  <ServicesSectionShort key="services" />,
   <WhyUsSection key="why-us" />,
   <PortfolioSection key="portfolio" />,
   <TimelineSection key="process" />,
