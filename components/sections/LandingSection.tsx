@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const LandingSection: React.FC = () => {
   return (
-    <section className="relative max-sm:px-4 pt-20 flex items-center max-xl:px-5 w-full max-sm:h-[450px] sm:h-[650px]">
+    <section className="relative max-sm:px-4 flex items-center max-xl:px-5 w-full max-sm:h-[450px] max-lg:h-[650px] lg:h-screen">
 
       {/* Background pseudo-element */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-0"></div>
