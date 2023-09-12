@@ -13,23 +13,12 @@ export const servicesShort = [
     icon: <CodeIcon />,
   },
   {
-    name: "Digital Marketing",
-    comment:
-      "Boost your online presence with data-driven strategies. Engage and convert your audience.",
-    icon: <LineGraphIcon />,
-  },
-  {
-    name: "SEO",
-    comment:
-      "Rise in search ranks with our SEO strategies. Drive organic traffic and boost visibility.",
-    icon: <MagnifyingGlassIcon />,
-  },
-  {
     name: "Branding & Logo Design",
     comment:
       "Create a memorable brand identity. Stand out and make a lasting impression.",
     icon: <PencilIcon />,
   },
+
   {
     name: "Hosting",
     comment:
@@ -37,9 +26,23 @@ export const servicesShort = [
     icon: <CloudIcon />,
   },
   {
+    name: "SEO",
+    comment:
+      "Optimize your local online presence. Rise in search ranks, attract more local customers, and boost visibility.",
+    icon: <MagnifyingGlassIcon />,
+  },
+  {
+    name: "Analytics & Reporting",
+    comment:
+      "Gain insights into user behavior and website performance. Make data-driven decisions to enhance user experience.",
+    icon: <LineGraphIcon />, // New icon for analytics
+  },
+  {
     name: "Support",
     comment:
       "Regular updates, quick tweaks, and 24/7 support. Keep your website at its peak.",
     icon: <HeadsetIcon />,
+
   },
+
 ];

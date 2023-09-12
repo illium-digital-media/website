@@ -1,14 +1,14 @@
 import TickIcon from "../components/Icons/Tick";
 
 export const whyChooseUs = [
+  {
+    title: "Flexible Payment Options",
+    content: "We offer flexible payment options to suit your needs: choose our £0 down, £50 per month subscription model or opt for a one-time upfront payment.",
+    image: <TickIcon />,
+  },
     {
       title: "Zero Down, Full Ownership",
-      content: "£0 down for a standard 5-page small business website. Own your domain, content, listing, and profiles without any hidden fees.",
-      image: <TickIcon />,
-    },
-    {
-      title: "Flexible & Custom Pricing",
-      content: "Need more than a standard site? We offer custom pricing based on the scope, additional pages, and time involved.",
+      content: "£0 down for a standard 5-page small business website. If you require more than the standard pages, we'll adjust the pricing accordingly. Own your domain, content, listing, and profiles without any hidden fees.",
       image: <TickIcon />,
     },
     {

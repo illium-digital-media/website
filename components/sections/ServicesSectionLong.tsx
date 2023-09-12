@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { services } from "@/data/services";
 import Image, { StaticImageData } from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { setRequestMeta } from "next/dist/server/request-meta";
 
 const ServicesSectionLong = () => {
     const [activeTab, setActiveTab] = useState<number>(0);
@@ -41,6 +42,9 @@ const ServicesSectionLong = () => {
                             <h2 className="pb-6 text-center font-bold text-4xl max-sm:text-2xl pb-2 text-white">{services[activeTab].name}</h2>
                             <div className="flex justify-center">
                                 <Image src={activeImage} alt={services[activeTab].name} />
+                            </div>
+                            <div className="text-gray-300 pb-5">
+                                {services[activeTab].intro}
                             </div>
                             {services[activeTab].content.map((contentItem, contentIndex) => (
                                 <div key={contentIndex} className="mb-6">
