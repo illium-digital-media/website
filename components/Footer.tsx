@@ -44,13 +44,13 @@ const Footer = () => {
                     <li className="py-2 flex items-center max-sm:justify-center sm:mr-3">
                       <div className="flex">
                         <div className="pr-3 text-orange-600"><PhoneIcon /></div>
-                        +44 123 456 789
+                        +44 7415 160 742
                       </div>
                     </li>
                     <li className="py-2 flex items-center max-sm:justify-center sm:mr-3">
                       <div className="flex">
                         <div className="pr-3 text-orange-600"><EmailIcon /></div>
-                        enquiries@illiumdigitalmedia.com
+                        illiumdigitalmedia@gmail.com
                       </div>
                     </li>
                   </ul>

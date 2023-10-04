@@ -12,10 +12,10 @@ import ServicesSectionShort from "@/components/sections/ServicesSectionShort";
 const sections = [
   <ServicesSectionShort key="services" />,
   <WhyUsSection key="why-us" />,
-  <PortfolioSection key="portfolio" />,
+  // <PortfolioSection key="portfolio" />,
   <TimelineSection key="process" />,
   <FAQ key="faq" />,
-  <TestimonialsSection key="testimonials" />,
+  // <TestimonialsSection key="testimonials" />,
   <ContactUsSection key="contact" />
 ];
 

@@ -5,18 +5,13 @@ const developmentProcess = [
     description: "Everything starts with your vision. We'll send you a comprehensive questionnaire about your enterprise to ensure we're capturing an online space that mirrors your objectives and appeals to your audience."
   },
   {
-    title: "Laying a Solid Foundation",
-    keywords: ["Contract", "Safeguard"],
-    description: "After we grasp the project scope, we'll forward a digital contract. This safeguards both parties, ensuring clear expectations and peace of mind as we embark on the creative journey."
-  },
-  {
     title: "Payment Structure",
     keywords: ["Invoice", "Auto-pay"],
     description: "Upon finalizing the agreement, you'll receive an invoice for the month's projected work. Monthly bills are sent on the first of every month. For convenience, auto-pay can be set up, ensuring a seamless process."
   },
   {
     title: "Crafting the Blueprint",
-    keywords: ["Designs", "Collaboration"],
+    keywords: ["Design", "Collaboration"],
     description: "With your feedback in hand, we'll sketch out designs that encapsulate your brand’s essence. In a collaborative session, we’ll present our concepts, ensuring alignment and accurate representation of your vision."
   },
   {
