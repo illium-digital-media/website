@@ -27,7 +27,8 @@ const ContactForm = () => {
 
   return (
     <>
-      <form className="border-l-2 border-cyan-400 p-5 bg-secondary" onSubmit={handleSubmit}>
+      <form className="border-l-2 border-cyan-400 p-5 bg-secondary" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true">
+        <input type="hidden" name="contact" value="contact" />
         <Input
           value={formData.name}
           handleInputChange={handleChange}
