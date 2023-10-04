@@ -20,6 +20,12 @@ const ContactForm = () => {
     e.preventDefault();
     // Handle form submission logic here
     console.log(formData);
+
+    fetch("/", {
+      method: "POST",
+      headers: {"Content-Type" : "application/x-www-form-urlencoded"},
+      body: new URLSearchParams(formData).toString(),
+    }).catch((error) => alert(error));
     // Reset the form
     setFormData({ name: "", email: "", message: "" });
     setFormSubmitted(true);
