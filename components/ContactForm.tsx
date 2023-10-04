@@ -19,7 +19,7 @@ const ContactForm = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log(formData);
+    // console.log(formData);
 
     // fetch("/", {
     //   method: "POST",
@@ -33,7 +33,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <form className="border-l-2 border-cyan-400 p-5 bg-secondary" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true">
+      <form className="border-l-2 border-cyan-400 p-5 bg-secondary" onSubmit={handleSubmit} name="contact">
         <input type="hidden" name="contact" value="contact" />
         <Input
           value={formData.name}
