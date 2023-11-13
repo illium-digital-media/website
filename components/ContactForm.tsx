@@ -1,11 +1,19 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import Input from "./Input";
 
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
 const ContactForm = () => {
-  const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
-  const [formData, setFormData] = useState({
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -16,25 +24,25 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    // console.log(formData);
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: {"Content-Type" : "application/x-www-form-urlencoded"},
-    //   body: new URLSearchParams(formData).toString(),
-    // }).catch((error) => alert(error));
-    // Reset the form
-    setFormData({ name: "", email: "", message: "" });
-    setFormSubmitted(true);
+    const myForm = event.currentTarget; // Use currentTarget instead of target
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    }).catch((error) => alert(error));
+    setFormData({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitted(true);
   };
 
   return (
     <>
       <form className="border-l-2 border-cyan-400 p-5 bg-secondary" onSubmit={handleSubmit} name="contact">
-        <input type="hidden" name="contact" value="contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <Input
           value={formData.name}
           handleInputChange={handleChange}
@@ -67,7 +75,7 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
-      {formSubmitted && <div className="bg-green-400 text-center text-green-800 p-3">
+      {isSubmitted && <div className="bg-green-400 text-center text-green-800 p-3">
         <span className="font-bold">Thanks for contacting us!</span> We&apos;ll be in touch shortly
       </div>}
     </>
