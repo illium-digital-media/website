@@ -15,7 +15,7 @@ const sections = [
   <PortfolioSection key="portfolio" />,
   <TimelineSection key="process" />,
   <FAQ key="faq" />,
-  <TestimonialsSection key="testimonials" />,
+  // <TestimonialsSection key="testimonials" />,
   <ContactUsSection key="contact" />
 ];
 
