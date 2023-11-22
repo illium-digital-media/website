@@ -7,6 +7,22 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <Head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z2XTG8XXNS"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-Z2XTG8XXNS');
+            `
+          }}
+        />
         <title>Contact Us - Illium Digital Media</title>
         <meta name="description" content="Get in touch with Illium Digital Media for all your web development needs. Reach out to our team for consultations, inquiries, and collaborations. Let's build your digital dreams together." />
       </Head>

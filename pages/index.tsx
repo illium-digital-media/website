@@ -23,21 +23,21 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Head>
-           {/* Google tag (gtag.js) */}
-           <script 
-          async 
+        {/* Google tag (gtag.js) */}
+        <script
+          async
           src="https://www.googletagmanager.com/gtag/js?id=G-Z2XTG8XXNS"
         ></script>
-        <script 
-          dangerouslySetInnerHTML={{ 
+        <script
+          dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
               gtag('config', 'G-Z2XTG8XXNS');
-            ` 
-          }} 
+            `
+          }}
         />
         <title>Illium Digital Media</title>
         <meta
