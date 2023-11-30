@@ -5,12 +5,14 @@ import MainNavigation from "@/components/Navigation/MainNavigation";
 import ProgressBar from "@/components/ProgressBar";
 import useLoadGAOnUserInteraction from "@/hooks/useLoadGAOnUserInteraction";
 import Script from "next/script";
+import { Exo_2 } from 'next/font/google';
 
+const exo_2 = Exo_2({ weight: ['400', '700'], subsets: ['latin'] })
 export default function App({ Component, pageProps }: AppProps) {
   const loadGA = useLoadGAOnUserInteraction();
 
   return (
-    <>
+    <main className={exo_2.className}>
        {loadGA && (
         <>
           <Script
@@ -34,6 +36,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <ProgressBar/>
         <Component {...pageProps} />
         <Footer />
-    </>
+    </main>
   );
 }
