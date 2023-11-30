@@ -13,22 +13,6 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Head>
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-Z2XTG8XXNS"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-Z2XTG8XXNS');
-            `
-          }}
-        />
         <title>Services - Illium Digital Media</title>
         <meta name="description" content="Explore our comprehensive range of web design and development services at Illium Digital Media. From user-centric UI/UX design to modern development techniques, we're here to elevate your online presence." />
 
