@@ -3,7 +3,7 @@ import TickIcon from "../components/Icons/Tick";
 export const whyChooseUs = [
   {
     title: "Flexible Payment Options",
-    content: "We offer flexible payment options to suit your needs: choose our £0 down, £50 per month subscription model or opt for a one-time upfront payment.",
+    content: "We offer flexible payment options to suit your needs: choose our £0 down, £100 per month subscription model or opt for a one-time upfront payment.",
     image: <TickIcon />,
   },
     {
