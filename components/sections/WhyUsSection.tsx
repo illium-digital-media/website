@@ -9,7 +9,7 @@ const WhyUsSection: React.FC = () => {
       <div className="max-lg:w-full max-lg:px-5">
         <div className="pb-6 text-center">
           <h2 className="font-bold text-4xl max-sm:text-2xl pb-2">
-            <FadeInText text="£0 Down, £50 Per Month, Pay as You Go" highlightedWords={['£0', '£50']}/>
+            <FadeInText text="£0 Down, £100 Per Month, Pay as You Go" highlightedWords={['£0', '£100']}/>
           </h2>
         </div>
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-4">

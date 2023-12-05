@@ -50,7 +50,7 @@ const AboutUsSection: React.FC = () => {
                 However, my euphoria was tempered when I discovered a hard truth. The cost of creating such digital dreams was often out of reach for small businesses. It didn&apos;t sit right with me. With a fresh perspective and a passion ignited, I set out on a mission: to make quality web presence accessible to all.
               </p>
               <p className="text-gray-300">
-                And that&apos;s how I came up with my unique offering: £0 upfront and just £50 per month. It&apos;s not merely a pricing model; it&apos;s my commitment to you. I want to ensure that every business, no matter the size, can have its own digital narrative without the heavy financial weight. At Illium Digital Media, we&apos;re crafting digital tales together, ensuring each one shines bright.
+                And that&apos;s how I came up with my unique offering: £0 upfront and just £100 per month. It&apos;s not merely a pricing model; it&apos;s my commitment to you. I want to ensure that every business, no matter the size, can have its own digital narrative without the heavy financial weight. At Illium Digital Media, we&apos;re crafting digital tales together, ensuring each one shines bright.
               </p>
             </motion.div>
           </div>

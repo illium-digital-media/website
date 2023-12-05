@@ -30,7 +30,7 @@ export const faqs = [
       {
         question: "How does your pricing structure work for projects?",
         answer:
-          "We offer a unique subscription model designed to provide flexibility and affordability for our clients. For a standard 5-page website, we offer a subscription of £50 per month. This includes the core features and design elements to get your online presence up and running. If your project requires additional pages or features beyond the initial scope, we provide tailored pricing based on the specific scope and complexity. Our goal is to ensure you get the most value for your investment while accommodating your project's individual needs.",
+          "We offer a unique subscription model designed to provide flexibility and affordability for our clients. For a standard 5-page website, we offer a subscription of £100 per month. This includes the core features and design elements to get your online presence up and running. If your project requires additional pages or features beyond the initial scope, we provide tailored pricing based on the specific scope and complexity. Our goal is to ensure you get the most value for your investment while accommodating your project's individual needs.",
       },
       {
         question: "What are the typical turnaround times for projects?",
