@@ -7,14 +7,12 @@ import useLoadGAOnUserInteraction from "@/hooks/useLoadGAOnUserInteraction";
 import Script from "next/script";
 import { Exo_2 } from 'next/font/google';
 
-// const exo_2 = Exo_2({ weight: ['400', '700'], subsets: ['latin'], display: 'swap'})
+const exo_2 = Exo_2({ weight: ['400', '700'], subsets: ['latin'], display: 'swap', adjustFontFallback: false })
 export default function App({ Component, pageProps }: AppProps) {
   const loadGA = useLoadGAOnUserInteraction();
 
   return (
-    // <main className={exo_2.className}>
-    <main>
-
+    <main className={exo_2.className}>
        {loadGA && (
         <>
           <Script
