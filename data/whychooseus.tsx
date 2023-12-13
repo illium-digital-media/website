@@ -17,15 +17,16 @@ export const whyChooseUs = [
     image: <TickIcon />,
   },
   {
-    title: "On-the-Fly Updates",
-    content: "Quick updates within 24 hours.",
+    title: "Responsive Support and Updates",
+    content: "Enjoy 24/7 human assistance with quick on-the-fly updates to keep your website running smoothly.",
     image: <TickIcon />,
   },
   {
-    title: "Round-the-Clock Support",
-    content: "24/7 human assistance, no automated menus.",
+    title: "90+ Google Page Speed Score",
+    content: "We excel in achieving Google Page Speed scores of 90 or higher, significantly enhancing your website's performance and search visibility.",
     image: <TickIcon />,
   },
+  
   {
     title: "Comprehensive Web Solutions",
     content: "Over 40 hours dedicated to design, development, and testing.",
