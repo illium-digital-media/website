@@ -32,7 +32,7 @@ export const servicesShort = [
     icon: <MagnifyingGlassIcon />,
   },
   {
-    name: "Analytics & Reporting",
+    name: "Google Analytics",
     comment:
       "Gain insights into user behavior and website performance. Make data-driven decisions to enhance user experience.",
     icon: <LineGraphIcon />, // New icon for analytics
